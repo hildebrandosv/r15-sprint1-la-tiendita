@@ -1,0 +1,65 @@
+/*╔════════════════════════════════════════════════╗
+  ║ MAIN STYLES CSS sheet                          ║
+  ╚════════════════════════════════════════════════╝*/
+/* Font import and root and body css */
+/* @import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Press+Start+2P&display=swap'); */
+/* Variables definition */
+* {
+   --colorBgNavBarr: #EEEEEE;
+   --colorMainTitle: #313172;
+   --colorMainFooter: green;
+   --colorBgError: lightgray;
+   --colorTxtError: red;
+   --colorBgSuccess: #BFFF5F;
+   --colorTxtSuccess: green;
+   --colorBgForms: #262645;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   border: none;
+}
+body{
+  background-color: var(--colorBgNavBarr);
+}
+.clBg{
+  background-color: var(--colorBgNavBarr) !important;
+}
+#idMain {
+  margin-top: 5em;
+}
+.card-title {
+  background-color: #e0dada !important;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(196, 238, 196);
+  }
+  footer {
+    opacity: 1;
+    display: flexbox;
+    justify-content: end;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  p{
+    font-size: .85em;
+  }
+  .clImg {
+    object-fit: fill;
+  }
+}
+
+.clMainTitle {
+  color: var(--colorMainTitle);
+  font-size: 2rem;
+}
+.clSecondaryTitle {
+  color: var(--colorMainTitle);
+  font-size: 21px;
+  font-style: italic;
+}
+.clBgForms {
+  background-color: var(--colorBgForms);
+  opacity: 0.9;
+}
