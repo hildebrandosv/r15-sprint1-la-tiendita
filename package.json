@@ -1,0 +1,16 @@
+{
+   "pacckage-json-manual": "// Tú, yo y package.json: https://medium.com/noders/t%C3%BA-yo-y-package-json-9553929fb2e3",
+   "name": "heroes-commics",
+     "version": "1.0.0",
+     "description": "> ## Formador : John Florez | @JohnFlorez25\r > ## [WebPage] \r #### [Repositorio] \r ___\r ### --> ENUNCIADO:\r #### * Ejercicio con \"json-server\" y datos en \"json\" como bases de datos para uso de promesas en ambiente de pruebas.\r > [Link_Ejercicio] https://docs.google.com/document/d/1nF50bUhiTEO5Fa1Jou5RwRxqU-hJZpTK/edit?usp=sharing&ouid=106083708411687794311&rtpof=true&sd=true",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"HS --> Error: no test specified\" && exit 1",
+       "jserver-script-README": "Created by HS: Upload the JSON SERVER in the ports necesaries for local testing",
+       "jserver0": "json-server --watch data/_dbConfig.json --port 3000",
+       "jserver1": "json-server --watch data/db-tiendita.json --port 4000"
+     },
+     "author": "Hildebrando Sierra V.",
+     "license": "ISC"
+   }
+ 
