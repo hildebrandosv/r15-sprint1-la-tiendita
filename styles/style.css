@@ -21,14 +21,10 @@
 body{
   background-color: var(--colorBgNavBarr);
 }
-.clBg{
-  background-color: var(--colorBgNavBarr) !important;
+#idOffers {
 }
-#idMain {
-  margin-top: 5em;
-}
-.card-title {
-  background-color: #e0dada !important;
+.card {
+  /* min-width: 300px; */
 }
 @media only screen and (max-width: 600px) {
   body {
