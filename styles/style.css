@@ -13,6 +13,8 @@
    --colorBgSuccess: #BFFF5F;
    --colorTxtSuccess: green;
    --colorBgForms: #262645;
+   --colorBtn1: #0AC763;
+   --colorBgSecondary2: rgb(189, 189, 189);
    box-sizing: border-box;
    margin: 0;
    padding: 0;
@@ -22,10 +24,16 @@ body{
   background-color: var(--colorBgNavBarr);
 }
 #idOffers {
+
 }
-.card {
-  /* min-width: 300px; */
+.clBg-secondary2 {
+  background-color: var(--colorBgSecondary2);
 }
+.clCol-txt-discount {
+  color: #5b2ea3;
+}
+
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: rgb(196, 238, 196);
@@ -46,6 +54,9 @@ body{
   }
 }
 
+.clCol-btn1 {
+  background-color: var(--colorBtn1);
+}
 .clMainTitle {
   color: var(--colorMainTitle);
   font-size: 2rem;
