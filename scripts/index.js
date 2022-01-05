@@ -2,18 +2,21 @@
 //║             MAIN JAVASCRIPT SCRIPT             ║
 //╚════════════════════════════════════════════════╝
 // *** Import DATA from JS file ***
-// import { tbData01 } from "../data/data.js";
 //
 // *** Import FUNCTIONS from JS file ***
+import { fnGetTableOfDb } from './ctrlAllData.js';
 //
 // *** CONSTANT definition ***
+import { urlProducts } from '../data/data.js';
 //
 // *** VARIABLES definition ***
 //
 // *********************************************
 // ***           BEGIN MAIN MODULE           ***
 // *********************************************
-//
+const aProducts= await fnGetTableOfDb(urlProducts)
+
+console.log(aProducts)
 //
 // *********************************************
 // ***            END MAIN MODULE            ***

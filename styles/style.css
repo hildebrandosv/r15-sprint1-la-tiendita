@@ -5,7 +5,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Press+Start+2P&display=swap'); */
 /* Variables definition */
 * {
-   --colorBgNavBarr: #EEEEEE;
+   --colorBgNavBarr: #e9e3e3;
    --colorMainTitle: #313172;
    --colorMainFooter: green;
    --colorBgError: lightgray;
