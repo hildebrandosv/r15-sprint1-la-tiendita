@@ -24,8 +24,13 @@ window.addEventListener('DOMContentLoaded', e => {
 })
 
 // Listens the event click in te container of the offers
-idOffers.addEventListener("click", e => {
-   console.log (e)
+idOffers.addEventListener("submit", e => {
+   e.preventDefault();
+   // The TARGET of submit is a FORM, then the unique tag BOTTON is searched to know the ID to add to cart
+   const btnSubmit= e.target.getElementsByTagName('button')[0];
+   const id= btnSubmit.id; // Gets the ID to add to cart, this ID corresponding to ID of the button
+   console.log(`Elegí el ID "${id}" para agregar`)
+
 })
 
 function al(aa) { alert("Aquí voy... ", aa); }
@@ -68,8 +73,19 @@ async function fnLoadOffers() {
                               </div>
                               <h3 id="idOffers-name" class="text-muted my-2">${name}</h3>
                               <p id="idOffers-det" class="card-text"></p>
-                              <a id="${id}" href="#" class="btn w-100 fs-4 text-white clCol-btn1">Agregar</a>
-                           </div>
+
+                              <form>
+                                 <button id="${id}" type="submit" class="btn w-100 fs-4 text-white clCol-btn1">Agregar</button>
+                              </form>
+
+                              </div>
                         </div>`
+
+
+// <a id="${id}" href="#" class="btn w-100 fs-4 text-white clCol-btn1">Agregar</a>
+// <button id="${id}" type="submit" class="btn w-100 fs-4 text-white clCol-btn1">Agregar</button>
+
+
+
    })
 }
