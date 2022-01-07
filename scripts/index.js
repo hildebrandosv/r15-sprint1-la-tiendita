@@ -2,7 +2,10 @@
 //║             MAIN JAVASCRIPT SCRIPT             ║
 //╚════════════════════════════════════════════════╝
 // *** Import GLOBAL DATA VARIABLES from JS file ***
-import { urlProducts } from '../data/data.js';
+import {
+   urlProducts,
+   urlCities
+} from '../data/data.js';
 //
 // *** Import FUNCTIONS from JS file ***
 import { fnGetTableOfDb } from './ctrlAllData.js';
@@ -20,6 +23,7 @@ const idOffers = document.getElementById("idOffers"); // Container of products i
 // product than are not in offer products and neither are the most popular
 window.addEventListener('DOMContentLoaded', e => {
    fnLoadOffers() // Puts the offer products
+   fnLoadCities() // Puts the Cities to select the shipping address
    // TODO: // Puts the most popular products
 })
 
@@ -27,8 +31,8 @@ window.addEventListener('DOMContentLoaded', e => {
 idOffers.addEventListener("submit", e => {
    e.preventDefault();
    // The TARGET of submit is a FORM, then the unique tag BOTTON is searched to know the ID to add to cart
-   const btnSubmit= e.target.getElementsByTagName('button')[0];
-   const id= btnSubmit.id; // Gets the ID to add to cart, this ID corresponding to ID of the button
+   const btnSubmit = e.target.getElementsByTagName('button')[0];
+   const id = btnSubmit.id; // Gets the ID to add to cart, this ID corresponding to ID of the button
    console.log(`Elegí el ID "${id}" para agregar`)
 
 })
@@ -80,12 +84,11 @@ async function fnLoadOffers() {
 
                               </div>
                         </div>`
-
-
-// <a id="${id}" href="#" class="btn w-100 fs-4 text-white clCol-btn1">Agregar</a>
-// <button id="${id}" type="submit" class="btn w-100 fs-4 text-white clCol-btn1">Agregar</button>
-
-
-
    })
+}
+
+async function fnLoadCities() {
+   const aCities = await fnGetTableOfDb(urlCities);
+   console.log (aCities);
+
 }

@@ -1,0 +1,4476 @@
+{
+   "tbCities": [
+      {
+         "id": "1",
+         "city": "MEDELLIN (Antioquia)"
+      },
+      {
+         "id": "2",
+         "city": "ABEJORRAL (Antioquia)"
+      },
+      {
+         "id": "3",
+         "city": "ABRIAQUI (Antioquia)"
+      },
+      {
+         "id": "4",
+         "city": "ALEJANDRIA (Antioquia)"
+      },
+      {
+         "id": "5",
+         "city": "AMAGA (Antioquia)"
+      },
+      {
+         "id": "6",
+         "city": "AMALFI (Antioquia)"
+      },
+      {
+         "id": "7",
+         "city": "ANDES (Antioquia)"
+      },
+      {
+         "id": "8",
+         "city": "ANGELOPOLIS (Antioquia)"
+      },
+      {
+         "id": "9",
+         "city": "ANGOSTURA (Antioquia)"
+      },
+      {
+         "id": "10",
+         "city": "ANORI (Antioquia)"
+      },
+      {
+         "id": "11",
+         "city": "SANTAFE DE ANTIOQUIA (Antioquia)"
+      },
+      {
+         "id": "12",
+         "city": "ANZA (Antioquia)"
+      },
+      {
+         "id": "13",
+         "city": "APARTADO (Antioquia)"
+      },
+      {
+         "id": "14",
+         "city": "ARBOLETES (Antioquia)"
+      },
+      {
+         "id": "15",
+         "city": "ARGELIA (Antioquia)"
+      },
+      {
+         "id": "16",
+         "city": "ARMENIA (Antioquia)"
+      },
+      {
+         "id": "17",
+         "city": "BARBOSA (Antioquia)"
+      },
+      {
+         "id": "18",
+         "city": "BELMIRA (Antioquia)"
+      },
+      {
+         "id": "19",
+         "city": "BELLO (Antioquia)"
+      },
+      {
+         "id": "20",
+         "city": "BETANIA (Antioquia)"
+      },
+      {
+         "id": "21",
+         "city": "BETULIA (Antioquia)"
+      },
+      {
+         "id": "22",
+         "city": "CIUDAD BOLIVAR (Antioquia)"
+      },
+      {
+         "id": "23",
+         "city": "BRICEÑO (Antioquia)"
+      },
+      {
+         "id": "24",
+         "city": "BURITICA (Antioquia)"
+      },
+      {
+         "id": "25",
+         "city": "CACERES (Antioquia)"
+      },
+      {
+         "id": "26",
+         "city": "CAICEDO (Antioquia)"
+      },
+      {
+         "id": "27",
+         "city": "CALDAS (Antioquia)"
+      },
+      {
+         "id": "28",
+         "city": "CAMPAMENTO (Antioquia)"
+      },
+      {
+         "id": "29",
+         "city": "CAÑASGORDAS (Antioquia)"
+      },
+      {
+         "id": "30",
+         "city": "CARACOLI (Antioquia)"
+      },
+      {
+         "id": "31",
+         "city": "CARAMANTA (Antioquia)"
+      },
+      {
+         "id": "32",
+         "city": "CAREPA (Antioquia)"
+      },
+      {
+         "id": "33",
+         "city": "EL CARMEN DE VIBORAL (Antioquia)"
+      },
+      {
+         "id": "34",
+         "city": "CAROLINA (Antioquia)"
+      },
+      {
+         "id": "35",
+         "city": "CAUCASIA (Antioquia)"
+      },
+      {
+         "id": "36",
+         "city": "CHIGORODO (Antioquia)"
+      },
+      {
+         "id": "37",
+         "city": "CISNEROS (Antioquia)"
+      },
+      {
+         "id": "38",
+         "city": "COCORNA (Antioquia)"
+      },
+      {
+         "id": "39",
+         "city": "CONCEPCION (Antioquia)"
+      },
+      {
+         "id": "40",
+         "city": "CONCORDIA (Antioquia)"
+      },
+      {
+         "id": "41",
+         "city": "COPACABANA (Antioquia)"
+      },
+      {
+         "id": "42",
+         "city": "DABEIBA (Antioquia)"
+      },
+      {
+         "id": "43",
+         "city": "DON MATIAS (Antioquia)"
+      },
+      {
+         "id": "44",
+         "city": "EBEJICO (Antioquia)"
+      },
+      {
+         "id": "45",
+         "city": "EL BAGRE (Antioquia)"
+      },
+      {
+         "id": "46",
+         "city": "ENTRERRIOS (Antioquia)"
+      },
+      {
+         "id": "47",
+         "city": "ENVIGADO (Antioquia)"
+      },
+      {
+         "id": "48",
+         "city": "FREDONIA (Antioquia)"
+      },
+      {
+         "id": "49",
+         "city": "FRONTINO (Antioquia)"
+      },
+      {
+         "id": "50",
+         "city": "GIRALDO (Antioquia)"
+      },
+      {
+         "id": "51",
+         "city": "GIRARDOTA (Antioquia)"
+      },
+      {
+         "id": "52",
+         "city": "GOMEZ PLATA (Antioquia)"
+      },
+      {
+         "id": "53",
+         "city": "GRANADA (Antioquia)"
+      },
+      {
+         "id": "54",
+         "city": "GUADALUPE (Antioquia)"
+      },
+      {
+         "id": "55",
+         "city": "GUARNE (Antioquia)"
+      },
+      {
+         "id": "56",
+         "city": "GUATAPE (Antioquia)"
+      },
+      {
+         "id": "57",
+         "city": "HELICONIA (Antioquia)"
+      },
+      {
+         "id": "58",
+         "city": "HISPANIA (Antioquia)"
+      },
+      {
+         "id": "59",
+         "city": "ITAGÜI (Antioquia)"
+      },
+      {
+         "id": "60",
+         "city": "ITUANGO (Antioquia)"
+      },
+      {
+         "id": "61",
+         "city": "JARDIN (Antioquia)"
+      },
+      {
+         "id": "62",
+         "city": "JERICO (Antioquia)"
+      },
+      {
+         "id": "63",
+         "city": "LA CEJA (Antioquia)"
+      },
+      {
+         "id": "64",
+         "city": "LA ESTRELLA (Antioquia)"
+      },
+      {
+         "id": "65",
+         "city": "LA PINTADA (Antioquia)"
+      },
+      {
+         "id": "66",
+         "city": "LA UNION (Antioquia)"
+      },
+      {
+         "id": "67",
+         "city": "LIBORINA (Antioquia)"
+      },
+      {
+         "id": "68",
+         "city": "MACEO (Antioquia)"
+      },
+      {
+         "id": "69",
+         "city": "MARINILLA (Antioquia)"
+      },
+      {
+         "id": "70",
+         "city": "MONTEBELLO (Antioquia)"
+      },
+      {
+         "id": "71",
+         "city": "MURINDO (Antioquia)"
+      },
+      {
+         "id": "72",
+         "city": "MUTATA (Antioquia)"
+      },
+      {
+         "id": "73",
+         "city": "NARIÑO (Antioquia)"
+      },
+      {
+         "id": "74",
+         "city": "NECOCLI (Antioquia)"
+      },
+      {
+         "id": "75",
+         "city": "NECHI (Antioquia)"
+      },
+      {
+         "id": "76",
+         "city": "OLAYA (Antioquia)"
+      },
+      {
+         "id": "77",
+         "city": "PEÑOL (Antioquia)"
+      },
+      {
+         "id": "78",
+         "city": "PEQUE (Antioquia)"
+      },
+      {
+         "id": "79",
+         "city": "PUEBLORRICO (Antioquia)"
+      },
+      {
+         "id": "80",
+         "city": "PUERTO BERRIO (Antioquia)"
+      },
+      {
+         "id": "81",
+         "city": "PUERTO NARE (Antioquia)"
+      },
+      {
+         "id": "82",
+         "city": "PUERTO TRIUNFO (Antioquia)"
+      },
+      {
+         "id": "83",
+         "city": "REMEDIOS (Antioquia)"
+      },
+      {
+         "id": "84",
+         "city": "RETIRO (Antioquia)"
+      },
+      {
+         "id": "85",
+         "city": "RIONEGRO (Antioquia)"
+      },
+      {
+         "id": "86",
+         "city": "SABANALARGA (Antioquia)"
+      },
+      {
+         "id": "87",
+         "city": "SABANETA (Antioquia)"
+      },
+      {
+         "id": "88",
+         "city": "SALGAR (Antioquia)"
+      },
+      {
+         "id": "89",
+         "city": "SAN ANDRES (Antioquia)"
+      },
+      {
+         "id": "90",
+         "city": "SAN CARLOS (Antioquia)"
+      },
+      {
+         "id": "91",
+         "city": "SAN FRANCISCO (Antioquia)"
+      },
+      {
+         "id": "92",
+         "city": "SAN JERONIMO (Antioquia)"
+      },
+      {
+         "id": "93",
+         "city": "SAN JOSE DE LA MONTAÑA (Antioquia)"
+      },
+      {
+         "id": "94",
+         "city": "SAN JUAN DE URABA (Antioquia)"
+      },
+      {
+         "id": "95",
+         "city": "SAN LUIS (Antioquia)"
+      },
+      {
+         "id": "96",
+         "city": "SAN PEDRO (Antioquia)"
+      },
+      {
+         "id": "97",
+         "city": "SAN PEDRO DE URABA (Antioquia)"
+      },
+      {
+         "id": "98",
+         "city": "SAN RAFAEL (Antioquia)"
+      },
+      {
+         "id": "99",
+         "city": "SAN ROQUE (Antioquia)"
+      },
+      {
+         "id": "100",
+         "city": "SAN VICENTE (Antioquia)"
+      },
+      {
+         "id": "101",
+         "city": "SANTA BARBARA (Antioquia)"
+      },
+      {
+         "id": "102",
+         "city": "SANTA ROSA DE OSOS (Antioquia)"
+      },
+      {
+         "id": "103",
+         "city": "SANTO DOMINGO (Antioquia)"
+      },
+      {
+         "id": "104",
+         "city": "EL SANTUARIO (Antioquia)"
+      },
+      {
+         "id": "105",
+         "city": "SEGOVIA (Antioquia)"
+      },
+      {
+         "id": "106",
+         "city": "SONSON (Antioquia)"
+      },
+      {
+         "id": "107",
+         "city": "SOPETRAN (Antioquia)"
+      },
+      {
+         "id": "108",
+         "city": "TAMESIS (Antioquia)"
+      },
+      {
+         "id": "109",
+         "city": "TARAZA (Antioquia)"
+      },
+      {
+         "id": "110",
+         "city": "TARSO (Antioquia)"
+      },
+      {
+         "id": "111",
+         "city": "TITIRIBI (Antioquia)"
+      },
+      {
+         "id": "112",
+         "city": "TOLEDO (Antioquia)"
+      },
+      {
+         "id": "113",
+         "city": "TURBO (Antioquia)"
+      },
+      {
+         "id": "114",
+         "city": "URAMITA (Antioquia)"
+      },
+      {
+         "id": "115",
+         "city": "URRAO (Antioquia)"
+      },
+      {
+         "id": "116",
+         "city": "VALDIVIA (Antioquia)"
+      },
+      {
+         "id": "117",
+         "city": "VALPARAISO (Antioquia)"
+      },
+      {
+         "id": "118",
+         "city": "VEGACHI (Antioquia)"
+      },
+      {
+         "id": "119",
+         "city": "VENECIA (Antioquia)"
+      },
+      {
+         "id": "120",
+         "city": "VIGIA DEL FUERTE (Antioquia)"
+      },
+      {
+         "id": "121",
+         "city": "YALI (Antioquia)"
+      },
+      {
+         "id": "122",
+         "city": "YARUMAL (Antioquia)"
+      },
+      {
+         "id": "123",
+         "city": "YOLOMBO (Antioquia)"
+      },
+      {
+         "id": "124",
+         "city": "YONDO (Antioquia)"
+      },
+      {
+         "id": "125",
+         "city": "ZARAGOZA (Antioquia)"
+      },
+      {
+         "id": "126",
+         "city": "BARRANQUILLA (Atlántico)"
+      },
+      {
+         "id": "127",
+         "city": "BARANOA (Atlántico)"
+      },
+      {
+         "id": "128",
+         "city": "CAMPO DE LA CRUZ (Atlántico)"
+      },
+      {
+         "id": "129",
+         "city": "CANDELARIA (Atlántico)"
+      },
+      {
+         "id": "130",
+         "city": "GALAPA (Atlántico)"
+      },
+      {
+         "id": "131",
+         "city": "JUAN DE ACOSTA (Atlántico)"
+      },
+      {
+         "id": "132",
+         "city": "LURUACO (Atlántico)"
+      },
+      {
+         "id": "133",
+         "city": "MALAMBO (Atlántico)"
+      },
+      {
+         "id": "134",
+         "city": "MANATI (Atlántico)"
+      },
+      {
+         "id": "135",
+         "city": "PALMAR DE VARELA (Atlántico)"
+      },
+      {
+         "id": "136",
+         "city": "PIOJO (Atlántico)"
+      },
+      {
+         "id": "137",
+         "city": "POLONUEVO (Atlántico)"
+      },
+      {
+         "id": "138",
+         "city": "PONEDERA (Atlántico)"
+      },
+      {
+         "id": "139",
+         "city": "PUERTO COLOMBIA (Atlántico)"
+      },
+      {
+         "id": "140",
+         "city": "REPELON (Atlántico)"
+      },
+      {
+         "id": "141",
+         "city": "SABANAGRANDE (Atlántico)"
+      },
+      {
+         "id": "142",
+         "city": "SABANALARGA (Atlántico)"
+      },
+      {
+         "id": "143",
+         "city": "SANTA LUCIA (Atlántico)"
+      },
+      {
+         "id": "144",
+         "city": "SANTO TOMAS (Atlántico)"
+      },
+      {
+         "id": "145",
+         "city": "SOLEDAD (Atlántico)"
+      },
+      {
+         "id": "146",
+         "city": "SUAN (Atlántico)"
+      },
+      {
+         "id": "147",
+         "city": "TUBARA (Atlántico)"
+      },
+      {
+         "id": "148",
+         "city": "USIACURI (Atlántico)"
+      },
+      {
+         "id": "149",
+         "city": "BOGOTA (D.C.)"
+      },
+      {
+         "id": "150",
+         "city": "CARTAGENA (Bolívar)"
+      },
+      {
+         "id": "151",
+         "city": "ACHI (Bolívar)"
+      },
+      {
+         "id": "152",
+         "city": "ALTOS DEL ROSARIO (Bolívar)"
+      },
+      {
+         "id": "153",
+         "city": "ARENAL (Bolívar)"
+      },
+      {
+         "id": "154",
+         "city": "ARJONA (Bolívar)"
+      },
+      {
+         "id": "155",
+         "city": "ARROYOHONDO (Bolívar)"
+      },
+      {
+         "id": "156",
+         "city": "BARRANCO DE LOBA (Bolívar)"
+      },
+      {
+         "id": "157",
+         "city": "CALAMAR (Bolívar)"
+      },
+      {
+         "id": "158",
+         "city": "CANTAGALLO (Bolívar)"
+      },
+      {
+         "id": "159",
+         "city": "CICUCO (Bolívar)"
+      },
+      {
+         "id": "160",
+         "city": "CORDOBA (Bolívar)"
+      },
+      {
+         "id": "161",
+         "city": "CLEMENCIA (Bolívar)"
+      },
+      {
+         "id": "162",
+         "city": "EL CARMEN DE BOLIVAR (Bolívar)"
+      },
+      {
+         "id": "163",
+         "city": "EL GUAMO (Bolívar)"
+      },
+      {
+         "id": "164",
+         "city": "EL PEÑON (Bolívar)"
+      },
+      {
+         "id": "165",
+         "city": "HATILLO DE LOBA (Bolívar)"
+      },
+      {
+         "id": "166",
+         "city": "MAGANGUE (Bolívar)"
+      },
+      {
+         "id": "167",
+         "city": "MAHATES (Bolívar)"
+      },
+      {
+         "id": "168",
+         "city": "MARGARITA (Bolívar)"
+      },
+      {
+         "id": "169",
+         "city": "MARIA LA BAJA (Bolívar)"
+      },
+      {
+         "id": "170",
+         "city": "MONTECRISTO (Bolívar)"
+      },
+      {
+         "id": "171",
+         "city": "MOMPOS (Bolívar)"
+      },
+      {
+         "id": "172",
+         "city": "MORALES (Bolívar)"
+      },
+      {
+         "id": "173",
+         "city": "PINILLOS (Bolívar)"
+      },
+      {
+         "id": "174",
+         "city": "REGIDOR (Bolívar)"
+      },
+      {
+         "id": "175",
+         "city": "RIO VIEJO (Bolívar)"
+      },
+      {
+         "id": "176",
+         "city": "SAN CRISTOBAL (Bolívar)"
+      },
+      {
+         "id": "177",
+         "city": "SAN ESTANISLAO (Bolívar)"
+      },
+      {
+         "id": "178",
+         "city": "SAN FERNANDO (Bolívar)"
+      },
+      {
+         "id": "179",
+         "city": "SAN JACINTO (Bolívar)"
+      },
+      {
+         "id": "180",
+         "city": "SAN JACINTO DEL CAUCA (Bolívar)"
+      },
+      {
+         "id": "181",
+         "city": "SAN JUAN NEPOMUCENO (Bolívar)"
+      },
+      {
+         "id": "182",
+         "city": "SAN MARTIN DE LOBA (Bolívar)"
+      },
+      {
+         "id": "183",
+         "city": "SAN PABLO (Bolívar)"
+      },
+      {
+         "id": "184",
+         "city": "SANTA CATALINA (Bolívar)"
+      },
+      {
+         "id": "185",
+         "city": "SANTA ROSA (Bolívar)"
+      },
+      {
+         "id": "186",
+         "city": "SANTA ROSA DEL SUR (Bolívar)"
+      },
+      {
+         "id": "187",
+         "city": "SIMITI (Bolívar)"
+      },
+      {
+         "id": "188",
+         "city": "SOPLAVIENTO (Bolívar)"
+      },
+      {
+         "id": "189",
+         "city": "TALAIGUA NUEVO (Bolívar)"
+      },
+      {
+         "id": "190",
+         "city": "TIQUISIO (Bolívar)"
+      },
+      {
+         "id": "191",
+         "city": "TURBACO (Bolívar)"
+      },
+      {
+         "id": "192",
+         "city": "TURBANA (Bolívar)"
+      },
+      {
+         "id": "193",
+         "city": "VILLANUEVA (Bolívar)"
+      },
+      {
+         "id": "194",
+         "city": "ZAMBRANO (Bolívar)"
+      },
+      {
+         "id": "195",
+         "city": "TUNJA (Boyacá)"
+      },
+      {
+         "id": "196",
+         "city": "ALMEIDA (Boyacá)"
+      },
+      {
+         "id": "197",
+         "city": "AQUITANIA (Boyacá)"
+      },
+      {
+         "id": "198",
+         "city": "ARCABUCO (Boyacá)"
+      },
+      {
+         "id": "199",
+         "city": "BELEN (Boyacá)"
+      },
+      {
+         "id": "200",
+         "city": "BERBEO (Boyacá)"
+      },
+      {
+         "id": "201",
+         "city": "BETEITIVA (Boyacá)"
+      },
+      {
+         "id": "202",
+         "city": "BOAVITA (Boyacá)"
+      },
+      {
+         "id": "203",
+         "city": "BOYACA (Boyacá)"
+      },
+      {
+         "id": "204",
+         "city": "BRICEÑO (Boyacá)"
+      },
+      {
+         "id": "205",
+         "city": "BUENAVISTA (Boyacá)"
+      },
+      {
+         "id": "206",
+         "city": "BUSBANZA (Boyacá)"
+      },
+      {
+         "id": "207",
+         "city": "CALDAS (Boyacá)"
+      },
+      {
+         "id": "208",
+         "city": "CAMPOHERMOSO (Boyacá)"
+      },
+      {
+         "id": "209",
+         "city": "CERINZA (Boyacá)"
+      },
+      {
+         "id": "210",
+         "city": "CHINAVITA (Boyacá)"
+      },
+      {
+         "id": "211",
+         "city": "CHIQUINQUIRA (Boyacá)"
+      },
+      {
+         "id": "212",
+         "city": "CHISCAS (Boyacá)"
+      },
+      {
+         "id": "213",
+         "city": "CHITA (Boyacá)"
+      },
+      {
+         "id": "214",
+         "city": "CHITARAQUE (Boyacá)"
+      },
+      {
+         "id": "215",
+         "city": "CHIVATA (Boyacá)"
+      },
+      {
+         "id": "216",
+         "city": "CIENEGA (Boyacá)"
+      },
+      {
+         "id": "217",
+         "city": "COMBITA (Boyacá)"
+      },
+      {
+         "id": "218",
+         "city": "COPER (Boyacá)"
+      },
+      {
+         "id": "219",
+         "city": "CORRALES (Boyacá)"
+      },
+      {
+         "id": "220",
+         "city": "COVARACHIA (Boyacá)"
+      },
+      {
+         "id": "221",
+         "city": "CUBARA (Boyacá)"
+      },
+      {
+         "id": "222",
+         "city": "CUCAITA (Boyacá)"
+      },
+      {
+         "id": "223",
+         "city": "CUITIVA (Boyacá)"
+      },
+      {
+         "id": "224",
+         "city": "CHIQUIZA (Boyacá)"
+      },
+      {
+         "id": "225",
+         "city": "CHIVOR (Boyacá)"
+      },
+      {
+         "id": "226",
+         "city": "DUITAMA (Boyacá)"
+      },
+      {
+         "id": "227",
+         "city": "EL COCUY (Boyacá)"
+      },
+      {
+         "id": "228",
+         "city": "EL ESPINO (Boyacá)"
+      },
+      {
+         "id": "229",
+         "city": "FIRAVITOBA (Boyacá)"
+      },
+      {
+         "id": "230",
+         "city": "FLORESTA (Boyacá)"
+      },
+      {
+         "id": "231",
+         "city": "GACHANTIVA (Boyacá)"
+      },
+      {
+         "id": "232",
+         "city": "GAMEZA (Boyacá)"
+      },
+      {
+         "id": "233",
+         "city": "GARAGOA (Boyacá)"
+      },
+      {
+         "id": "234",
+         "city": "GUACAMAYAS (Boyacá)"
+      },
+      {
+         "id": "235",
+         "city": "GUATEQUE (Boyacá)"
+      },
+      {
+         "id": "236",
+         "city": "GUAYATA (Boyacá)"
+      },
+      {
+         "id": "237",
+         "city": "GÜICAN (Boyacá)"
+      },
+      {
+         "id": "238",
+         "city": "IZA (Boyacá)"
+      },
+      {
+         "id": "239",
+         "city": "JENESANO (Boyacá)"
+      },
+      {
+         "id": "240",
+         "city": "JERICO (Boyacá)"
+      },
+      {
+         "id": "241",
+         "city": "LABRANZAGRANDE (Boyacá)"
+      },
+      {
+         "id": "242",
+         "city": "LA CAPILLA (Boyacá)"
+      },
+      {
+         "id": "243",
+         "city": "LA VICTORIA (Boyacá)"
+      },
+      {
+         "id": "244",
+         "city": "LA UVITA (Boyacá)"
+      },
+      {
+         "id": "245",
+         "city": "VILLA DE LEYVA (Boyacá)"
+      },
+      {
+         "id": "246",
+         "city": "MACANAL (Boyacá)"
+      },
+      {
+         "id": "247",
+         "city": "MARIPI (Boyacá)"
+      },
+      {
+         "id": "248",
+         "city": "MIRAFLORES (Boyacá)"
+      },
+      {
+         "id": "249",
+         "city": "MONGUA (Boyacá)"
+      },
+      {
+         "id": "250",
+         "city": "MONGUI (Boyacá)"
+      },
+      {
+         "id": "251",
+         "city": "MONIQUIRA (Boyacá)"
+      },
+      {
+         "id": "252",
+         "city": "MOTAVITA (Boyacá)"
+      },
+      {
+         "id": "253",
+         "city": "MUZO (Boyacá)"
+      },
+      {
+         "id": "254",
+         "city": "NOBSA (Boyacá)"
+      },
+      {
+         "id": "255",
+         "city": "NUEVO COLON (Boyacá)"
+      },
+      {
+         "id": "256",
+         "city": "OICATA (Boyacá)"
+      },
+      {
+         "id": "257",
+         "city": "OTANCHE (Boyacá)"
+      },
+      {
+         "id": "258",
+         "city": "PACHAVITA (Boyacá)"
+      },
+      {
+         "id": "259",
+         "city": "PAEZ (Boyacá)"
+      },
+      {
+         "id": "260",
+         "city": "PAIPA (Boyacá)"
+      },
+      {
+         "id": "261",
+         "city": "PAJARITO (Boyacá)"
+      },
+      {
+         "id": "262",
+         "city": "PANQUEBA (Boyacá)"
+      },
+      {
+         "id": "263",
+         "city": "PAUNA (Boyacá)"
+      },
+      {
+         "id": "264",
+         "city": "PAYA (Boyacá)"
+      },
+      {
+         "id": "265",
+         "city": "PAZ DE RIO (Boyacá)"
+      },
+      {
+         "id": "266",
+         "city": "PESCA (Boyacá)"
+      },
+      {
+         "id": "267",
+         "city": "PISBA (Boyacá)"
+      },
+      {
+         "id": "268",
+         "city": "PUERTO BOYACA (Boyacá)"
+      },
+      {
+         "id": "269",
+         "city": "QUIPAMA (Boyacá)"
+      },
+      {
+         "id": "270",
+         "city": "RAMIRIQUI (Boyacá)"
+      },
+      {
+         "id": "271",
+         "city": "RAQUIRA (Boyacá)"
+      },
+      {
+         "id": "272",
+         "city": "RONDON (Boyacá)"
+      },
+      {
+         "id": "273",
+         "city": "SABOYA (Boyacá)"
+      },
+      {
+         "id": "274",
+         "city": "SACHICA (Boyacá)"
+      },
+      {
+         "id": "275",
+         "city": "SAMACA (Boyacá)"
+      },
+      {
+         "id": "276",
+         "city": "SAN EDUARDO (Boyacá)"
+      },
+      {
+         "id": "277",
+         "city": "SAN JOSE DE PARE (Boyacá)"
+      },
+      {
+         "id": "278",
+         "city": "SAN LUIS DE GACENO (Boyacá)"
+      },
+      {
+         "id": "279",
+         "city": "SAN MATEO (Boyacá)"
+      },
+      {
+         "id": "280",
+         "city": "SAN MIGUEL DE SEMA (Boyacá)"
+      },
+      {
+         "id": "281",
+         "city": "SAN PABLO DE BORBUR (Boyacá)"
+      },
+      {
+         "id": "282",
+         "city": "SANTANA (Boyacá)"
+      },
+      {
+         "id": "283",
+         "city": "SANTA MARIA (Boyacá)"
+      },
+      {
+         "id": "284",
+         "city": "SANTA ROSA DE VITERBO (Boyacá)"
+      },
+      {
+         "id": "285",
+         "city": "SANTA SOFIA (Boyacá)"
+      },
+      {
+         "id": "286",
+         "city": "SATIVANORTE (Boyacá)"
+      },
+      {
+         "id": "287",
+         "city": "SATIVASUR (Boyacá)"
+      },
+      {
+         "id": "288",
+         "city": "SIACHOQUE (Boyacá)"
+      },
+      {
+         "id": "289",
+         "city": "SOATA (Boyacá)"
+      },
+      {
+         "id": "290",
+         "city": "SOCOTA (Boyacá)"
+      },
+      {
+         "id": "291",
+         "city": "SOCHA (Boyacá)"
+      },
+      {
+         "id": "292",
+         "city": "SOGAMOSO (Boyacá)"
+      },
+      {
+         "id": "293",
+         "city": "SOMONDOCO (Boyacá)"
+      },
+      {
+         "id": "294",
+         "city": "SORA (Boyacá)"
+      },
+      {
+         "id": "295",
+         "city": "SOTAQUIRA (Boyacá)"
+      },
+      {
+         "id": "296",
+         "city": "SORACA (Boyacá)"
+      },
+      {
+         "id": "297",
+         "city": "SUSACON (Boyacá)"
+      },
+      {
+         "id": "298",
+         "city": "SUTAMARCHAN (Boyacá)"
+      },
+      {
+         "id": "299",
+         "city": "SUTATENZA (Boyacá)"
+      },
+      {
+         "id": "300",
+         "city": "TASCO (Boyacá)"
+      },
+      {
+         "id": "301",
+         "city": "TENZA (Boyacá)"
+      },
+      {
+         "id": "302",
+         "city": "TIBANA (Boyacá)"
+      },
+      {
+         "id": "303",
+         "city": "TIBASOSA (Boyacá)"
+      },
+      {
+         "id": "304",
+         "city": "TINJACA (Boyacá)"
+      },
+      {
+         "id": "305",
+         "city": "TIPACOQUE (Boyacá)"
+      },
+      {
+         "id": "306",
+         "city": "TOCA (Boyacá)"
+      },
+      {
+         "id": "307",
+         "city": "TOGÜI (Boyacá)"
+      },
+      {
+         "id": "308",
+         "city": "TOPAGA (Boyacá)"
+      },
+      {
+         "id": "309",
+         "city": "TOTA (Boyacá)"
+      },
+      {
+         "id": "310",
+         "city": "TUNUNGUA (Boyacá)"
+      },
+      {
+         "id": "311",
+         "city": "TURMEQUE (Boyacá)"
+      },
+      {
+         "id": "312",
+         "city": "TUTA (Boyacá)"
+      },
+      {
+         "id": "313",
+         "city": "TUTAZA (Boyacá)"
+      },
+      {
+         "id": "314",
+         "city": "UMBITA (Boyacá)"
+      },
+      {
+         "id": "315",
+         "city": "VENTAQUEMADA (Boyacá)"
+      },
+      {
+         "id": "316",
+         "city": "VIRACACHA (Boyacá)"
+      },
+      {
+         "id": "317",
+         "city": "ZETAQUIRA (Boyacá)"
+      },
+      {
+         "id": "318",
+         "city": "MANIZALES (Caldas)"
+      },
+      {
+         "id": "319",
+         "city": "AGUADAS (Caldas)"
+      },
+      {
+         "id": "320",
+         "city": "ANSERMA (Caldas)"
+      },
+      {
+         "id": "321",
+         "city": "ARANZAZU (Caldas)"
+      },
+      {
+         "id": "322",
+         "city": "BELALCAZAR (Caldas)"
+      },
+      {
+         "id": "323",
+         "city": "CHINCHINA (Caldas)"
+      },
+      {
+         "id": "324",
+         "city": "FILADELFIA (Caldas)"
+      },
+      {
+         "id": "325",
+         "city": "LA DORADA (Caldas)"
+      },
+      {
+         "id": "326",
+         "city": "LA MERCED (Caldas)"
+      },
+      {
+         "id": "327",
+         "city": "MANZANARES (Caldas)"
+      },
+      {
+         "id": "328",
+         "city": "MARMATO (Caldas)"
+      },
+      {
+         "id": "329",
+         "city": "MARQUETALIA (Caldas)"
+      },
+      {
+         "id": "330",
+         "city": "MARULANDA (Caldas)"
+      },
+      {
+         "id": "331",
+         "city": "NEIRA (Caldas)"
+      },
+      {
+         "id": "332",
+         "city": "NORCASIA (Caldas)"
+      },
+      {
+         "id": "333",
+         "city": "PACORA (Caldas)"
+      },
+      {
+         "id": "334",
+         "city": "PALESTINA (Caldas)"
+      },
+      {
+         "id": "335",
+         "city": "PENSILVANIA (Caldas)"
+      },
+      {
+         "id": "336",
+         "city": "RIOSUCIO (Caldas)"
+      },
+      {
+         "id": "337",
+         "city": "RISARALDA (Caldas)"
+      },
+      {
+         "id": "338",
+         "city": "SALAMINA (Caldas)"
+      },
+      {
+         "id": "339",
+         "city": "SAMANA (Caldas)"
+      },
+      {
+         "id": "340",
+         "city": "SAN JOSE (Caldas)"
+      },
+      {
+         "id": "341",
+         "city": "SUPIA (Caldas)"
+      },
+      {
+         "id": "342",
+         "city": "VICTORIA (Caldas)"
+      },
+      {
+         "id": "343",
+         "city": "VILLAMARIA (Caldas)"
+      },
+      {
+         "id": "344",
+         "city": "VITERBO (Caldas)"
+      },
+      {
+         "id": "345",
+         "city": "FLORENCIA (Caquetá)"
+      },
+      {
+         "id": "346",
+         "city": "ALBANIA (Caquetá)"
+      },
+      {
+         "id": "347",
+         "city": "BELEN DE LOS ANDAQUIES (Caquetá)"
+      },
+      {
+         "id": "348",
+         "city": "CARTAGENA DEL CHAIRA (Caquetá)"
+      },
+      {
+         "id": "349",
+         "city": "CURILLO (Caquetá)"
+      },
+      {
+         "id": "350",
+         "city": "EL DONCELLO (Caquetá)"
+      },
+      {
+         "id": "351",
+         "city": "EL PAUJIL (Caquetá)"
+      },
+      {
+         "id": "352",
+         "city": "LA MONTAÑITA (Caquetá)"
+      },
+      {
+         "id": "353",
+         "city": "MILAN (Caquetá)"
+      },
+      {
+         "id": "354",
+         "city": "MORELIA (Caquetá)"
+      },
+      {
+         "id": "355",
+         "city": "PUERTO RICO (Caquetá)"
+      },
+      {
+         "id": "356",
+         "city": "SAN JOSE DE LA FRAGUA (Caquetá)"
+      },
+      {
+         "id": "357",
+         "city": "SAN VICENTE DEL CAGUAN (Caquetá)"
+      },
+      {
+         "id": "358",
+         "city": "SOLANO (Caquetá)"
+      },
+      {
+         "id": "359",
+         "city": "SOLITA (Caquetá)"
+      },
+      {
+         "id": "360",
+         "city": "VALPARAISO (Caquetá)"
+      },
+      {
+         "id": "361",
+         "city": "POPAYAN (Cauca)"
+      },
+      {
+         "id": "362",
+         "city": "ALMAGUER (Cauca)"
+      },
+      {
+         "id": "363",
+         "city": "ARGELIA (Cauca)"
+      },
+      {
+         "id": "364",
+         "city": "BALBOA (Cauca)"
+      },
+      {
+         "id": "365",
+         "city": "BOLIVAR (Cauca)"
+      },
+      {
+         "id": "366",
+         "city": "BUENOS AIRES (Cauca)"
+      },
+      {
+         "id": "367",
+         "city": "CAJIBIO (Cauca)"
+      },
+      {
+         "id": "368",
+         "city": "CALDONO (Cauca)"
+      },
+      {
+         "id": "369",
+         "city": "CALOTO (Cauca)"
+      },
+      {
+         "id": "370",
+         "city": "CORINTO (Cauca)"
+      },
+      {
+         "id": "371",
+         "city": "EL TAMBO (Cauca)"
+      },
+      {
+         "id": "372",
+         "city": "FLORENCIA (Cauca)"
+      },
+      {
+         "id": "373",
+         "city": "GUAPI (Cauca)"
+      },
+      {
+         "id": "374",
+         "city": "INZA (Cauca)"
+      },
+      {
+         "id": "375",
+         "city": "JAMBALO (Cauca)"
+      },
+      {
+         "id": "376",
+         "city": "LA SIERRA (Cauca)"
+      },
+      {
+         "id": "377",
+         "city": "LA VEGA (Cauca)"
+      },
+      {
+         "id": "378",
+         "city": "LOPEZ (Cauca)"
+      },
+      {
+         "id": "379",
+         "city": "MERCADERES (Cauca)"
+      },
+      {
+         "id": "380",
+         "city": "MIRANDA (Cauca)"
+      },
+      {
+         "id": "381",
+         "city": "MORALES (Cauca)"
+      },
+      {
+         "id": "382",
+         "city": "PADILLA (Cauca)"
+      },
+      {
+         "id": "383",
+         "city": "PAEZ (Cauca)"
+      },
+      {
+         "id": "384",
+         "city": "PATIA (Cauca)"
+      },
+      {
+         "id": "385",
+         "city": "PIAMONTE (Cauca)"
+      },
+      {
+         "id": "386",
+         "city": "PIENDAMO (Cauca)"
+      },
+      {
+         "id": "387",
+         "city": "PUERTO TEJADA (Cauca)"
+      },
+      {
+         "id": "388",
+         "city": "PURACE (Cauca)"
+      },
+      {
+         "id": "389",
+         "city": "ROSAS (Cauca)"
+      },
+      {
+         "id": "390",
+         "city": "SAN SEBASTIAN (Cauca)"
+      },
+      {
+         "id": "391",
+         "city": "SANTANDER DE QUILICHAO (Cauca)"
+      },
+      {
+         "id": "392",
+         "city": "SANTA ROSA (Cauca)"
+      },
+      {
+         "id": "393",
+         "city": "SILVIA (Cauca)"
+      },
+      {
+         "id": "394",
+         "city": "SOTARA (Cauca)"
+      },
+      {
+         "id": "395",
+         "city": "SUAREZ (Cauca)"
+      },
+      {
+         "id": "396",
+         "city": "SUCRE (Cauca)"
+      },
+      {
+         "id": "397",
+         "city": "TIMBIO (Cauca)"
+      },
+      {
+         "id": "398",
+         "city": "TIMBIQUI (Cauca)"
+      },
+      {
+         "id": "399",
+         "city": "TORIBIO (Cauca)"
+      },
+      {
+         "id": "400",
+         "city": "TOTORO (Cauca)"
+      },
+      {
+         "id": "401",
+         "city": "VILLA RICA (Cauca)"
+      },
+      {
+         "id": "402",
+         "city": "VALLEDUPAR (Cesar)"
+      },
+      {
+         "id": "403",
+         "city": "AGUACHICA (Cesar)"
+      },
+      {
+         "id": "404",
+         "city": "AGUSTIN CODAZZI (Cesar)"
+      },
+      {
+         "id": "405",
+         "city": "ASTREA (Cesar)"
+      },
+      {
+         "id": "406",
+         "city": "BECERRIL (Cesar)"
+      },
+      {
+         "id": "407",
+         "city": "BOSCONIA (Cesar)"
+      },
+      {
+         "id": "408",
+         "city": "CHIMICHAGUA (Cesar)"
+      },
+      {
+         "id": "409",
+         "city": "CHIRIGUANA (Cesar)"
+      },
+      {
+         "id": "410",
+         "city": "CURUMANI (Cesar)"
+      },
+      {
+         "id": "411",
+         "city": "EL COPEY (Cesar)"
+      },
+      {
+         "id": "412",
+         "city": "EL PASO (Cesar)"
+      },
+      {
+         "id": "413",
+         "city": "GAMARRA (Cesar)"
+      },
+      {
+         "id": "414",
+         "city": "GONZALEZ (Cesar)"
+      },
+      {
+         "id": "415",
+         "city": "LA GLORIA (Cesar)"
+      },
+      {
+         "id": "416",
+         "city": "LA JAGUA DE IBIRICO (Cesar)"
+      },
+      {
+         "id": "417",
+         "city": "MANAURE (Cesar)"
+      },
+      {
+         "id": "418",
+         "city": "PAILITAS (Cesar)"
+      },
+      {
+         "id": "419",
+         "city": "PELAYA (Cesar)"
+      },
+      {
+         "id": "420",
+         "city": "PUEBLO BELLO (Cesar)"
+      },
+      {
+         "id": "421",
+         "city": "RIO DE ORO (Cesar)"
+      },
+      {
+         "id": "422",
+         "city": "LA PAZ (Cesar)"
+      },
+      {
+         "id": "423",
+         "city": "SAN ALBERTO (Cesar)"
+      },
+      {
+         "id": "424",
+         "city": "SAN DIEGO (Cesar)"
+      },
+      {
+         "id": "425",
+         "city": "SAN MARTIN (Cesar)"
+      },
+      {
+         "id": "426",
+         "city": "TAMALAMEQUE (Cesar)"
+      },
+      {
+         "id": "427",
+         "city": "MONTERIA (Córdoba)"
+      },
+      {
+         "id": "428",
+         "city": "AYAPEL (Córdoba)"
+      },
+      {
+         "id": "429",
+         "city": "BUENAVISTA (Córdoba)"
+      },
+      {
+         "id": "430",
+         "city": "CANALETE (Córdoba)"
+      },
+      {
+         "id": "431",
+         "city": "CERETE (Córdoba)"
+      },
+      {
+         "id": "432",
+         "city": "CHIMA (Córdoba)"
+      },
+      {
+         "id": "433",
+         "city": "CHINU (Córdoba)"
+      },
+      {
+         "id": "434",
+         "city": "CIENAGA DE ORO (Córdoba)"
+      },
+      {
+         "id": "435",
+         "city": "COTORRA (Córdoba)"
+      },
+      {
+         "id": "436",
+         "city": "LA APARTADA (Córdoba)"
+      },
+      {
+         "id": "437",
+         "city": "LORICA (Córdoba)"
+      },
+      {
+         "id": "438",
+         "city": "LOS CORDOBAS (Córdoba)"
+      },
+      {
+         "id": "439",
+         "city": "MOMIL (Córdoba)"
+      },
+      {
+         "id": "440",
+         "city": "MONTELIBANO (Córdoba)"
+      },
+      {
+         "id": "441",
+         "city": "MOÑITOS (Córdoba)"
+      },
+      {
+         "id": "442",
+         "city": "PLANETA RICA (Córdoba)"
+      },
+      {
+         "id": "443",
+         "city": "PUEBLO NUEVO (Córdoba)"
+      },
+      {
+         "id": "444",
+         "city": "PUERTO ESCONDIDO (Córdoba)"
+      },
+      {
+         "id": "445",
+         "city": "PUERTO LIBERTADOR (Córdoba)"
+      },
+      {
+         "id": "446",
+         "city": "PURISIMA (Córdoba)"
+      },
+      {
+         "id": "447",
+         "city": "SAHAGUN (Córdoba)"
+      },
+      {
+         "id": "448",
+         "city": "SAN ANDRES DE SOTAVENTO (Córdoba)"
+      },
+      {
+         "id": "449",
+         "city": "SAN ANTERO (Córdoba)"
+      },
+      {
+         "id": "450",
+         "city": "SAN BERNARDO DEL VIENTO (Córdoba)"
+      },
+      {
+         "id": "451",
+         "city": "SAN CARLOS (Córdoba)"
+      },
+      {
+         "id": "452",
+         "city": "SAN PELAYO (Córdoba)"
+      },
+      {
+         "id": "453",
+         "city": "TIERRALTA (Córdoba)"
+      },
+      {
+         "id": "454",
+         "city": "VALENCIA (Córdoba)"
+      },
+      {
+         "id": "455",
+         "city": "AGUA DE DIOS (Cundinamarca)"
+      },
+      {
+         "id": "456",
+         "city": "ALBAN (Cundinamarca)"
+      },
+      {
+         "id": "457",
+         "city": "ANAPOIMA (Cundinamarca)"
+      },
+      {
+         "id": "458",
+         "city": "ANOLAIMA (Cundinamarca)"
+      },
+      {
+         "id": "459",
+         "city": "ARBELAEZ (Cundinamarca)"
+      },
+      {
+         "id": "460",
+         "city": "BELTRAN (Cundinamarca)"
+      },
+      {
+         "id": "461",
+         "city": "BITUIMA (Cundinamarca)"
+      },
+      {
+         "id": "462",
+         "city": "BOJACA (Cundinamarca)"
+      },
+      {
+         "id": "463",
+         "city": "CABRERA (Cundinamarca)"
+      },
+      {
+         "id": "464",
+         "city": "CACHIPAY (Cundinamarca)"
+      },
+      {
+         "id": "465",
+         "city": "CAJICA (Cundinamarca)"
+      },
+      {
+         "id": "466",
+         "city": "CAPARRAPI (Cundinamarca)"
+      },
+      {
+         "id": "467",
+         "city": "CAQUEZA (Cundinamarca)"
+      },
+      {
+         "id": "468",
+         "city": "CARMEN DE CARUPA (Cundinamarca)"
+      },
+      {
+         "id": "469",
+         "city": "CHAGUANI (Cundinamarca)"
+      },
+      {
+         "id": "470",
+         "city": "CHIA (Cundinamarca)"
+      },
+      {
+         "id": "471",
+         "city": "CHIPAQUE (Cundinamarca)"
+      },
+      {
+         "id": "472",
+         "city": "CHOACHI (Cundinamarca)"
+      },
+      {
+         "id": "473",
+         "city": "CHOCONTA (Cundinamarca)"
+      },
+      {
+         "id": "474",
+         "city": "COGUA (Cundinamarca)"
+      },
+      {
+         "id": "475",
+         "city": "COTA (Cundinamarca)"
+      },
+      {
+         "id": "476",
+         "city": "CUCUNUBA (Cundinamarca)"
+      },
+      {
+         "id": "477",
+         "city": "EL COLEGIO (Cundinamarca)"
+      },
+      {
+         "id": "478",
+         "city": "EL PEÑON (Cundinamarca)"
+      },
+      {
+         "id": "479",
+         "city": "EL ROSAL (Cundinamarca)"
+      },
+      {
+         "id": "480",
+         "city": "FACATATIVA (Cundinamarca)"
+      },
+      {
+         "id": "481",
+         "city": "FOMEQUE (Cundinamarca)"
+      },
+      {
+         "id": "482",
+         "city": "FOSCA (Cundinamarca)"
+      },
+      {
+         "id": "483",
+         "city": "FUNZA (Cundinamarca)"
+      },
+      {
+         "id": "484",
+         "city": "FUQUENE (Cundinamarca)"
+      },
+      {
+         "id": "485",
+         "city": "FUSAGASUGA (Cundinamarca)"
+      },
+      {
+         "id": "486",
+         "city": "GACHALA (Cundinamarca)"
+      },
+      {
+         "id": "487",
+         "city": "GACHANCIPA (Cundinamarca)"
+      },
+      {
+         "id": "488",
+         "city": "GACHETA (Cundinamarca)"
+      },
+      {
+         "id": "489",
+         "city": "GAMA (Cundinamarca)"
+      },
+      {
+         "id": "490",
+         "city": "GIRARDOT (Cundinamarca)"
+      },
+      {
+         "id": "491",
+         "city": "GRANADA (Cundinamarca)"
+      },
+      {
+         "id": "492",
+         "city": "GUACHETA (Cundinamarca)"
+      },
+      {
+         "id": "493",
+         "city": "GUADUAS (Cundinamarca)"
+      },
+      {
+         "id": "494",
+         "city": "GUASCA (Cundinamarca)"
+      },
+      {
+         "id": "495",
+         "city": "GUATAQUI (Cundinamarca)"
+      },
+      {
+         "id": "496",
+         "city": "GUATAVITA (Cundinamarca)"
+      },
+      {
+         "id": "497",
+         "city": "GUAYABAL DE SIQUIMA (Cundinamarca)"
+      },
+      {
+         "id": "498",
+         "city": "GUAYABETAL (Cundinamarca)"
+      },
+      {
+         "id": "499",
+         "city": "GUTIERREZ (Cundinamarca)"
+      },
+      {
+         "id": "500",
+         "city": "JERUSALEN (Cundinamarca)"
+      },
+      {
+         "id": "501",
+         "city": "JUNIN (Cundinamarca)"
+      },
+      {
+         "id": "502",
+         "city": "LA CALERA (Cundinamarca)"
+      },
+      {
+         "id": "503",
+         "city": "LA MESA (Cundinamarca)"
+      },
+      {
+         "id": "504",
+         "city": "LA PALMA (Cundinamarca)"
+      },
+      {
+         "id": "505",
+         "city": "LA PEÑA (Cundinamarca)"
+      },
+      {
+         "id": "506",
+         "city": "LA VEGA (Cundinamarca)"
+      },
+      {
+         "id": "507",
+         "city": "LENGUAZAQUE (Cundinamarca)"
+      },
+      {
+         "id": "508",
+         "city": "MACHETA (Cundinamarca)"
+      },
+      {
+         "id": "509",
+         "city": "MADRID (Cundinamarca)"
+      },
+      {
+         "id": "510",
+         "city": "MANTA (Cundinamarca)"
+      },
+      {
+         "id": "511",
+         "city": "MEDINA (Cundinamarca)"
+      },
+      {
+         "id": "512",
+         "city": "MOSQUERA (Cundinamarca)"
+      },
+      {
+         "id": "513",
+         "city": "NARIÑO (Cundinamarca)"
+      },
+      {
+         "id": "514",
+         "city": "NEMOCON (Cundinamarca)"
+      },
+      {
+         "id": "515",
+         "city": "NILO (Cundinamarca)"
+      },
+      {
+         "id": "516",
+         "city": "NIMAIMA (Cundinamarca)"
+      },
+      {
+         "id": "517",
+         "city": "NOCAIMA (Cundinamarca)"
+      },
+      {
+         "id": "518",
+         "city": "VENECIA (Cundinamarca)"
+      },
+      {
+         "id": "519",
+         "city": "PACHO (Cundinamarca)"
+      },
+      {
+         "id": "520",
+         "city": "PAIME (Cundinamarca)"
+      },
+      {
+         "id": "521",
+         "city": "PANDI (Cundinamarca)"
+      },
+      {
+         "id": "522",
+         "city": "PARATEBUENO (Cundinamarca)"
+      },
+      {
+         "id": "523",
+         "city": "PASCA (Cundinamarca)"
+      },
+      {
+         "id": "524",
+         "city": "PUERTO SALGAR (Cundinamarca)"
+      },
+      {
+         "id": "525",
+         "city": "PULI (Cundinamarca)"
+      },
+      {
+         "id": "526",
+         "city": "QUEBRADANEGRA (Cundinamarca)"
+      },
+      {
+         "id": "527",
+         "city": "QUETAME (Cundinamarca)"
+      },
+      {
+         "id": "528",
+         "city": "QUIPILE (Cundinamarca)"
+      },
+      {
+         "id": "529",
+         "city": "APULO (Cundinamarca)"
+      },
+      {
+         "id": "530",
+         "city": "RICAURTE (Cundinamarca)"
+      },
+      {
+         "id": "531",
+         "city": "SAN ANTONIO DEL TEQUENDAMA (Cundinamarca)"
+      },
+      {
+         "id": "532",
+         "city": "SAN BERNARDO (Cundinamarca)"
+      },
+      {
+         "id": "533",
+         "city": "SAN CAYETANO (Cundinamarca)"
+      },
+      {
+         "id": "534",
+         "city": "SAN FRANCISCO (Cundinamarca)"
+      },
+      {
+         "id": "535",
+         "city": "SAN JUAN DE RIO SECO (Cundinamarca)"
+      },
+      {
+         "id": "536",
+         "city": "SASAIMA (Cundinamarca)"
+      },
+      {
+         "id": "537",
+         "city": "SESQUILE (Cundinamarca)"
+      },
+      {
+         "id": "538",
+         "city": "SIBATE (Cundinamarca)"
+      },
+      {
+         "id": "539",
+         "city": "SILVANIA (Cundinamarca)"
+      },
+      {
+         "id": "540",
+         "city": "SIMIJACA (Cundinamarca)"
+      },
+      {
+         "id": "541",
+         "city": "SOACHA (Cundinamarca)"
+      },
+      {
+         "id": "542",
+         "city": "SOPO (Cundinamarca)"
+      },
+      {
+         "id": "543",
+         "city": "SUBACHOQUE (Cundinamarca)"
+      },
+      {
+         "id": "544",
+         "city": "SUESCA (Cundinamarca)"
+      },
+      {
+         "id": "545",
+         "city": "SUPATA (Cundinamarca)"
+      },
+      {
+         "id": "546",
+         "city": "SUSA (Cundinamarca)"
+      },
+      {
+         "id": "547",
+         "city": "SUTATAUSA (Cundinamarca)"
+      },
+      {
+         "id": "548",
+         "city": "TABIO (Cundinamarca)"
+      },
+      {
+         "id": "549",
+         "city": "TAUSA (Cundinamarca)"
+      },
+      {
+         "id": "550",
+         "city": "TENA (Cundinamarca)"
+      },
+      {
+         "id": "551",
+         "city": "TENJO (Cundinamarca)"
+      },
+      {
+         "id": "552",
+         "city": "TIBACUY (Cundinamarca)"
+      },
+      {
+         "id": "553",
+         "city": "TIBIRITA (Cundinamarca)"
+      },
+      {
+         "id": "554",
+         "city": "TOCAIMA (Cundinamarca)"
+      },
+      {
+         "id": "555",
+         "city": "TOCANCIPA (Cundinamarca)"
+      },
+      {
+         "id": "556",
+         "city": "TOPAIPI (Cundinamarca)"
+      },
+      {
+         "id": "557",
+         "city": "UBALA (Cundinamarca)"
+      },
+      {
+         "id": "558",
+         "city": "UBAQUE (Cundinamarca)"
+      },
+      {
+         "id": "559",
+         "city": "VILLA DE SAN DIEGO DE UBATE (Cundinamarca)"
+      },
+      {
+         "id": "560",
+         "city": "UNE (Cundinamarca)"
+      },
+      {
+         "id": "561",
+         "city": "UTICA (Cundinamarca)"
+      },
+      {
+         "id": "562",
+         "city": "VERGARA (Cundinamarca)"
+      },
+      {
+         "id": "563",
+         "city": "VIANI (Cundinamarca)"
+      },
+      {
+         "id": "564",
+         "city": "VILLAGOMEZ (Cundinamarca)"
+      },
+      {
+         "id": "565",
+         "city": "VILLAPINZON (Cundinamarca)"
+      },
+      {
+         "id": "566",
+         "city": "VILLETA (Cundinamarca)"
+      },
+      {
+         "id": "567",
+         "city": "VIOTA (Cundinamarca)"
+      },
+      {
+         "id": "568",
+         "city": "YACOPI (Cundinamarca)"
+      },
+      {
+         "id": "569",
+         "city": "ZIPACON (Cundinamarca)"
+      },
+      {
+         "id": "570",
+         "city": "ZIPAQUIRA (Cundinamarca)"
+      },
+      {
+         "id": "571",
+         "city": "QUIBDO (Chocó)"
+      },
+      {
+         "id": "572",
+         "city": "ACANDI (Chocó)"
+      },
+      {
+         "id": "573",
+         "city": "ALTO BAUDO (Chocó)"
+      },
+      {
+         "id": "574",
+         "city": "ATRATO (Chocó)"
+      },
+      {
+         "id": "575",
+         "city": "BAGADO (Chocó)"
+      },
+      {
+         "id": "576",
+         "city": "BAHIA SOLANO (Chocó)"
+      },
+      {
+         "id": "577",
+         "city": "BAJO BAUDO (Chocó)"
+      },
+      {
+         "id": "578",
+         "city": "BELEN DE BAJIRA (Chocó)"
+      },
+      {
+         "id": "579",
+         "city": "BOJAYA (Chocó)"
+      },
+      {
+         "id": "580",
+         "city": "EL CANTON DEL SAN PABLO (Chocó)"
+      },
+      {
+         "id": "581",
+         "city": "CARMEN DEL DARIEN (Chocó)"
+      },
+      {
+         "id": "582",
+         "city": "CERTEGUI (Chocó)"
+      },
+      {
+         "id": "583",
+         "city": "CONDOTO (Chocó)"
+      },
+      {
+         "id": "584",
+         "city": "EL CARMEN DE ATRATO (Chocó)"
+      },
+      {
+         "id": "585",
+         "city": "EL LITORAL DEL SAN JUAN (Chocó)"
+      },
+      {
+         "id": "586",
+         "city": "ISTMINA (Chocó)"
+      },
+      {
+         "id": "587",
+         "city": "JURADO (Chocó)"
+      },
+      {
+         "id": "588",
+         "city": "LLORO (Chocó)"
+      },
+      {
+         "id": "589",
+         "city": "MEDIO ATRATO (Chocó)"
+      },
+      {
+         "id": "590",
+         "city": "MEDIO BAUDO (Chocó)"
+      },
+      {
+         "id": "591",
+         "city": "MEDIO SAN JUAN (Chocó)"
+      },
+      {
+         "id": "592",
+         "city": "NOVITA (Chocó)"
+      },
+      {
+         "id": "593",
+         "city": "NUQUI (Chocó)"
+      },
+      {
+         "id": "594",
+         "city": "RIO IRO (Chocó)"
+      },
+      {
+         "id": "595",
+         "city": "RIO QUITO (Chocó)"
+      },
+      {
+         "id": "596",
+         "city": "RIOSUCIO (Chocó)"
+      },
+      {
+         "id": "597",
+         "city": "SAN JOSE DEL PALMAR (Chocó)"
+      },
+      {
+         "id": "598",
+         "city": "SIPI (Chocó)"
+      },
+      {
+         "id": "599",
+         "city": "TADO (Chocó)"
+      },
+      {
+         "id": "600",
+         "city": "UNGUIA (Chocó)"
+      },
+      {
+         "id": "601",
+         "city": "UNION PANAMERICANA (Chocó)"
+      },
+      {
+         "id": "602",
+         "city": "NEIVA (Huila)"
+      },
+      {
+         "id": "603",
+         "city": "ACEVEDO (Huila)"
+      },
+      {
+         "id": "604",
+         "city": "AGRADO (Huila)"
+      },
+      {
+         "id": "605",
+         "city": "AIPE (Huila)"
+      },
+      {
+         "id": "606",
+         "city": "ALGECIRAS (Huila)"
+      },
+      {
+         "id": "607",
+         "city": "ALTAMIRA (Huila)"
+      },
+      {
+         "id": "608",
+         "city": "BARAYA (Huila)"
+      },
+      {
+         "id": "609",
+         "city": "CAMPOALEGRE (Huila)"
+      },
+      {
+         "id": "610",
+         "city": "COLOMBIA (Huila)"
+      },
+      {
+         "id": "611",
+         "city": "ELIAS (Huila)"
+      },
+      {
+         "id": "612",
+         "city": "GARZON (Huila)"
+      },
+      {
+         "id": "613",
+         "city": "GIGANTE (Huila)"
+      },
+      {
+         "id": "614",
+         "city": "GUADALUPE (Huila)"
+      },
+      {
+         "id": "615",
+         "city": "HOBO (Huila)"
+      },
+      {
+         "id": "616",
+         "city": "IQUIRA (Huila)"
+      },
+      {
+         "id": "617",
+         "city": "ISNOS (Huila)"
+      },
+      {
+         "id": "618",
+         "city": "LA ARGENTINA (Huila)"
+      },
+      {
+         "id": "619",
+         "city": "LA PLATA (Huila)"
+      },
+      {
+         "id": "620",
+         "city": "NATAGA (Huila)"
+      },
+      {
+         "id": "621",
+         "city": "OPORAPA (Huila)"
+      },
+      {
+         "id": "622",
+         "city": "PAICOL (Huila)"
+      },
+      {
+         "id": "623",
+         "city": "PALERMO (Huila)"
+      },
+      {
+         "id": "624",
+         "city": "PALESTINA (Huila)"
+      },
+      {
+         "id": "625",
+         "city": "PITAL (Huila)"
+      },
+      {
+         "id": "626",
+         "city": "PITALITO (Huila)"
+      },
+      {
+         "id": "627",
+         "city": "RIVERA (Huila)"
+      },
+      {
+         "id": "628",
+         "city": "SALADOBLANCO (Huila)"
+      },
+      {
+         "id": "629",
+         "city": "SAN AGUSTIN (Huila)"
+      },
+      {
+         "id": "630",
+         "city": "SANTA MARIA (Huila)"
+      },
+      {
+         "id": "631",
+         "city": "SUAZA (Huila)"
+      },
+      {
+         "id": "632",
+         "city": "TARQUI (Huila)"
+      },
+      {
+         "id": "633",
+         "city": "TESALIA (Huila)"
+      },
+      {
+         "id": "634",
+         "city": "TELLO (Huila)"
+      },
+      {
+         "id": "635",
+         "city": "TERUEL (Huila)"
+      },
+      {
+         "id": "636",
+         "city": "TIMANA (Huila)"
+      },
+      {
+         "id": "637",
+         "city": "VILLAVIEJA (Huila)"
+      },
+      {
+         "id": "638",
+         "city": "YAGUARA (Huila)"
+      },
+      {
+         "id": "639",
+         "city": "RIOHACHA (La Guajira)"
+      },
+      {
+         "id": "640",
+         "city": "ALBANIA (La Guajira)"
+      },
+      {
+         "id": "641",
+         "city": "BARRANCAS (La Guajira)"
+      },
+      {
+         "id": "642",
+         "city": "DIBULLA (La Guajira)"
+      },
+      {
+         "id": "643",
+         "city": "DISTRACCION (La Guajira)"
+      },
+      {
+         "id": "644",
+         "city": "EL MOLINO (La Guajira)"
+      },
+      {
+         "id": "645",
+         "city": "FONSECA (La Guajira)"
+      },
+      {
+         "id": "646",
+         "city": "HATONUEVO (La Guajira)"
+      },
+      {
+         "id": "647",
+         "city": "LA JAGUA DEL PILAR (La Guajira)"
+      },
+      {
+         "id": "648",
+         "city": "MAICAO (La Guajira)"
+      },
+      {
+         "id": "649",
+         "city": "MANAURE (La Guajira)"
+      },
+      {
+         "id": "650",
+         "city": "SAN JUAN DEL CESAR (La Guajira)"
+      },
+      {
+         "id": "651",
+         "city": "URIBIA (La Guajira)"
+      },
+      {
+         "id": "652",
+         "city": "URUMITA (La Guajira)"
+      },
+      {
+         "id": "653",
+         "city": "VILLANUEVA (La Guajira)"
+      },
+      {
+         "id": "654",
+         "city": "SANTA MARTA (Magdalena)"
+      },
+      {
+         "id": "655",
+         "city": "ALGARROBO (Magdalena)"
+      },
+      {
+         "id": "656",
+         "city": "ARACATACA (Magdalena)"
+      },
+      {
+         "id": "657",
+         "city": "ARIGUANI (Magdalena)"
+      },
+      {
+         "id": "658",
+         "city": "CERRO SAN ANTONIO (Magdalena)"
+      },
+      {
+         "id": "659",
+         "city": "CHIVOLO (Magdalena)"
+      },
+      {
+         "id": "660",
+         "city": "CIENAGA (Magdalena)"
+      },
+      {
+         "id": "661",
+         "city": "CONCORDIA (Magdalena)"
+      },
+      {
+         "id": "662",
+         "city": "EL BANCO (Magdalena)"
+      },
+      {
+         "id": "663",
+         "city": "EL PIÑON (Magdalena)"
+      },
+      {
+         "id": "664",
+         "city": "EL RETEN (Magdalena)"
+      },
+      {
+         "id": "665",
+         "city": "FUNDACION (Magdalena)"
+      },
+      {
+         "id": "666",
+         "city": "GUAMAL (Magdalena)"
+      },
+      {
+         "id": "667",
+         "city": "NUEVA GRANADA (Magdalena)"
+      },
+      {
+         "id": "668",
+         "city": "PEDRAZA (Magdalena)"
+      },
+      {
+         "id": "669",
+         "city": "PIJIÑO DEL CARMEN (Magdalena)"
+      },
+      {
+         "id": "670",
+         "city": "PIVIJAY (Magdalena)"
+      },
+      {
+         "id": "671",
+         "city": "PLATO (Magdalena)"
+      },
+      {
+         "id": "672",
+         "city": "PUEBLOVIEJO (Magdalena)"
+      },
+      {
+         "id": "673",
+         "city": "REMOLINO (Magdalena)"
+      },
+      {
+         "id": "674",
+         "city": "SABANAS DE SAN ANGEL (Magdalena)"
+      },
+      {
+         "id": "675",
+         "city": "SALAMINA (Magdalena)"
+      },
+      {
+         "id": "676",
+         "city": "SAN (SEBASTIAN)"
+      },
+      {
+         "id": "677",
+         "city": "SAN ZENON (Magdalena)"
+      },
+      {
+         "id": "678",
+         "city": "SANTA ANA (Magdalena)"
+      },
+      {
+         "id": "679",
+         "city": "SANTA BARBARA DE PINTO (Magdalena)"
+      },
+      {
+         "id": "680",
+         "city": "SITIONUEVO (Magdalena)"
+      },
+      {
+         "id": "681",
+         "city": "TENERIFE (Magdalena)"
+      },
+      {
+         "id": "682",
+         "city": "ZAPAYAN (Magdalena)"
+      },
+      {
+         "id": "683",
+         "city": "ZONA BANANERA (Magdalena)"
+      },
+      {
+         "id": "684",
+         "city": "VILLAVICENCIO (Meta)"
+      },
+      {
+         "id": "685",
+         "city": "ACACIAS (Meta)"
+      },
+      {
+         "id": "686",
+         "city": "BARRANCA DE UPIA (Meta)"
+      },
+      {
+         "id": "687",
+         "city": "CABUYARO (Meta)"
+      },
+      {
+         "id": "688",
+         "city": "CASTILLA LA NUEVA (Meta)"
+      },
+      {
+         "id": "689",
+         "city": "CUBARRAL (Meta)"
+      },
+      {
+         "id": "690",
+         "city": "CUMARAL (Meta)"
+      },
+      {
+         "id": "691",
+         "city": "EL CALVARIO (Meta)"
+      },
+      {
+         "id": "692",
+         "city": "EL CASTILLO (Meta)"
+      },
+      {
+         "id": "693",
+         "city": "EL DORADO (Meta)"
+      },
+      {
+         "id": "694",
+         "city": "FUENTE DE ORO (Meta)"
+      },
+      {
+         "id": "695",
+         "city": "GRANADA (Meta)"
+      },
+      {
+         "id": "696",
+         "city": "GUAMAL (Meta)"
+      },
+      {
+         "id": "697",
+         "city": "MAPIRIPAN (Meta)"
+      },
+      {
+         "id": "698",
+         "city": "MESETAS (Meta)"
+      },
+      {
+         "id": "699",
+         "city": "LA MACARENA (Meta)"
+      },
+      {
+         "id": "700",
+         "city": "URIBE (Meta)"
+      },
+      {
+         "id": "701",
+         "city": "LEJANIAS (Meta)"
+      },
+      {
+         "id": "702",
+         "city": "PUERTO CONCORDIA (Meta)"
+      },
+      {
+         "id": "703",
+         "city": "PUERTO GAITAN (Meta)"
+      },
+      {
+         "id": "704",
+         "city": "PUERTO LOPEZ (Meta)"
+      },
+      {
+         "id": "705",
+         "city": "PUERTO LLERAS (Meta)"
+      },
+      {
+         "id": "706",
+         "city": "PUERTO RICO (Meta)"
+      },
+      {
+         "id": "707",
+         "city": "RESTREPO (Meta)"
+      },
+      {
+         "id": "708",
+         "city": "SAN CARLOS DE GUAROA (Meta)"
+      },
+      {
+         "id": "709",
+         "city": "SAN JUAN DE ARAMA (Meta)"
+      },
+      {
+         "id": "710",
+         "city": "SAN JUANITO (Meta)"
+      },
+      {
+         "id": "711",
+         "city": "SAN MARTIN (Meta)"
+      },
+      {
+         "id": "712",
+         "city": "VISTA HERMOSA (Meta)"
+      },
+      {
+         "id": "713",
+         "city": "PASTO (Nariño)"
+      },
+      {
+         "id": "714",
+         "city": "ALBAN (Nariño)"
+      },
+      {
+         "id": "715",
+         "city": "ALDANA (Nariño)"
+      },
+      {
+         "id": "716",
+         "city": "ANCUYA (Nariño)"
+      },
+      {
+         "id": "717",
+         "city": "ARBOLEDA (Nariño)"
+      },
+      {
+         "id": "718",
+         "city": "BARBACOAS (Nariño)"
+      },
+      {
+         "id": "719",
+         "city": "BELEN (Nariño)"
+      },
+      {
+         "id": "720",
+         "city": "BUESACO (Nariño)"
+      },
+      {
+         "id": "721",
+         "city": "COLON (Nariño)"
+      },
+      {
+         "id": "722",
+         "city": "CONSACA (Nariño)"
+      },
+      {
+         "id": "723",
+         "city": "CONTADERO (Nariño)"
+      },
+      {
+         "id": "724",
+         "city": "CORDOBA (Nariño)"
+      },
+      {
+         "id": "725",
+         "city": "CUASPUD (Nariño)"
+      },
+      {
+         "id": "726",
+         "city": "CUMBAL (Nariño)"
+      },
+      {
+         "id": "727",
+         "city": "CUMBITARA (Nariño)"
+      },
+      {
+         "id": "728",
+         "city": "CHACHAGÜI (Nariño)"
+      },
+      {
+         "id": "729",
+         "city": "EL CHARCO (Nariño)"
+      },
+      {
+         "id": "730",
+         "city": "EL PEÑOL (Nariño)"
+      },
+      {
+         "id": "731",
+         "city": "EL ROSARIO (Nariño)"
+      },
+      {
+         "id": "732",
+         "city": "EL TABLON DE GOMEZ (Nariño)"
+      },
+      {
+         "id": "733",
+         "city": "EL TAMBO (Nariño)"
+      },
+      {
+         "id": "734",
+         "city": "FUNES (Nariño)"
+      },
+      {
+         "id": "735",
+         "city": "GUACHUCAL (Nariño)"
+      },
+      {
+         "id": "736",
+         "city": "GUAITARILLA (Nariño)"
+      },
+      {
+         "id": "737",
+         "city": "GUALMATAN (Nariño)"
+      },
+      {
+         "id": "738",
+         "city": "ILES (Nariño)"
+      },
+      {
+         "id": "739",
+         "city": "IMUES (Nariño)"
+      },
+      {
+         "id": "740",
+         "city": "IPIALES (Nariño)"
+      },
+      {
+         "id": "741",
+         "city": "LA CRUZ (Nariño)"
+      },
+      {
+         "id": "742",
+         "city": "LA FLORIDA (Nariño)"
+      },
+      {
+         "id": "743",
+         "city": "LA LLANADA (Nariño)"
+      },
+      {
+         "id": "744",
+         "city": "LA TOLA (Nariño)"
+      },
+      {
+         "id": "745",
+         "city": "LA UNION (Nariño)"
+      },
+      {
+         "id": "746",
+         "city": "LEIVA (Nariño)"
+      },
+      {
+         "id": "747",
+         "city": "LINARES (Nariño)"
+      },
+      {
+         "id": "748",
+         "city": "LOS ANDES (Nariño)"
+      },
+      {
+         "id": "749",
+         "city": "MAGÜI (Nariño)"
+      },
+      {
+         "id": "750",
+         "city": "MALLAMA (Nariño)"
+      },
+      {
+         "id": "751",
+         "city": "MOSQUERA (Nariño)"
+      },
+      {
+         "id": "752",
+         "city": "NARIÑO (Nariño)"
+      },
+      {
+         "id": "753",
+         "city": "OLAYA HERRERA (Nariño)"
+      },
+      {
+         "id": "754",
+         "city": "OSPINA (Nariño)"
+      },
+      {
+         "id": "755",
+         "city": "FRANCISCO PIZARRO (Nariño)"
+      },
+      {
+         "id": "756",
+         "city": "POLICARPA (Nariño)"
+      },
+      {
+         "id": "757",
+         "city": "POTOSI (Nariño)"
+      },
+      {
+         "id": "758",
+         "city": "PROVIDENCIA (Nariño)"
+      },
+      {
+         "id": "759",
+         "city": "PUERRES (Nariño)"
+      },
+      {
+         "id": "760",
+         "city": "PUPIALES (Nariño)"
+      },
+      {
+         "id": "761",
+         "city": "RICAURTE (Nariño)"
+      },
+      {
+         "id": "762",
+         "city": "ROBERTO PAYAN (Nariño)"
+      },
+      {
+         "id": "763",
+         "city": "SAMANIEGO (Nariño)"
+      },
+      {
+         "id": "764",
+         "city": "SANDONA (Nariño)"
+      },
+      {
+         "id": "765",
+         "city": "SAN BERNARDO (Nariño)"
+      },
+      {
+         "id": "766",
+         "city": "SAN LORENZO (Nariño)"
+      },
+      {
+         "id": "767",
+         "city": "SAN PABLO (Nariño)"
+      },
+      {
+         "id": "768",
+         "city": "SAN PEDRO DE CARTAGO (Nariño)"
+      },
+      {
+         "id": "769",
+         "city": "SANTA BARBARA (Nariño)"
+      },
+      {
+         "id": "770",
+         "city": "SANTACRUZ (Nariño)"
+      },
+      {
+         "id": "771",
+         "city": "SAPUYES (Nariño)"
+      },
+      {
+         "id": "772",
+         "city": "TAMINANGO (Nariño)"
+      },
+      {
+         "id": "773",
+         "city": "TANGUA (Nariño)"
+      },
+      {
+         "id": "774",
+         "city": "TUMACO (Nariño)"
+      },
+      {
+         "id": "775",
+         "city": "TUQUERRES (Nariño)"
+      },
+      {
+         "id": "776",
+         "city": "YACUANQUER (Nariño)"
+      },
+      {
+         "id": "777",
+         "city": "CUCUTA (Norte de Santander)"
+      },
+      {
+         "id": "778",
+         "city": "ABREGO (Norte de Santander)"
+      },
+      {
+         "id": "779",
+         "city": "ARBOLEDAS (Norte de Santander)"
+      },
+      {
+         "id": "780",
+         "city": "BOCHALEMA (Norte de Santander)"
+      },
+      {
+         "id": "781",
+         "city": "BUCARASICA (Norte de Santander)"
+      },
+      {
+         "id": "782",
+         "city": "CACOTA (Norte de Santander)"
+      },
+      {
+         "id": "783",
+         "city": "CACHIRA (Norte de Santander)"
+      },
+      {
+         "id": "784",
+         "city": "CHINACOTA (Norte de Santander)"
+      },
+      {
+         "id": "785",
+         "city": "CHITAGA (Norte de Santander)"
+      },
+      {
+         "id": "786",
+         "city": "CONVENCION (Norte de Santander)"
+      },
+      {
+         "id": "787",
+         "city": "CUCUTILLA (Norte de Santander)"
+      },
+      {
+         "id": "788",
+         "city": "DURANIA (Norte de Santander)"
+      },
+      {
+         "id": "789",
+         "city": "EL CARMEN (Norte de Santander)"
+      },
+      {
+         "id": "790",
+         "city": "EL TARRA (Norte de Santander)"
+      },
+      {
+         "id": "791",
+         "city": "EL ZULIA (Norte de Santander)"
+      },
+      {
+         "id": "792",
+         "city": "GRAMALOTE (Norte de Santander)"
+      },
+      {
+         "id": "793",
+         "city": "HACARI (Norte de Santander)"
+      },
+      {
+         "id": "794",
+         "city": "HERRAN (Norte de Santander)"
+      },
+      {
+         "id": "795",
+         "city": "LABATECA (Norte de Santander)"
+      },
+      {
+         "id": "796",
+         "city": "LA ESPERANZA (Norte de Santander)"
+      },
+      {
+         "id": "797",
+         "city": "LA PLAYA (Norte de Santander)"
+      },
+      {
+         "id": "798",
+         "city": "LOS PATIOS (Norte de Santander)"
+      },
+      {
+         "id": "799",
+         "city": "LOURDES (Norte de Santander)"
+      },
+      {
+         "id": "800",
+         "city": "MUTISCUA (Norte de Santander)"
+      },
+      {
+         "id": "801",
+         "city": "OCAÑA (Norte de Santander)"
+      },
+      {
+         "id": "802",
+         "city": "PAMPLONA (Norte de Santander)"
+      },
+      {
+         "id": "803",
+         "city": "PAMPLONITA (Norte de Santander)"
+      },
+      {
+         "id": "804",
+         "city": "PUERTO SANTANDER (Norte de Santander)"
+      },
+      {
+         "id": "805",
+         "city": "RAGONVALIA (Norte de Santander)"
+      },
+      {
+         "id": "806",
+         "city": "SALAZAR (Norte de Santander)"
+      },
+      {
+         "id": "807",
+         "city": "SAN CALIXTO (Norte de Santander)"
+      },
+      {
+         "id": "808",
+         "city": "SAN CAYETANO (Norte de Santander)"
+      },
+      {
+         "id": "809",
+         "city": "SANTIAGO (Norte de Santander)"
+      },
+      {
+         "id": "810",
+         "city": "SARDINATA (Norte de Santander)"
+      },
+      {
+         "id": "811",
+         "city": "SILOS (Norte de Santander)"
+      },
+      {
+         "id": "812",
+         "city": "TEORAMA (Norte de Santander)"
+      },
+      {
+         "id": "813",
+         "city": "TIBU (Norte de Santander)"
+      },
+      {
+         "id": "814",
+         "city": "TOLEDO (Norte de Santander)"
+      },
+      {
+         "id": "815",
+         "city": "VILLA CARO (Norte de Santander)"
+      },
+      {
+         "id": "816",
+         "city": "VILLA DEL ROSARIO (Norte de Santander)"
+      },
+      {
+         "id": "817",
+         "city": "ARMENIA (Quindio)"
+      },
+      {
+         "id": "818",
+         "city": "BUENAVISTA (Quindio)"
+      },
+      {
+         "id": "819",
+         "city": "CALARCA (Quindio)"
+      },
+      {
+         "id": "820",
+         "city": "CIRCASIA (Quindio)"
+      },
+      {
+         "id": "821",
+         "city": "CORDOBA (Quindio)"
+      },
+      {
+         "id": "822",
+         "city": "FILANDIA (Quindio)"
+      },
+      {
+         "id": "823",
+         "city": "GENOVA (Quindio)"
+      },
+      {
+         "id": "824",
+         "city": "LA TEBAIDA (Quindio)"
+      },
+      {
+         "id": "825",
+         "city": "MONTENEGRO (Quindio)"
+      },
+      {
+         "id": "826",
+         "city": "PIJAO (Quindio)"
+      },
+      {
+         "id": "827",
+         "city": "QUIMBAYA (Quindio)"
+      },
+      {
+         "id": "828",
+         "city": "SALENTO (Quindio)"
+      },
+      {
+         "id": "829",
+         "city": "PEREIRA (Risaralda)"
+      },
+      {
+         "id": "830",
+         "city": "APIA (Risaralda)"
+      },
+      {
+         "id": "831",
+         "city": "BALBOA (Risaralda)"
+      },
+      {
+         "id": "832",
+         "city": "BELEN DE UMBRIA (Risaralda)"
+      },
+      {
+         "id": "833",
+         "city": "DOSQUEBRADAS (Risaralda)"
+      },
+      {
+         "id": "834",
+         "city": "GUATICA (Risaralda)"
+      },
+      {
+         "id": "835",
+         "city": "LA CELIA (Risaralda)"
+      },
+      {
+         "id": "836",
+         "city": "LA VIRGINIA (Risaralda)"
+      },
+      {
+         "id": "837",
+         "city": "MARSELLA (Risaralda)"
+      },
+      {
+         "id": "838",
+         "city": "MISTRATO (Risaralda)"
+      },
+      {
+         "id": "839",
+         "city": "PUEBLO RICO (Risaralda)"
+      },
+      {
+         "id": "840",
+         "city": "QUINCHIA (Risaralda)"
+      },
+      {
+         "id": "841",
+         "city": "SANTA ROSA DE CABAL (Risaralda)"
+      },
+      {
+         "id": "842",
+         "city": "SANTUARIO (Risaralda)"
+      },
+      {
+         "id": "843",
+         "city": "BUCARAMANGA (Santander)"
+      },
+      {
+         "id": "844",
+         "city": "AGUADA (Santander)"
+      },
+      {
+         "id": "845",
+         "city": "ALBANIA (Santander)"
+      },
+      {
+         "id": "846",
+         "city": "ARATOCA (Santander)"
+      },
+      {
+         "id": "847",
+         "city": "BARBOSA (Santander)"
+      },
+      {
+         "id": "848",
+         "city": "BARICHARA (Santander)"
+      },
+      {
+         "id": "849",
+         "city": "BARRANCABERMEJA (Santander)"
+      },
+      {
+         "id": "850",
+         "city": "BETULIA (Santander)"
+      },
+      {
+         "id": "851",
+         "city": "BOLIVAR (Santander)"
+      },
+      {
+         "id": "852",
+         "city": "CABRERA (Santander)"
+      },
+      {
+         "id": "853",
+         "city": "CALIFORNIA (Santander)"
+      },
+      {
+         "id": "854",
+         "city": "CAPITANEJO (Santander)"
+      },
+      {
+         "id": "855",
+         "city": "CARCASI (Santander)"
+      },
+      {
+         "id": "856",
+         "city": "CEPITA (Santander)"
+      },
+      {
+         "id": "857",
+         "city": "CERRITO (Santander)"
+      },
+      {
+         "id": "858",
+         "city": "CHARALA (Santander)"
+      },
+      {
+         "id": "859",
+         "city": "CHARTA (Santander)"
+      },
+      {
+         "id": "860",
+         "city": "CHIMA (Santander)"
+      },
+      {
+         "id": "861",
+         "city": "CHIPATA (Santander)"
+      },
+      {
+         "id": "862",
+         "city": "CIMITARRA (Santander)"
+      },
+      {
+         "id": "863",
+         "city": "CONCEPCION (Santander)"
+      },
+      {
+         "id": "864",
+         "city": "CONFINES (Santander)"
+      },
+      {
+         "id": "865",
+         "city": "CONTRATACION (Santander)"
+      },
+      {
+         "id": "866",
+         "city": "COROMORO (Santander)"
+      },
+      {
+         "id": "867",
+         "city": "CURITI (Santander)"
+      },
+      {
+         "id": "868",
+         "city": "EL CARMEN DE CHUCURI (Santander)"
+      },
+      {
+         "id": "869",
+         "city": "EL GUACAMAYO (Santander)"
+      },
+      {
+         "id": "870",
+         "city": "EL PEÑON (Santander)"
+      },
+      {
+         "id": "871",
+         "city": "EL PLAYON (Santander)"
+      },
+      {
+         "id": "872",
+         "city": "ENCINO (Santander)"
+      },
+      {
+         "id": "873",
+         "city": "ENCISO (Santander)"
+      },
+      {
+         "id": "874",
+         "city": "FLORIAN (Santander)"
+      },
+      {
+         "id": "875",
+         "city": "FLORIDABLANCA (Santander)"
+      },
+      {
+         "id": "876",
+         "city": "GALAN (Santander)"
+      },
+      {
+         "id": "877",
+         "city": "GAMBITA (Santander)"
+      },
+      {
+         "id": "878",
+         "city": "GIRON (Santander)"
+      },
+      {
+         "id": "879",
+         "city": "GUACA (Santander)"
+      },
+      {
+         "id": "880",
+         "city": "GUADALUPE (Santander)"
+      },
+      {
+         "id": "881",
+         "city": "GUAPOTA (Santander)"
+      },
+      {
+         "id": "882",
+         "city": "GUAVATA (Santander)"
+      },
+      {
+         "id": "883",
+         "city": "GÜEPSA (Santander)"
+      },
+      {
+         "id": "884",
+         "city": "HATO (Santander)"
+      },
+      {
+         "id": "885",
+         "city": "JESUS MARIA (Santander)"
+      },
+      {
+         "id": "886",
+         "city": "JORDAN (Santander)"
+      },
+      {
+         "id": "887",
+         "city": "LA BELLEZA (Santander)"
+      },
+      {
+         "id": "888",
+         "city": "LANDAZURI (Santander)"
+      },
+      {
+         "id": "889",
+         "city": "LA PAZ (Santander)"
+      },
+      {
+         "id": "890",
+         "city": "LEBRIJA (Santander)"
+      },
+      {
+         "id": "891",
+         "city": "LOS SANTOS (Santander)"
+      },
+      {
+         "id": "892",
+         "city": "MACARAVITA (Santander)"
+      },
+      {
+         "id": "893",
+         "city": "MALAGA (Santander)"
+      },
+      {
+         "id": "894",
+         "city": "MATANZA (Santander)"
+      },
+      {
+         "id": "895",
+         "city": "MOGOTES (Santander)"
+      },
+      {
+         "id": "896",
+         "city": "MOLAGAVITA (Santander)"
+      },
+      {
+         "id": "897",
+         "city": "OCAMONTE (Santander)"
+      },
+      {
+         "id": "898",
+         "city": "OIBA (Santander)"
+      },
+      {
+         "id": "899",
+         "city": "ONZAGA (Santander)"
+      },
+      {
+         "id": "900",
+         "city": "PALMAR (Santander)"
+      },
+      {
+         "id": "901",
+         "city": "PALMAS DEL SOCORRO (Santander)"
+      },
+      {
+         "id": "902",
+         "city": "PARAMO (Santander)"
+      },
+      {
+         "id": "903",
+         "city": "PIEDECUESTA (Santander)"
+      },
+      {
+         "id": "904",
+         "city": "PINCHOTE (Santander)"
+      },
+      {
+         "id": "905",
+         "city": "PUENTE NACIONAL (Santander)"
+      },
+      {
+         "id": "906",
+         "city": "PUERTO PARRA (Santander)"
+      },
+      {
+         "id": "907",
+         "city": "PUERTO WILCHES (Santander)"
+      },
+      {
+         "id": "908",
+         "city": "RIONEGRO (Santander)"
+      },
+      {
+         "id": "909",
+         "city": "SABANA DE TORRES (Santander)"
+      },
+      {
+         "id": "910",
+         "city": "SAN ANDRES (Santander)"
+      },
+      {
+         "id": "911",
+         "city": "SAN BENITO (Santander)"
+      },
+      {
+         "id": "912",
+         "city": "SAN GIL (Santander)"
+      },
+      {
+         "id": "913",
+         "city": "SAN JOAQUIN (Santander)"
+      },
+      {
+         "id": "914",
+         "city": "SAN JOSE DE MIRANDA (Santander)"
+      },
+      {
+         "id": "915",
+         "city": "SAN MIGUEL (Santander)"
+      },
+      {
+         "id": "916",
+         "city": "SAN VICENTE DE CHUCURI (Santander)"
+      },
+      {
+         "id": "917",
+         "city": "SANTA BARBARA (Santander)"
+      },
+      {
+         "id": "918",
+         "city": "SANTA HELENA DEL OPON (Santander)"
+      },
+      {
+         "id": "919",
+         "city": "SIMACOTA (Santander)"
+      },
+      {
+         "id": "920",
+         "city": "SOCORRO (Santander)"
+      },
+      {
+         "id": "921",
+         "city": "SUAITA (Santander)"
+      },
+      {
+         "id": "922",
+         "city": "SUCRE (Santander)"
+      },
+      {
+         "id": "923",
+         "city": "SURATA (Santander)"
+      },
+      {
+         "id": "924",
+         "city": "TONA (Santander)"
+      },
+      {
+         "id": "925",
+         "city": "VALLE DE SAN JOSE (Santander)"
+      },
+      {
+         "id": "926",
+         "city": "VELEZ (Santander)"
+      },
+      {
+         "id": "927",
+         "city": "VETAS (Santander)"
+      },
+      {
+         "id": "928",
+         "city": "VILLANUEVA (Santander)"
+      },
+      {
+         "id": "929",
+         "city": "ZAPATOCA (Santander)"
+      },
+      {
+         "id": "930",
+         "city": "SINCELEJO (Suere)"
+      },
+      {
+         "id": "931",
+         "city": "BUENAVISTA (Suere)"
+      },
+      {
+         "id": "932",
+         "city": "CAIMITO (Suere)"
+      },
+      {
+         "id": "933",
+         "city": "COLOSO (Suere)"
+      },
+      {
+         "id": "934",
+         "city": "COROZAL (Suere)"
+      },
+      {
+         "id": "935",
+         "city": "CHALAN (Suere)"
+      },
+      {
+         "id": "936",
+         "city": "EL ROBLE (Suere)"
+      },
+      {
+         "id": "937",
+         "city": "GALERAS (Suere)"
+      },
+      {
+         "id": "938",
+         "city": "GUARANDA (Suere)"
+      },
+      {
+         "id": "939",
+         "city": "LA UNION (Suere)"
+      },
+      {
+         "id": "940",
+         "city": "LOS PALMITOS (Suere)"
+      },
+      {
+         "id": "941",
+         "city": "MAJAGUAL (Suere)"
+      },
+      {
+         "id": "942",
+         "city": "MORROA (Suere)"
+      },
+      {
+         "id": "943",
+         "city": "OVEJAS (Suere)"
+      },
+      {
+         "id": "944",
+         "city": "PALMITO (Suere)"
+      },
+      {
+         "id": "945",
+         "city": "SAMPUES (Suere)"
+      },
+      {
+         "id": "946",
+         "city": "SAN BENITO ABAD (Suere)"
+      },
+      {
+         "id": "947",
+         "city": "SAN JUAN DE BETULIA (Suere)"
+      },
+      {
+         "id": "948",
+         "city": "SAN MARCOS (Suere)"
+      },
+      {
+         "id": "949",
+         "city": "SAN ONOFRE (Suere)"
+      },
+      {
+         "id": "950",
+         "city": "SAN PEDRO (Suere)"
+      },
+      {
+         "id": "951",
+         "city": "SINCE (Suere)"
+      },
+      {
+         "id": "952",
+         "city": "SUCRE (Suere)"
+      },
+      {
+         "id": "953",
+         "city": "SANTIAGO DE TOLU (Suere)"
+      },
+      {
+         "id": "954",
+         "city": "TOLUVIEJO (Suere)"
+      },
+      {
+         "id": "955",
+         "city": "IBAGUE (Tolima)"
+      },
+      {
+         "id": "956",
+         "city": "ALPUJARRA (Tolima)"
+      },
+      {
+         "id": "957",
+         "city": "ALVARADO (Tolima)"
+      },
+      {
+         "id": "958",
+         "city": "AMBALEMA (Tolima)"
+      },
+      {
+         "id": "959",
+         "city": "ANZOATEGUI (Tolima)"
+      },
+      {
+         "id": "960",
+         "city": "ARMERO (Tolima)"
+      },
+      {
+         "id": "961",
+         "city": "ATACO (Tolima)"
+      },
+      {
+         "id": "962",
+         "city": "CAJAMARCA (Tolima)"
+      },
+      {
+         "id": "963",
+         "city": "CARMEN DE APICALA (Tolima)"
+      },
+      {
+         "id": "964",
+         "city": "CASABIANCA (Tolima)"
+      },
+      {
+         "id": "965",
+         "city": "CHAPARRAL (Tolima)"
+      },
+      {
+         "id": "966",
+         "city": "COELLO (Tolima)"
+      },
+      {
+         "id": "967",
+         "city": "COYAIMA (Tolima)"
+      },
+      {
+         "id": "968",
+         "city": "CUNDAY (Tolima)"
+      },
+      {
+         "id": "969",
+         "city": "DOLORES (Tolima)"
+      },
+      {
+         "id": "970",
+         "city": "ESPINAL (Tolima)"
+      },
+      {
+         "id": "971",
+         "city": "FALAN (Tolima)"
+      },
+      {
+         "id": "972",
+         "city": "FLANDES (Tolima)"
+      },
+      {
+         "id": "973",
+         "city": "FRESNO (Tolima)"
+      },
+      {
+         "id": "974",
+         "city": "GUAMO (Tolima)"
+      },
+      {
+         "id": "975",
+         "city": "HERVEO (Tolima)"
+      },
+      {
+         "id": "976",
+         "city": "HONDA (Tolima)"
+      },
+      {
+         "id": "977",
+         "city": "ICONONZO (Tolima)"
+      },
+      {
+         "id": "978",
+         "city": "LERIDA (Tolima)"
+      },
+      {
+         "id": "979",
+         "city": "LIBANO (Tolima)"
+      },
+      {
+         "id": "980",
+         "city": "MARIQUITA (Tolima)"
+      },
+      {
+         "id": "981",
+         "city": "MELGAR (Tolima)"
+      },
+      {
+         "id": "982",
+         "city": "MURILLO (Tolima)"
+      },
+      {
+         "id": "983",
+         "city": "NATAGAIMA (Tolima)"
+      },
+      {
+         "id": "984",
+         "city": "ORTEGA (Tolima)"
+      },
+      {
+         "id": "985",
+         "city": "PALOCABILDO (Tolima)"
+      },
+      {
+         "id": "986",
+         "city": "PIEDRAS (Tolima)"
+      },
+      {
+         "id": "987",
+         "city": "PLANADAS (Tolima)"
+      },
+      {
+         "id": "988",
+         "city": "PRADO (Tolima)"
+      },
+      {
+         "id": "989",
+         "city": "PURIFICACION (Tolima)"
+      },
+      {
+         "id": "990",
+         "city": "RIOBLANCO (Tolima)"
+      },
+      {
+         "id": "991",
+         "city": "RONCESVALLES (Tolima)"
+      },
+      {
+         "id": "992",
+         "city": "ROVIRA (Tolima)"
+      },
+      {
+         "id": "993",
+         "city": "SALDAÑA (Tolima)"
+      },
+      {
+         "id": "994",
+         "city": "SAN ANTONIO (Tolima)"
+      },
+      {
+         "id": "995",
+         "city": "SAN LUIS (Tolima)"
+      },
+      {
+         "id": "996",
+         "city": "SANTA ISABEL (Tolima)"
+      },
+      {
+         "id": "997",
+         "city": "SUAREZ (Tolima)"
+      },
+      {
+         "id": "998",
+         "city": "VALLE DE SAN JUAN (Tolima)"
+      },
+      {
+         "id": "999",
+         "city": "VENADILLO (Tolima)"
+      },
+      {
+         "id": "1000",
+         "city": "VILLAHERMOSA (Tolima)"
+      },
+      {
+         "id": "1001",
+         "city": "VILLARRICA (Tolima)"
+      },
+      {
+         "id": "1002",
+         "city": "CALI (Valle del Cauca)"
+      },
+      {
+         "id": "1003",
+         "city": "ALCALA (Valle del Cauca)"
+      },
+      {
+         "id": "1004",
+         "city": "ANDALUCIA (Valle del Cauca)"
+      },
+      {
+         "id": "1005",
+         "city": "ANSERMANUEVO (Valle del Cauca)"
+      },
+      {
+         "id": "1006",
+         "city": "ARGELIA (Valle del Cauca)"
+      },
+      {
+         "id": "1007",
+         "city": "BOLIVAR (Valle del Cauca)"
+      },
+      {
+         "id": "1008",
+         "city": "BUENAVENTURA (Valle del Cauca)"
+      },
+      {
+         "id": "1009",
+         "city": "GUADALAJARA DE BUGA (Valle del Cauca)"
+      },
+      {
+         "id": "1010",
+         "city": "BUGALAGRANDE (Valle del Cauca)"
+      },
+      {
+         "id": "1011",
+         "city": "CAICEDONIA (Valle del Cauca)"
+      },
+      {
+         "id": "1012",
+         "city": "CALIMA (Valle del Cauca)"
+      },
+      {
+         "id": "1013",
+         "city": "CANDELARIA (Valle del Cauca)"
+      },
+      {
+         "id": "1014",
+         "city": "CARTAGO (Valle del Cauca)"
+      },
+      {
+         "id": "1015",
+         "city": "DAGUA (Valle del Cauca)"
+      },
+      {
+         "id": "1016",
+         "city": "EL AGUILA (Valle del Cauca)"
+      },
+      {
+         "id": "1017",
+         "city": "EL CAIRO (Valle del Cauca)"
+      },
+      {
+         "id": "1018",
+         "city": "EL CERRITO (Valle del Cauca)"
+      },
+      {
+         "id": "1019",
+         "city": "EL DOVIO (Valle del Cauca)"
+      },
+      {
+         "id": "1020",
+         "city": "FLORIDA (Valle del Cauca)"
+      },
+      {
+         "id": "1021",
+         "city": "GINEBRA (Valle del Cauca)"
+      },
+      {
+         "id": "1022",
+         "city": "GUACARI (Valle del Cauca)"
+      },
+      {
+         "id": "1023",
+         "city": "JAMUNDI (Valle del Cauca)"
+      },
+      {
+         "id": "1024",
+         "city": "LA CUMBRE (Valle del Cauca)"
+      },
+      {
+         "id": "1025",
+         "city": "LA UNION (Valle del Cauca)"
+      },
+      {
+         "id": "1026",
+         "city": "LA VICTORIA (Valle del Cauca)"
+      },
+      {
+         "id": "1027",
+         "city": "OBANDO (Valle del Cauca)"
+      },
+      {
+         "id": "1028",
+         "city": "PALMIRA (Valle del Cauca)"
+      },
+      {
+         "id": "1029",
+         "city": "PRADERA (Valle del Cauca)"
+      },
+      {
+         "id": "1030",
+         "city": "RESTREPO (Valle del Cauca)"
+      },
+      {
+         "id": "1031",
+         "city": "RIOFRIO (Valle del Cauca)"
+      },
+      {
+         "id": "1032",
+         "city": "ROLDANILLO (Valle del Cauca)"
+      },
+      {
+         "id": "1033",
+         "city": "SAN PEDRO (Valle del Cauca)"
+      },
+      {
+         "id": "1034",
+         "city": "SEVILLA (Valle del Cauca)"
+      },
+      {
+         "id": "1035",
+         "city": "TORO (Valle del Cauca)"
+      },
+      {
+         "id": "1036",
+         "city": "TRUJILLO (Valle del Cauca)"
+      },
+      {
+         "id": "1037",
+         "city": "TULUA (Valle del Cauca)"
+      },
+      {
+         "id": "1038",
+         "city": "ULLOA (Valle del Cauca)"
+      },
+      {
+         "id": "1039",
+         "city": "VERSALLES (Valle del Cauca)"
+      },
+      {
+         "id": "1040",
+         "city": "VIJES (Valle del Cauca)"
+      },
+      {
+         "id": "1041",
+         "city": "YOTOCO (Valle del Cauca)"
+      },
+      {
+         "id": "1042",
+         "city": "YUMBO (Valle del Cauca)"
+      },
+      {
+         "id": "1043",
+         "city": "ZARZAL (Valle del Cauca)"
+      },
+      {
+         "id": "1044",
+         "city": "ARAUCA (Arauca)"
+      },
+      {
+         "id": "1045",
+         "city": "ARAUQUITA (Arauca)"
+      },
+      {
+         "id": "1046",
+         "city": "CRAVO NORTE (Arauca)"
+      },
+      {
+         "id": "1047",
+         "city": "FORTUL (Arauca)"
+      },
+      {
+         "id": "1048",
+         "city": "PUERTO RONDON (Arauca)"
+      },
+      {
+         "id": "1049",
+         "city": "SARAVENA (Arauca)"
+      },
+      {
+         "id": "1050",
+         "city": "TAME (Arauca)"
+      },
+      {
+         "id": "1051",
+         "city": "YOPAL (Casanare)"
+      },
+      {
+         "id": "1052",
+         "city": "AGUAZUL (Casanare)"
+      },
+      {
+         "id": "1053",
+         "city": "CHAMEZA (Casanare)"
+      },
+      {
+         "id": "1054",
+         "city": "HATO COROZAL (Casanare)"
+      },
+      {
+         "id": "1055",
+         "city": "LA SALINA (Casanare)"
+      },
+      {
+         "id": "1056",
+         "city": "MANI (Casanare)"
+      },
+      {
+         "id": "1057",
+         "city": "MONTERREY (Casanare)"
+      },
+      {
+         "id": "1058",
+         "city": "NUNCHIA (Casanare)"
+      },
+      {
+         "id": "1059",
+         "city": "OROCUE (Casanare)"
+      },
+      {
+         "id": "1060",
+         "city": "PAZ DE ARIPORO (Casanare)"
+      },
+      {
+         "id": "1061",
+         "city": "PORE (Casanare)"
+      },
+      {
+         "id": "1062",
+         "city": "RECETOR (Casanare)"
+      },
+      {
+         "id": "1063",
+         "city": "SABANALARGA (Casanare)"
+      },
+      {
+         "id": "1064",
+         "city": "SACAMA (Casanare)"
+      },
+      {
+         "id": "1065",
+         "city": "SAN LUIS DE PALENQUE (Casanare)"
+      },
+      {
+         "id": "1066",
+         "city": "TAMARA (Casanare)"
+      },
+      {
+         "id": "1067",
+         "city": "TAURAMENA (Casanare)"
+      },
+      {
+         "id": "1068",
+         "city": "TRINIDAD (Casanare)"
+      },
+      {
+         "id": "1069",
+         "city": "VILLANUEVA (Casanare)"
+      },
+      {
+         "id": "1070",
+         "city": "MOCOA (Putumayo)"
+      },
+      {
+         "id": "1071",
+         "city": "COLON (Putumayo)"
+      },
+      {
+         "id": "1072",
+         "city": "ORITO (Putumayo)"
+      },
+      {
+         "id": "1073",
+         "city": "PUERTO ASIS (Putumayo)"
+      },
+      {
+         "id": "1074",
+         "city": "PUERTO CAICEDO (Putumayo)"
+      },
+      {
+         "id": "1075",
+         "city": "PUERTO GUZMAN (Putumayo)"
+      },
+      {
+         "id": "1076",
+         "city": "LEGUIZAMO (Putumayo)"
+      },
+      {
+         "id": "1077",
+         "city": "SIBUNDOY (Putumayo)"
+      },
+      {
+         "id": "1078",
+         "city": "SAN FRANCISCO (Putumayo)"
+      },
+      {
+         "id": "1079",
+         "city": "SAN MIGUEL (Putumayo)"
+      },
+      {
+         "id": "1080",
+         "city": "SANTIAGO (Putumayo)"
+      },
+      {
+         "id": "1081",
+         "city": "VALLE DEL GUAMUEZ (Putumayo)"
+      },
+      {
+         "id": "1082",
+         "city": "VILLAGARZON (Putumayo)"
+      },
+      {
+         "id": "1083",
+         "city": "SAN ANDRES (Archipiélago de San Andrés, Providencia y Santa Catalina)"
+      },
+      {
+         "id": "1084",
+         "city": "PROVIDENCIA (Archipiélago de San Andrés, Providencia y Santa Catalina)"
+      },
+      {
+         "id": "1085",
+         "city": "LETICIA (Amazonas)"
+      },
+      {
+         "id": "1086",
+         "city": "EL ENCANTO (Amazonas)"
+      },
+      {
+         "id": "1087",
+         "city": "LA CHORRERA (Amazonas)"
+      },
+      {
+         "id": "1088",
+         "city": "LA PEDRERA (Amazonas)"
+      },
+      {
+         "id": "1089",
+         "city": "LA VICTORIA (Amazonas)"
+      },
+      {
+         "id": "1090",
+         "city": "MIRITI - PARANA (Amazonas)"
+      },
+      {
+         "id": "1091",
+         "city": "PUERTO ALEGRIA (Amazonas)"
+      },
+      {
+         "id": "1092",
+         "city": "PUERTO ARICA (Amazonas)"
+      },
+      {
+         "id": "1093",
+         "city": "PUERTO NARIÑO (Amazonas)"
+      },
+      {
+         "id": "1094",
+         "city": "PUERTO SANTANDER (Amazonas)"
+      },
+      {
+         "id": "1095",
+         "city": "TARAPACA (Amazonas)"
+      },
+      {
+         "id": "1096",
+         "city": "INIRIDA (Guainía)"
+      },
+      {
+         "id": "1097",
+         "city": "BARRANCO MINAS (Guainía)"
+      },
+      {
+         "id": "1098",
+         "city": "MAPIRIPANA (Guainía)"
+      },
+      {
+         "id": "1099",
+         "city": "SAN FELIPE (Guainía)"
+      },
+      {
+         "id": "1100",
+         "city": "PUERTO COLOMBIA (Guainía)"
+      },
+      {
+         "id": "1101",
+         "city": "LA GUADALUPE (Guainía)"
+      },
+      {
+         "id": "1102",
+         "city": "CACAHUAL (Guainía)"
+      },
+      {
+         "id": "1103",
+         "city": "PANA PANA (Guainía)"
+      },
+      {
+         "id": "1104",
+         "city": "MORICHAL (Guainía)"
+      },
+      {
+         "id": "1105",
+         "city": "SAN JOSE DEL GUAVIARE (Guaviare)"
+      },
+      {
+         "id": "1106",
+         "city": "CALAMAR (Guaviare)"
+      },
+      {
+         "id": "1107",
+         "city": "EL RETORNO (Guaviare)"
+      },
+      {
+         "id": "1108",
+         "city": "MIRAFLORES (Guaviare)"
+      },
+      {
+         "id": "1109",
+         "city": "MITU (Vaupés)"
+      },
+      {
+         "id": "1110",
+         "city": "CARURU (Vaupés)"
+      },
+      {
+         "id": "1111",
+         "city": "PACOA (Vaupés)"
+      },
+      {
+         "id": "1112",
+         "city": "TARAIRA (Vaupés)"
+      },
+      {
+         "id": "1113",
+         "city": "PAPUNAUA (Vaupés)"
+      },
+      {
+         "id": "1114",
+         "city": "YAVARATE (Vaupés)"
+      },
+      {
+         "id": "1115",
+         "city": "PUERTO CARREÑO (Vichada)"
+      },
+      {
+         "id": "1116",
+         "city": "LA PRIMAVERA (Vichada)"
+      },
+      {
+         "id": "1117",
+         "city": "SANTA ROSALIA (Vichada)"
+      },
+      {
+         "id": "1118",
+         "city": "CUMARIBO (Vichada)"
+      }
+   ]
+}
