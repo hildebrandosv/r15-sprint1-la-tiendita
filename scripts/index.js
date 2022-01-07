@@ -8,11 +8,18 @@ import {
 } from '../data/data.js';
 //
 // *** Import FUNCTIONS from JS file ***
-import { fnGetTableOfDb } from './ctrlAllData.js';
+import {
+   fnGetTableOfDb,
+   fnGetDataFromLocalStorage
+} from './ctrlAllData.js';
 //
 // *** CONSTANT definition ***
 //
-const idOffers = document.getElementById("idOffers"); // Container of products in offer
+const idOffers = document.getElementById("idOffers");                // Container of products in offer
+const idCitiesSelect = document.getElementById("idCitiesSelect");    // List with cities to choose the shippment address
+const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');
+
+//
 // *** VARIABLES definition ***
 //
 // *********************************************
@@ -37,12 +44,24 @@ idOffers.addEventListener("submit", e => {
 
 })
 
+// Listens the click in the modal to save the address selected to shipping.
+idBtnSaveAddress.addEventListener('click', e => {
+   e.preventDefault();
+   const lCitySelected = (idCitiesSelect.selectedIndex > 0);
+   if (lCitySelected) {
+      const sAddressShiping = idCitiesSelect.options[idCitiesSelect.selectedIndex].text;
+      localStorage.setItem('sAddressShiping', sAddressShiping);
+   } else {
+      alert("ℹ Recuerde que debe digitar la dirección de envío.")
+   }
+})
+
 function al(aa) { alert("Aquí voy... ", aa); }
 function cl(aa) { console.log("Aquí voy... ", aa); }
 //╔════════════════════════════════════════════════╗
 //║             FUNCTION DEFINITION                ║
 //╚════════════════════════════════════════════════╝
-// 
+//
 // Content generation of the products in offer
 async function fnLoadOffers() {
    // Extracts only elements in offer
@@ -87,8 +106,19 @@ async function fnLoadOffers() {
    })
 }
 
+// Content generation of the cities to choose to shippment
 async function fnLoadCities() {
+   // Gets the cities of the DB
    const aCities = await fnGetTableOfDb(urlCities);
-   console.log (aCities);
-
+   // Verify if the last shipping address selected exits to show it selected in the list. If not exists, then initializates the key in empty.
+   const sAddressShiping= fnGetDataFromLocalStorage("sAddressShiping");
+   const nIndexCurrentCity=  aCities.findIndex(element => element.city.toUpperCase().trim() === sAddressShiping.toUpperCase().trim());
+   if (nIndexCurrentCity < 0) {
+      localStorage.setItem('sAddressShiping', "");
+   }
+   // Fills the list with the cities to select the shipping address
+   idCitiesSelect.innerHTML= `<option ${nIndexCurrentCity < 0 ? "selected" : ""}>Elija una dirección...</option>`;
+   aCities.forEach( (element, index) => {
+      idCitiesSelect.innerHTML += `<option value="${element.id}" ${index == nIndexCurrentCity ? "selected" : ""}>${element.city}</option>`;
+   })
 }

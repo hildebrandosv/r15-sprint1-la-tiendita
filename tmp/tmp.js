@@ -20,7 +20,7 @@ idBtnSaveAddress.addEventListener('click', e => {
    e.preventDefault();
    const lCitySelected= (idCitiesSelect.selectedIndex > 0);
    if (lCitySelected) {
-      sAddressShiping = idCitiesSelect.options[idCitiesSelect.selectedIndex].text;
+      const sAddressShiping = idCitiesSelect.options[idCitiesSelect.selectedIndex].text;
       localStorage.setItem('sAddressShiping', sAddressShiping);   
    } else {
       alert("ℹ Recuerde que debe digitar la dirección de envío.")
@@ -31,7 +31,7 @@ idBtnSaveAddress.addEventListener('click', e => {
 // Ojo, preguntar por la dirección, sólo si no hay una dirección válida en localSt
 // Ojo; si elige cancelar o "X" y no hay dirección, tambien saca mensaje informativo
 
-function fnGetDataInLocalStorage (sKeyData, theContentData) {
+function fnGetDataFromLocalStorage (sKeyData, theContentData) {
    // Documentation Local Storage: https://www.acontracorrientech.com/local-storage-en-javascript-guia-completa/
 
 }
