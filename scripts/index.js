@@ -21,6 +21,7 @@ const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');   // Botto
 const idBtnModAddressSh =document.getElementById('idBtnModAddressSh');  // Botton that activates the read modal of the shipping address
 //
 // *** VARIABLES definition ***
+let addressShiping = ""          // Shhiping Adress: Global variable to have always this data in memory
 //
 // *********************************************
 // ***           BEGIN MAIN MODULE           ***
@@ -30,7 +31,7 @@ const idBtnModAddressSh =document.getElementById('idBtnModAddressSh');  // Botto
 // product than are not in offer products and neither are the most popular
 window.addEventListener('DOMContentLoaded', e => {
    fnLoadOffers() // Puts the offer products
-   fnLoadCities() // Puts the Cities to select the shipping address
+   fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShiping" in LS if not exists.
    // TODO: // Puts the most popular products
 })
 
@@ -41,10 +42,10 @@ idOffers.addEventListener("submit", e => {
    const btnSubmit = e.target.getElementsByTagName('button')[0];
    const id = btnSubmit.id; // Gets the ID to add to cart, this ID corresponding to ID of the button
    // If there is not a address to shipping, then this address is read in a modal of Bootstrap
-   idBtnModAddressSh.click();
-
-   console.log(`Elegí el ID "${id}" para agregar`)
-
+   addressShiping= fnGetDataFromLocalStorage("sAddressShiping");  // To updates the global variable
+   if (addressShiping === '') {
+    idBtnModAddressSh.click();
+   }
 })
 
 // Listens the click in the modal to save the address selected to shipping.
@@ -59,8 +60,6 @@ idBtnSaveAddress.addEventListener('click', e => {
    }
 })
 
-function al(aa) { alert("Aquí voy... ", aa); }
-function cl(aa) { console.log("Aquí voy... ", aa); }
 //╔════════════════════════════════════════════════╗
 //║             FUNCTION DEFINITION                ║
 //╚════════════════════════════════════════════════╝
@@ -119,6 +118,7 @@ async function fnLoadCities() {
    if (nIndexCurrentCity < 0) {
       localStorage.setItem('sAddressShiping', "");
    }
+   addressShiping= sAddressShiping;    // To always charge thr cities, then updates the global variable
    // Fills the list with the cities to select the shipping address
    idCitiesSelect.innerHTML= `<option ${nIndexCurrentCity < 0 ? "selected" : ""}><span>🛃</span>Elija una dirección...</option>`;
    aCities.forEach( (element, index) => {
