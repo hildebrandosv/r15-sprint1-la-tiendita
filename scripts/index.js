@@ -15,10 +15,10 @@ import {
 //
 // *** CONSTANT definition ***
 //
-const idOffers = document.getElementById("idOffers");                // Container of products in offer
-const idCitiesSelect = document.getElementById("idCitiesSelect");    // List with cities to choose the shippment address
-const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');
-
+const idOffers = document.getElementById("idOffers");                   // Container of products in offer to displays the cards of these products
+const idCitiesSelect = document.getElementById("idCitiesSelect");       // List (select tag) with cities to choose the shippment address
+const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');   // Botton to save the shipping address chosen
+const idBtnModAddressSh =document.getElementById('idBtnModAddressSh');  // Botton that activates the read modal of the shipping address
 //
 // *** VARIABLES definition ***
 //
@@ -40,6 +40,9 @@ idOffers.addEventListener("submit", e => {
    // The TARGET of submit is a FORM, then the unique tag BOTTON is searched to know the ID to add to cart
    const btnSubmit = e.target.getElementsByTagName('button')[0];
    const id = btnSubmit.id; // Gets the ID to add to cart, this ID corresponding to ID of the button
+   // If there is not a address to shipping, then this address is read in a modal of Bootstrap
+   idBtnModAddressSh.click();
+
    console.log(`Elegí el ID "${id}" para agregar`)
 
 })
@@ -117,8 +120,8 @@ async function fnLoadCities() {
       localStorage.setItem('sAddressShiping', "");
    }
    // Fills the list with the cities to select the shipping address
-   idCitiesSelect.innerHTML= `<option ${nIndexCurrentCity < 0 ? "selected" : ""}>Elija una dirección...</option>`;
+   idCitiesSelect.innerHTML= `<option ${nIndexCurrentCity < 0 ? "selected" : ""}><span>🛃</span>Elija una dirección...</option>`;
    aCities.forEach( (element, index) => {
-      idCitiesSelect.innerHTML += `<option value="${element.id}" ${index == nIndexCurrentCity ? "selected" : ""}>${element.city}</option>`;
+      idCitiesSelect.innerHTML += `<option value="${element.id}" ${index == nIndexCurrentCity ? "selected" : ""}><span>🛃</span>${element.city}</option>`;
    })
 }
