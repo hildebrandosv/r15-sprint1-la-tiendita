@@ -18,6 +18,7 @@ import {
 const idOffers = document.getElementById("idOffers");                   // Container of products in offer to displays the cards of these products
 const idCitiesSelect = document.getElementById("idCitiesSelect");       // List (select tag) with cities to choose the shippment address
 const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');   // Botton to save the shipping address chosen
+const idBtnCancelAddress= document.getElementById('idBtnCancelAddress') // Botton to cancel the shipping address selection
 const idBtnModAddressSh =document.getElementById('idBtnModAddressSh');  // Botton that activates the read modal of the shipping address
 //
 // *** VARIABLES definition ***
@@ -48,7 +49,7 @@ idOffers.addEventListener("submit", e => {
    }
 })
 
-// Listens the click in the modal to save the address selected to shipping.
+// Listens the click in the modal to "SAVE" button the address selected to shipping.
 idBtnSaveAddress.addEventListener('click', e => {
    e.preventDefault();
    const lCitySelected = (idCitiesSelect.selectedIndex > 0);
@@ -56,6 +57,14 @@ idBtnSaveAddress.addEventListener('click', e => {
       const sAddressShiping = idCitiesSelect.options[idCitiesSelect.selectedIndex].text;
       localStorage.setItem('sAddressShiping', sAddressShiping);
    } else {
+      alert("ℹ Recuerde que debe digitar la dirección de envío.")
+   }
+})
+// Listens the click in the modal to "CANCEL" button the address selected to shipping.
+idBtnCancelAddress.addEventListener('click', e => {
+   e.preventDefault();
+   const lCitySelected = (idCitiesSelect.selectedIndex > 0);
+   if (!lCitySelected) {
       alert("ℹ Recuerde que debe digitar la dirección de envío.")
    }
 })
