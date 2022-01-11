@@ -11,7 +11,8 @@ import {
 import {
    fnGetTableOfDb,
    fnGetRecordOfTable,
-   fnGetDataFromLocalStorage
+   fnGetDataFromLocalStorage,
+   fnNumberFormat
 } from './ctrlAllData.js';
 //
 // *** CONSTANT definition ***
@@ -30,6 +31,7 @@ let addressShiping = ""          // Shhiping Adress: Global variable to have alw
 // *********************************************
 // ***           BEGIN MAIN MODULE           ***
 // *********************************************
+
 //
 // Loads  initial data: In offer and most popular products. an improvement is puts the
 // product than are not in offer products and neither are the most popular
@@ -80,13 +82,25 @@ idBtnCancelAddress.addEventListener('click', e => {
 //╚════════════════════════════════════════════════╝
 // GET promise to load ONE RECORD: Query only a product of the products in offer
 async function fnLoadOneProduct (urlData, idKey) {
-   const element= await fnGetRecordOfTable(urlData,idKey)
+   // Get data and load object in variables
+   const element= await fnGetRecordOfTable(urlData,idKey) // Get the data to the selected product
+   const { id, name, unit, price, stock, min_stock, max_stock, description, url_image, most_popular, discount } = element;
+   const price_net = Math.round(price * ((100 - discount) / 100));
 
-idBtnModAddProdOffer.click();
+   const idImgProdOffer = document.getElementById('idImgProdOffer');
+   const idTmpName = document.getElementById('idModalDialogProdOfferToCart');
+   const idPriceProdOffer = document.getElementById('idPriceProdOffer');
+   // Load the data in each HTML element.
+   idImgProdOffer.src= element.url_image;
+   idTmpName.innerHTML= element.name;
+   idPriceProdOffer.innerHTML= fnNumberFormat(price_net,'$') + ' /' + unit;
+   // Open the modal with te info
+   idBtnModAddProdOffer.click();
 
 
    console.log(element.id) // TODO: quitar esto
    console.log(element.name) // TODO: quitar esto
+   console.log(element) // TODO: quitar esto
 }
 
 
@@ -99,8 +113,8 @@ async function fnLoadOffers() {
       // Unstructured every data record (an object) to puts in the individual values with te same name of the object "key"
       const { id, name, unit, price, stock, min_stock, max_stock, description, url_image, most_popular, discount } = element;
       const price_net = Math.round(price * ((100 - discount) / 100));
-      const price_format = price.toString().substr(0, price.toString().length - 3) + (price.length > 3 ? "," : "") + price.toString().substr(-3);
-      const price_net_format = price_net.toString().substr(0, price_net.toString().length - 3) + (price_net.length > 3 ? "," : "") + price_net.toString().substr(-3);
+      const price_format = fnNumberFormat(price);
+      const price_net_format = fnNumberFormat(price_net);
       // Fills the container with products in offer
       const url_IMAGE= "./images/vegetables01.png";   // TODO: quitar esto y reemplazar la variable del objeto más abajo TODO: 
       idOffers.innerHTML += `
@@ -126,12 +140,10 @@ async function fnLoadOffers() {
                               </div>
                               <h3 id="idOffers-name" class="text-muted my-2">${name}</h3>
                               <p id="idOffers-det" class="card-text"></p>
-
                               <form>
                                  <button id="${id}" type="submit" class="btn w-100 fs-4 text-white clCol-btn1">Agregar</button>
                               </form>
-
-                              </div>
+                           </div>
                         </div>`
    })
 }

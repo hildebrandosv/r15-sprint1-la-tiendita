@@ -24,3 +24,12 @@ export const fnGetDataFromLocalStorage = (sKeyData) => {
    valueKeyInLocalStorage = localStorage.getItem(sKeyData);
    return ((valueKeyInLocalStorage))
 }
+
+// Formats number with decimal separator and prefix
+export function fnNumberFormat (nNumber, sPrefix, sSeparator) {
+   const strThousandsSeparator= sSeparator === undefined ? "," : sSeparator;
+   const strDecimalSeparator= sSeparator === ',' ? "." : ',';
+   const strPrefix= sPrefix === undefined ? "" : sPrefix;
+   const strFormat = strPrefix + nNumber.toString().substr(0, nNumber.toString().length - 3) + (nNumber.toString().length > 3 ? strThousandsSeparator : "") + nNumber.toString().substr(-3);
+   return strFormat
+}

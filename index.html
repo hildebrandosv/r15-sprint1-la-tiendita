@@ -89,21 +89,50 @@
           </div>
           <div class="row">
             <div class="col-12 col-sm-12 col-md-6 text-center">
-              <img class="m-4" src="images/gps01.png" height="500px">
+              <img id="idImgProdOffer" class="m-4" src="images/gps01.png" height="500px">
             </div>
-            <div class="col-12 col-sm-12 col-md-5 ms-2 me-3">
-              <h5 id="idModalDialogProdOfferToCart" class="modal-title mt-4">NOMBRE DEL PRODUCTO</h5>
+            <div class="col-12 col-sm-12 col-md-5 ms-2 me-3 mt-4 pt-4">
+              <h5 id="idModalDialogProdOfferToCart" class="modal-title h1 mt-4 ms-3">NOMBRE DEL PRODUCTO</h5>
               <div class="modal-body">
-                <p>PRECIO</p>
-                <div class="input-group mb-5 ">
-                  <select id="idCitiesSelect" class="form-select" aria-label="Select filled from JS (Hs)">
-                    <!-- This is the "option" list to choose the shipping address than is filled from JS -->
-                  </select>
+                <p id="idPriceProdOffer" class="h1">PRECIO</p>
+                <p class="my-4">Precio con iva incluido.</p>
+                <p class="fs-5">Peso aproximado por pieza, puede variar de acuerdo al peso real.</p>
+                <div class="input-group mb-5">
+                  <div class="dropdown w-100">
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Elija el tiempo de entrega mínimo
+                    </button>
+                    <ul class="dropdown-menu w-100 ps-2" aria-labelledby="dropdownMenuButton1">
+                      <li>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            Entrega para hoy
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                          <label class="form-check-label" for="exampleRadios2">
+                            Entrega para mañana
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                          <label class="form-check-label" for="exampleRadios3">
+                            Entrega en tres días hábiles
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
           <!-- Botton to add to cart -->
           <div class="modal-footer">
             <button id="idBtnSaveAddress" type="button" class="btn btn-success" data-bs-dismiss="modal">
