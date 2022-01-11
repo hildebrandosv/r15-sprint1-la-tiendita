@@ -83,29 +83,34 @@
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="row justify-content-end mt-4 me-4">
-            <button id="btnCloseModal" class="btn-close p-4 bg-dark opacity-100 text-white rounded-circle d-flex justify-content-center align-items-center" type="button" data-bs-dismiss="modal" aria-label="Close">
+            <button id="btnCloseModal"
+              class="btn-close p-4 bg-dark opacity-100 text-white rounded-circle d-flex justify-content-center align-items-center"
+              type="button" data-bs-dismiss="modal" aria-label="Close">
               <span class="fs-3">X</span>
             </button>
           </div>
-          <div class="row">
+          <div class="row">    <!-- DIV type ROW to show image and product detail -->
             <div class="col-12 col-sm-12 col-md-6 text-center">
               <img id="idImgProdOffer" class="m-4" src="images/gps01.png" height="500px">
             </div>
             <div class="col-12 col-sm-12 col-md-5 ms-2 me-3 mt-4 pt-4">
               <h5 id="idModalDialogProdOfferToCart" class="modal-title h1 mt-4 ms-3">NOMBRE DEL PRODUCTO</h5>
               <div class="modal-body">
+                <!--MODAL-BODY -Show product selected to add to cart -->
                 <p id="idPriceProdOffer" class="h1">PRECIO</p>
                 <p class="my-4">Precio con iva incluido.</p>
                 <p class="fs-5">Peso aproximado por pieza, puede variar de acuerdo al peso real.</p>
-                <div class="input-group mb-5">
+                <div class="input-group mb-5">  <!--DROPDOWN -Read of days of delivery -->
                   <div class="dropdown w-100">
-                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
                       Elija el tiempo de entrega mínimo
                     </button>
                     <ul class="dropdown-menu w-100 ps-2" aria-labelledby="dropdownMenuButton1">
                       <li>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1" checked>
                           <label class="form-check-label" for="exampleRadios1">
                             Entrega para hoy
                           </label>
@@ -113,7 +118,8 @@
                       </li>
                       <li>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2">
                           <label class="form-check-label" for="exampleRadios2">
                             Entrega para mañana
                           </label>
@@ -121,7 +127,8 @@
                       </li>
                       <li>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                            value="option3">
                           <label class="form-check-label" for="exampleRadios3">
                             Entrega en tres días hábiles
                           </label>
@@ -129,15 +136,21 @@
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                </div>                <!--End: DROPDOWN - Read of days of delivery -->
+              </div>              <!--End: MODAL-BODY - Show product selected to add to cart -->
+            </div>  <!-- End: DIV type COL to show product detail -->
+          </div>  <!-- End: DIV type ROW to show image and product detail -->
           <!-- Botton to add to cart -->
-          <div class="modal-footer">
-            <button id="idBtnSaveAddress" type="button" class="btn btn-success" data-bs-dismiss="modal">
-              Agregar
-            </button>
+          <div class="modal-footer me-4">
+            <div class="me-4 d-flex align-items-center">
+              <p class="fs-3 color-info mt-2">Cantidad: </p>
+              <a id="idSubstractOne" href=""><img class="mx-4" src="./images/minus01.png" width="40" height="40"></a>
+              <span id="idAmountToCart" class="fs-4 fw-bold">1</span>
+              <a id="idAddOne" href=""><img class="mx-4" src="./images/add01.png" width="40" height="40"></a>
+              <button id="idBtnAddToCart" type="button" class="btn btn-success btn-lg mx-4" data-bs-dismiss="modal">
+                Agregar
+              </button>
+            </div>
           </div>
         </div>
       </div> <!-- class="modal-dialog" -->

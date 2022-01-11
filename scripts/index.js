@@ -20,9 +20,9 @@ import {
 const idOffers = document.getElementById("idOffers");                   // Container of products in offer to displays the cards of these products
 const idCitiesSelect = document.getElementById("idCitiesSelect");       // List (select tag) with cities to choose the shippment address
 const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');   // Botton to save the shipping address chosen
-const idBtnCancelAddress= document.getElementById('idBtnCancelAddress') // Botton to cancel the shipping address selection
-const idBtnModAddressSh =document.getElementById('idBtnModAddressSh');  // Botton that activates the read modal of the shipping address
-const idBtnModAddProdOffer =document.getElementById('idBtnModAddProdOffer');
+const idBtnCancelAddress = document.getElementById('idBtnCancelAddress') // Botton to cancel the shipping address selection
+const idBtnModAddressSh = document.getElementById('idBtnModAddressSh');  // Botton that activates the read modal of the shipping address
+const idBtnModAddProdOffer = document.getElementById('idBtnModAddProdOffer');
 
 //
 // *** VARIABLES definition ***
@@ -47,12 +47,12 @@ idOffers.addEventListener("submit", async e => {
    const btnSubmit = e.target.getElementsByTagName('button')[0];
    const id = btnSubmit.id; // Gets the ID to add to cart, this ID corresponding to ID of the button
    // If there is not a address to shipping, then this address is read in a modal of Bootstrap
-   addressShiping= fnGetDataFromLocalStorage("sAddressShiping");  // To updates the global variable
+   addressShiping = fnGetDataFromLocalStorage("sAddressShiping");  // To updates the global variable
    if (addressShiping === '') {
-    //TODO: idBtnModAddressSh.click();   //TODO: habilitar esto que lle la dirección cuando dan click en agregar y no hay una dirección
+      //TODO: idBtnModAddressSh.click();   //TODO: habilitar esto que lle la dirección cuando dan click en agregar y no hay una dirección
    }
    // Open the modal to selected product with the information of these product
-   fnLoadOneProduct(urlProducts,id)
+   fnLoadOneProduct(urlProducts, id)
 
 
 })
@@ -81,9 +81,12 @@ idBtnCancelAddress.addEventListener('click', e => {
 //║             FUNCTION DEFINITION                ║
 //╚════════════════════════════════════════════════╝
 // GET promise to load ONE RECORD: Query only a product of the products in offer
-async function fnLoadOneProduct (urlData, idKey) {
+async function fnLoadOneProduct(urlData, idKey) {
+   // Local variables for the item to be added to the 
+   let nAmountItem = 1;
+   let stAmountAndUnit = "";
    // Get data and load object in variables
-   const element= await fnGetRecordOfTable(urlData,idKey) // Get the data to the selected product
+   const element = await fnGetRecordOfTable(urlData, idKey) // Get the data to the selected product
    const { id, name, unit, price, stock, min_stock, max_stock, description, url_image, most_popular, discount } = element;
    const price_net = Math.round(price * ((100 - discount) / 100));
 
@@ -91,16 +94,33 @@ async function fnLoadOneProduct (urlData, idKey) {
    const idTmpName = document.getElementById('idModalDialogProdOfferToCart');
    const idPriceProdOffer = document.getElementById('idPriceProdOffer');
    // Load the data in each HTML element.
-   idImgProdOffer.src= element.url_image;
-   idTmpName.innerHTML= element.name;
-   idPriceProdOffer.innerHTML= fnNumberFormat(price_net,'$') + ' /' + unit;
+   idImgProdOffer.src = element.url_image;
+   idTmpName.innerHTML = element.name;
+   idPriceProdOffer.innerHTML = fnNumberFormat(price_net, '$') + ' /' + unit;
    // Open the modal with te info
    idBtnModAddProdOffer.click();
-
-
-   console.log(element.id) // TODO: quitar esto
-   console.log(element.name) // TODO: quitar esto
-   console.log(element) // TODO: quitar esto
+   // Listens CLICK in the add or substract buttons, to increase or decrease the amount needed
+   const idSubstractOne = document.getElementById('idSubstractOne');
+   const idAddOne = document.getElementById('idAddOne');
+   const idAmountToCart = document.getElementById('idAmountToCart');
+   const idBtnAddToCart = document.getElementById('idBtnAddToCart');
+   stAmountAndUnit = fnNumberFormat(nAmountItem) + ' /' + unit;
+   idAmountToCart.innerHTML = stAmountAndUnit;
+   idSubstractOne.addEventListener('click', e => {
+      e.preventDefault();
+      nAmountItem += -1;
+      nAmountItem <= 0 ? nAmountItem= 1 : nAmountItem
+      idAmountToCart.innerHTML = fnNumberFormat(nAmountItem) + ' /' + unit;
+   })
+   idAddOne.addEventListener('click', e => {
+      e.preventDefault();
+      nAmountItem += 1;
+      idAmountToCart.innerHTML = fnNumberFormat(nAmountItem) + ' /' + unit;
+   })
+   idBtnAddToCart.addEventListener('click', e => {
+      e.preventDefault();
+      alert("agregado");
+   })
 }
 
 
@@ -116,7 +136,7 @@ async function fnLoadOffers() {
       const price_format = fnNumberFormat(price);
       const price_net_format = fnNumberFormat(price_net);
       // Fills the container with products in offer
-      const url_IMAGE= "./images/vegetables01.png";   // TODO: quitar esto y reemplazar la variable del objeto más abajo TODO: 
+      const url_IMAGE = "./images/vegetables01.png";   // TODO: quitar esto y reemplazar la variable del objeto más abajo TODO: 
       idOffers.innerHTML += `
                         <div class="card position-relative fst-italic" style="width: 350px; min-width: 350px;" data-id=${id}>
                            <div id="idDiscount" class="position-absolute rounded-pill m-2 clBg-secondary2">
@@ -153,15 +173,15 @@ async function fnLoadCities() {
    // Gets the cities of the DB
    const aCities = await fnGetTableOfDb(urlCities);
    // Verify if the last shipping address selected exits to show it selected in the list. If not exists, then initializates the key in empty.
-   const sAddressShiping= fnGetDataFromLocalStorage("sAddressShiping");
-   const nIndexCurrentCity=  aCities.findIndex(element => element.city.toUpperCase().trim() === sAddressShiping.toUpperCase().trim());
+   const sAddressShiping = fnGetDataFromLocalStorage("sAddressShiping");
+   const nIndexCurrentCity = aCities.findIndex(element => element.city.toUpperCase().trim() === sAddressShiping.toUpperCase().trim());
    if (nIndexCurrentCity < 0) {
       localStorage.setItem('sAddressShiping', "");
    }
-   addressShiping= sAddressShiping;    // To always charge thr cities, then updates the global variable
+   addressShiping = sAddressShiping;    // To always charge thr cities, then updates the global variable
    // Fills the list with the cities to select the shipping address
-   idCitiesSelect.innerHTML= `<option ${nIndexCurrentCity < 0 ? "selected" : ""}><span>🛃</span>Elija una dirección...</option>`;
-   aCities.forEach( (element, index) => {
+   idCitiesSelect.innerHTML = `<option ${nIndexCurrentCity < 0 ? "selected" : ""}><span>🛃</span>Elija una dirección...</option>`;
+   aCities.forEach((element, index) => {
       idCitiesSelect.innerHTML += `<option value="${element.id}" ${index == nIndexCurrentCity ? "selected" : ""}><span>🛃</span>${element.city}</option>`;
    })
 }
