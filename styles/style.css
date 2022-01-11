@@ -23,11 +23,11 @@
 body{
   background-color: var(--colorBgNavBarr);
 }
-#idOffers {
-
-}
 .clBg-secondary2 {
   background-color: var(--colorBgSecondary2);
+}
+.clBg-secondary3 {
+  background-color: var(--colorBtn1);
 }
 .clCol-txt-discount {
   color: #5b2ea3;
