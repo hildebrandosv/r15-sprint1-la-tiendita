@@ -1,6 +1,15 @@
-// Function to get data from table for any table
+// https://rosolutions.com.mx/blog/index.php/2018/10/29/manejo-de-errores-al-utilizar-fetch/
+
+// Function HTTP-GET to get ALL DATA (all registers) from table for any table
 export const fnGetTableOfDb = async(urlData) => {
    const res = await fetch(urlData);
+   const data = res.json()
+   return data
+}
+
+// Function HTTP-GET to get ALL DATA (all registers) from table for any table
+export const fnGetRecordOfTable = async(urlData, idKey) => {
+   const res = await fetch(urlData + "/" + idKey);
    const data = res.json()
    return data
 }

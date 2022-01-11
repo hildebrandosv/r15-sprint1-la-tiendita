@@ -29,20 +29,20 @@
     <!-- This containes is filled from JS  -->
   </div>
 
-
-  <!-- Modal to read the address to the shiping. This modal only is showed when the user do not has a address -->
+  <!-- ---------------------------------------------------------------------------------------- -->
+  <!-- Modal to read the "ADDRESS TO SHIPPING". This modal only is showed when the user do not has a address -->
   <!-- registered and the button of the modal is always hide and this is activated fron JS when a product is selected. -->
-  <div id="nn" class="container my-5">
-    <!-- Button to activate trhe modal: is always hide TODO: PONER LA CLASE DE OCULTO -->
+  <div id="idAddressShipingContainer" class="container my-5">
+    <!-- Button to activate trhe modal: is always hide -->
     <button id="idBtnModAddressSh" class="btn btn-dark d-none" type="button" data-bs-toggle="modal"
       data-bs-target="#idModalStaticAddressShipp">
-      Choose your Address Shipping
+      Seleccionar elemento de la lista
     </button>
     <!-- Modal to read the shipping address -->
     <div id="idModalStaticAddressShipp" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false"
       tabindex="-1" aria-labelledby="idModalDialogAddress" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="width: 38rem;">
           <div class="modal-header">
             <h2 id="idModalDialogAddress" class="modal-title">¿Donde quieres recibir tu pedido?</h5>
               <button id="btnCloseModal" class="btn-close" type="button" data-bs-dismiss="modal"
@@ -67,8 +67,54 @@
         </div>
       </div> <!-- class="modal-dialog" -->
     </div> <!-- End: id="idModalStaticAddressShipp" -->
+  </div> <!-- End: id="idAddressShipingContainer" -->
+  <!-- -------------------------------------------------------------------------------------- -->
+  <!-- Modal to read the "SELECTED PRODUCT TO ADD TO CART". This modal only is showed when the user wants add an article to cart -->
+  <!-- and the button of the modal is always hide and this is activated fron JS when a product is selected. -->
+  <div id="idProdOfferToCartContainer" class="container my-5">
+    <!-- Button to activate trhe modal: is always hide -->
+    <button id="idBtnModAddProdOffer" class="btn btn-dark d-none" type="button" data-bs-toggle="modal"
+      data-bs-target="#idModalProdOfferToCart">
+      Agregar elemento al carrito de compras
+    </button>
+    <!-- Modal to read the data product to add to cart -->
+    <div id="idModalProdOfferToCart" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="idModalDialogProdOfferToCart" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="row justify-content-end mt-4 me-4">
+            <button id="btnCloseModal" class="btn-close p-4 bg-dark opacity-100 text-white rounded-circle d-flex justify-content-center align-items-center" type="button" data-bs-dismiss="modal" aria-label="Close">
+              <span class="fs-3">X</span>
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 text-center">
+              <img class="m-4" src="images/gps01.png" height="500px">
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 ms-2 me-3">
+              <h5 id="idModalDialogProdOfferToCart" class="modal-title mt-4">NOMBRE DEL PRODUCTO</h5>
+              <div class="modal-body">
+                <p>PRECIO</p>
+                <div class="input-group mb-5 ">
+                  <select id="idCitiesSelect" class="form-select" aria-label="Select filled from JS (Hs)">
+                    <!-- This is the "option" list to choose the shipping address than is filled from JS -->
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botton to add to cart -->
+          <div class="modal-footer">
+            <button id="idBtnSaveAddress" type="button" class="btn btn-success" data-bs-dismiss="modal">
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div> <!-- class="modal-dialog" -->
+    </div> <!-- End: id="idModalProdOfferToCart" -->
   </div> <!-- End: Container with te botton of the modal and the modal -->
-  <!-- ---------- -->
+  <!-- ---------------------------------------------------------------------------------------- -->
   <!-- Own Footer -->
   <footer class="mt-3 text-center text-lg-start bg-success bg-opacity-25 text-muted">
     <!-- Copyright -->

@@ -10,6 +10,7 @@ import {
 // *** Import FUNCTIONS from JS file ***
 import {
    fnGetTableOfDb,
+   fnGetRecordOfTable,
    fnGetDataFromLocalStorage
 } from './ctrlAllData.js';
 //
@@ -20,6 +21,8 @@ const idCitiesSelect = document.getElementById("idCitiesSelect");       // List 
 const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');   // Botton to save the shipping address chosen
 const idBtnCancelAddress= document.getElementById('idBtnCancelAddress') // Botton to cancel the shipping address selection
 const idBtnModAddressSh =document.getElementById('idBtnModAddressSh');  // Botton that activates the read modal of the shipping address
+const idBtnModAddProdOffer =document.getElementById('idBtnModAddProdOffer');
+
 //
 // *** VARIABLES definition ***
 let addressShiping = ""          // Shhiping Adress: Global variable to have always this data in memory
@@ -32,12 +35,11 @@ let addressShiping = ""          // Shhiping Adress: Global variable to have alw
 // product than are not in offer products and neither are the most popular
 window.addEventListener('DOMContentLoaded', e => {
    fnLoadOffers() // Puts the offer products
-   fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShiping" in LS if not exists.
-   // TODO: // Puts the most popular products
+   //TODO:(habilitar esta lín)TODO: fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShiping" in LS if not exists.
 })
 
 // Listens the event click in te container of the offers
-idOffers.addEventListener("submit", e => {
+idOffers.addEventListener("submit", async e => {
    e.preventDefault();
    // The TARGET of submit is a FORM, then the unique tag BOTTON is searched to know the ID to add to cart
    const btnSubmit = e.target.getElementsByTagName('button')[0];
@@ -45,8 +47,12 @@ idOffers.addEventListener("submit", e => {
    // If there is not a address to shipping, then this address is read in a modal of Bootstrap
    addressShiping= fnGetDataFromLocalStorage("sAddressShiping");  // To updates the global variable
    if (addressShiping === '') {
-    idBtnModAddressSh.click();
+    //TODO: idBtnModAddressSh.click();   //TODO: habilitar esto que lle la dirección cuando dan click en agregar y no hay una dirección
    }
+   // Open the modal to selected product with the information of these product
+   fnLoadOneProduct(urlProducts,id)
+
+
 })
 
 // Listens the click in the modal to "SAVE" button the address selected to shipping.
@@ -72,8 +78,20 @@ idBtnCancelAddress.addEventListener('click', e => {
 //╔════════════════════════════════════════════════╗
 //║             FUNCTION DEFINITION                ║
 //╚════════════════════════════════════════════════╝
+// GET promise to load ONE RECORD: Query only a product of the products in offer
+async function fnLoadOneProduct (urlData, idKey) {
+   const element= await fnGetRecordOfTable(urlData,idKey)
+
+idBtnModAddProdOffer.click();
+
+
+   console.log(element.id) // TODO: quitar esto
+   console.log(element.name) // TODO: quitar esto
+}
+
+
 //
-// Content generation of the products in offer
+// GET promise to load ALL TABLE data: Content generation of the products in offer
 async function fnLoadOffers() {
    // Extracts only elements in offer
    const aProducts = (await fnGetTableOfDb(urlProducts)).filter(element => element.discount > 0)
@@ -84,6 +102,7 @@ async function fnLoadOffers() {
       const price_format = price.toString().substr(0, price.toString().length - 3) + (price.length > 3 ? "," : "") + price.toString().substr(-3);
       const price_net_format = price_net.toString().substr(0, price_net.toString().length - 3) + (price_net.length > 3 ? "," : "") + price_net.toString().substr(-3);
       // Fills the container with products in offer
+      const url_IMAGE= "./images/vegetables01.png";   // TODO: quitar esto y reemplazar la variable del objeto más abajo TODO: 
       idOffers.innerHTML += `
                         <div class="card position-relative fst-italic" style="width: 350px; min-width: 350px;" data-id=${id}>
                            <div id="idDiscount" class="position-absolute rounded-pill m-2 clBg-secondary2">
@@ -91,7 +110,7 @@ async function fnLoadOffers() {
                                  class="fs-5 fw-bolder ps-2 pb-3 bg-gradient clCol-txt-discount">${discount}%</span>
                               <span class="h6 me-2 bg-gradient clCol-txt-discount">dcto.</span>
                            </div>
-                           <img id="idOffers-img" src="${url_image}"
+                           <img id="idOffers-img" src="${url_IMAGE}"
                            class="card-img-top" alt="...">
                            <div class="card-body">
                               <div class="d-flex">
