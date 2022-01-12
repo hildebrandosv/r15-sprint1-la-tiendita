@@ -26,7 +26,9 @@
     <nav id="nav-bar" class="mb-5 navbar navbar-expand-lg navbar-light fixed-top bg-white">
       <div class="container-fluid">
         <img id="header-img" src="./images/little-shop01.png" alt="" width="100" height="100">
-        <a class="navbar-brand fs-4 fw-bold mx-3" href="#idMain"><span class="display-4">La Tiendita</span></a>
+        <a class="navbar-brand fs-4 fw-bold mx-3" href="#idMain">
+          <span class="display-6">La Tiendita</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -37,24 +39,27 @@
               <a class="nav-link active" aria-current="page" href="#idMain">Inicio</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" aria-current="page" href="">Mantenimiento Productos</a>
+              <a class="nav-link" aria-current="page" href="">Productos</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" aria-current="page" href="">Dirección envío</a>
             </li>
           </ul>
           <form class="d-flex">
             <input id="idSearch" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Buscar</button>
           </form>
-          <div class="mx-4 p-2 clBg-secondary3" style="border-radius: 1em;">
+          <div class="mx-4 px-2 bg-light border border-success rounded shadow d-flex align-items-center">
             <a href="">
-              <img id="idImgCartStatus" src="images/cart-empty01.png" width="50" height="50">
+              <img id="idImgCartStatus" src="images/cart-empty01.png" width="25" height="25">
             </a>
-            <span id="idTxtCartStatus" class="mx-4 fs-3">0</span>
+            <span id="idTxtCartStatus" class="mx-4 fs-4">0</span>
           </div>
         </div>
       </div>
     </nav>
   </header>
-
+  <!-- Product added to cart message -->
   <div id="idMsgItemAdded" class="position-absolute w-50 d-none" style="top: 6rem; right: 4rem; z-index: 10000;">
     <div class="alert alert-success alert-dismissible fade show rounded-pill mx-2" role="alert">
       <img src="images/ok01.png" class="me-3" width="30" height="30" role="img" aria-label="Success:"></img>
@@ -62,15 +67,14 @@
       <button type="button" class="btn-close mt-0" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   </div>
-
+  <!-- Main image banner -->
   <div id="idMain" class="">
     <div id="idBanner" class="container-fluid" style="margin-top: 100px">
       <img src="images/banner01.png" alt="" class="img-thumbnail"
         style="height: 300px; width: 100%; object-fit: cover;">
     </div>
   </div>
-
-
+  <!-- Display images to offer products container -->
   <div id="idOffers" class="d-flex overflow-auto gap-2 m-3">
     <!-- This containes is filled from JS  -->
   </div>
