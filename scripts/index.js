@@ -18,16 +18,19 @@ import {
 //
 // *** CONSTANT definition ***
 //
-const idOffers = document.getElementById("idOffers");                   // Container of products in offer to displays the cards of these products
-const idCitiesSelect = document.getElementById("idCitiesSelect");       // List (select tag) with cities to choose the shippment address
-const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');   // Botton to save the shipping address chosen
-const idBtnCancelAddress = document.getElementById('idBtnCancelAddress') // Botton to cancel the shipping address selection
-const idBtnModAddressSh = document.getElementById('idBtnModAddressSh');  // Botton that activates the read modal of the shipping address
-const idBtnModAddProdOffer = document.getElementById('idBtnModAddProdOffer');
-const idMsgItemAdded = document.getElementById('idMsgItemAdded');
+const idOffers = document.getElementById("idOffers");                         // Container of products in offer to displays the cards of these products
+const idCitiesSelect = document.getElementById("idCitiesSelect");             // List (select tag) with cities to choose the shippment address
+const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');         // Botton to save the shipping address chosen
+const idBtnCancelAddress = document.getElementById('idBtnCancelAddress')      // Botton to cancel the shipping address selection
+const idBtnModAddressSh = document.getElementById('idBtnModAddressSh');       // Botton that activates the read modal of the shipping address
+const idBtnModAddProdOffer = document.getElementById('idBtnModAddProdOffer'); // Button of modal to read the "SELECTED PRODUCT TO ADD TO CART". 
+const idMsgItemAdded = document.getElementById('idMsgItemAdded');             // Message item added when a product is added to cart
+const idImgCartStatus= document.getElementById('idImgCartStatus');            // Image in te status cart container
+const idTxtCartStatus= document.getElementById('idTxtCartStatus');            // Texto in te status cart container with te amount of items in the cart
 //
 // *** VARIABLES definition ***
-let addressShiping = ""          // Shhiping Adress: Global variable to have always this data in memory
+let addressShiping = ""       // Shhiping Adress (string): Global variable to have always this data in memory
+let cartContent = []          // Content of the cart (array): Global variable to have always this data in memory
 //
 // *********************************************
 // ***           BEGIN MAIN MODULE           ***
@@ -36,6 +39,7 @@ let addressShiping = ""          // Shhiping Adress: Global variable to have alw
 // Loads  initial data: In offer and most popular products. an improvement is puts the
 // product than are not in offer products and neither are the most popular
 window.addEventListener('DOMContentLoaded', e => {
+   localStorage.setItem('aCartContent',JSON.stringify(cartContent)); // Cart contain initialize
    fnLoadOffers() // Puts the offer products
    //TODO:(habilitar esta lín)TODO: fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShiping" in LS if not exists.
 })
@@ -62,6 +66,7 @@ idBtnSaveAddress.addEventListener('click', e => {
    if (lCitySelected) {
       const sAddressShiping = idCitiesSelect.options[idCitiesSelect.selectedIndex].text;
       localStorage.setItem('sAddressShiping', sAddressShiping);
+      addressShiping= sAddressShiping;
    } else {
       alert("ℹ Recuerde que debe digitar la dirección de envío.")
    }
@@ -85,9 +90,13 @@ async function fnLoadOneProduct(urlData, idKey) {
    let stAmountAndUnit = "";
    // Get data and load object in variables
    const element = await fnGetRecordOfTable(urlData, idKey) // Get the data to the selected product
-   const { id, name, unit, price, stock, min_stock, max_stock, description, url_image, most_popular, discount } = element;
-   const price_net = Math.round(price * ((100 - discount) / 100));
+   const { id, name, unit, price, url_image, most_popular, discount } = element;
 
+   console.log('TODO:(quitar) - elemento traido de la tabla:')
+   console.log(element)
+   console.log('------------------')
+
+   const price_net = Math.round(price * ((100 - discount) / 100));
    const idImgProdOffer = document.getElementById('idImgProdOffer');
    const idTmpName = document.getElementById('idModalDialogProdOfferToCart');
    const idPriceProdOffer = document.getElementById('idPriceProdOffer');
@@ -122,9 +131,27 @@ async function fnLoadOneProduct(urlData, idKey) {
       setTimeout(() => {
          idMsgItemAdded.classList.add('d-none')
       }, 3000);
+      fnUpdateCart(element);  // Update the cart in Local Storage and te container status in el HTML. An improvment may be to use a table in the DB to storage the cart.
    })
 }
-
+//
+function fnUpdateCart(element) {
+   let oItemSelected= element;
+   oItemSelected.total_items = 0; // Adds KEY/VALUE property to element with the product information, the acumulator of items by each product (Other form: "element[total_items]")
+   // cartContent= fnGetDataFromLocalStorage("aCartContent", true); // If the key is not in LS, it is created, else it gets its content
+   let aCartContent= JSON.parse(localStorage.getItem('aCartContent'));
+   let indexFound = aCartContent.findIndex( item => item.id === element.id)
+   if (indexFound < 0) {  // If do not exists, the "total_items" property is created
+      aCartContent.push(oItemSelected);
+      indexFound= 0;
+   }
+   aCartContent[indexFound].total_items += 1;   // TODO: recibir cantidad y actualizar con ese valor y no con 1
+   const nAmountItems = aCartContent.length;
+   localStorage.setItem('aCartContent',JSON.stringify(aCartContent));
+   idImgCartStatus.src= "images/cart-full01.png";
+   idTxtCartStatus.innerHTML= fnNumberFormat(nAmountItems);
+   cartContent= aCartContent; // Load global variable
+}
 //
 // GET promise to load ALL TABLE data: Content generation of the products in offer
 async function fnLoadOffers() {

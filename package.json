@@ -7,7 +7,7 @@
    "scripts": {
       "test": "echo \"HS --> Error: no test specified\" && exit 1",
       "jserver-script-README": "Created by HS: Upload the JSON SERVER in the ports necesaries for local testing",
-      "jserver1": "json-server --watch data/db-tiendita.json --port 4000"
+      "js1": "json-server --watch data/db-tiendita.json --port 4000"
    },
    "author": "Hildebrando Sierra V.",
    "license": "ISC",
