@@ -1,3 +1,4 @@
+// git config http.postBuffer 524288000
 //╔════════════════════════════════════════════════╗
 //║             MAIN JAVASCRIPT SCRIPT             ║
 //╚════════════════════════════════════════════════╝
@@ -23,7 +24,7 @@ const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');   // Botto
 const idBtnCancelAddress = document.getElementById('idBtnCancelAddress') // Botton to cancel the shipping address selection
 const idBtnModAddressSh = document.getElementById('idBtnModAddressSh');  // Botton that activates the read modal of the shipping address
 const idBtnModAddProdOffer = document.getElementById('idBtnModAddProdOffer');
-
+const idMsgItemAdded = document.getElementById('idMsgItemAdded');
 //
 // *** VARIABLES definition ***
 let addressShiping = ""          // Shhiping Adress: Global variable to have always this data in memory
@@ -31,7 +32,6 @@ let addressShiping = ""          // Shhiping Adress: Global variable to have alw
 // *********************************************
 // ***           BEGIN MAIN MODULE           ***
 // *********************************************
-
 //
 // Loads  initial data: In offer and most popular products. an improvement is puts the
 // product than are not in offer products and neither are the most popular
@@ -53,8 +53,6 @@ idOffers.addEventListener("submit", async e => {
    }
    // Open the modal to selected product with the information of these product
    fnLoadOneProduct(urlProducts, id)
-
-
 })
 
 // Listens the click in the modal to "SAVE" button the address selected to shipping.
@@ -109,7 +107,7 @@ async function fnLoadOneProduct(urlData, idKey) {
    idSubstractOne.addEventListener('click', e => {
       e.preventDefault();
       nAmountItem += -1;
-      nAmountItem <= 0 ? nAmountItem= 1 : nAmountItem
+      nAmountItem <= 0 ? nAmountItem = 1 : nAmountItem
       idAmountToCart.innerHTML = fnNumberFormat(nAmountItem) + ' /' + unit;
    })
    idAddOne.addEventListener('click', e => {
@@ -119,10 +117,13 @@ async function fnLoadOneProduct(urlData, idKey) {
    })
    idBtnAddToCart.addEventListener('click', e => {
       e.preventDefault();
-      alert("agregado");
+      idMsgItemAdded.classList.remove('d-none')
+      location.hash= '#idMsgItemAdded';
+      setTimeout(() => {
+         idMsgItemAdded.classList.add('d-none')
+      }, 3000);
    })
 }
-
 
 //
 // GET promise to load ALL TABLE data: Content generation of the products in offer

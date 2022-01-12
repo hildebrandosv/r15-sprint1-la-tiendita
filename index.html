@@ -46,22 +46,32 @@
           </form>
           <div class="mx-4 p-2 clBg-secondary3" style="border-radius: 1em;">
             <a href="">
-              <img class="text-white" id="idImgCartStatus" src="images/cart-empty01.png" width="50" height="50">
+              <img id="idImgCartStatus" src="images/cart-empty01.png" width="50" height="50">
             </a>
-            <span id="idTxtCartStatus" class="mx-4">0</span>
+            <span id="idTxtCartStatus" class="mx-4 fs-3">0</span>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <section id="idMain">
+  <div id="idMsgItemAdded" class="position-absolute w-50 d-none" style="top: 6rem; right: 4rem; z-index: 10000;">
+    <div class="alert alert-success alert-dismissible fade show rounded-pill mx-2" role="alert">
+      <img src="images/ok01.png" class="me-3" width="30" height="30" role="img" aria-label="Success:"></img>
+      <span class="d-flex-inline">El producto agregado</span>
+      <button type="button" class="btn-close mt-0" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+
+  <div id="idMain" class="">
     <div id="idBanner" class="container-fluid" style="margin-top: 100px">
       <img src="images/banner01.png" alt="" class="img-thumbnail"
-        style="height: 400px; width: 100%; object-fit: cover;">
+        style="height: 300px; width: 100%; object-fit: cover;">
     </div>
-  </section>
-  <div id="idOffers" class="d-flex overflow-auto gap-2 m-5">
+  </div>
+
+
+  <div id="idOffers" class="d-flex overflow-auto gap-2 m-3">
     <!-- This containes is filled from JS  -->
   </div>
 
