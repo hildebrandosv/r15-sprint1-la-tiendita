@@ -15,48 +15,39 @@
 </head>
 
 <body>
-
-   <!-- Modal to read the address to the shiping. This modal only is showed when the user do not has a address registered -->
-   <!-- and the button of the modal is always hide and this is activated fron JS when a product is selected. -->
-   <div id="idContainerModalAdressShipping" class="container my-5">
-      <!-- Button to activate trhe modal: is always hide. This button is always hide and it is showed when where is a click in any button to add an article to cart -->
-      <button id="idBtnModalAdressShipping" class="btn btn-dark" type="button" data-bs-toggle="modal"
-         data-bs-target="#idModalStaticAddress">
-         Choose your Address Shipping
-      </button>
-      <!-- Modal to read the shipping address -->
-      <div id="idModalStaticAddress" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-         aria-labelledby="idModalDialogAddress" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h2 id="idModalDialogAddress" class="modal-title">¿Donde quieres recibir tu pedido?</h5>
-                     <button id="btnCloseModal" class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+   
+   <!-- Button trigger modal -->
+   <button id="idModalCartEmpty" type="button" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#idBtnModalCartEmpty">
+      El carrito está vacio
+   </button>
+   <!-- Modal -->
+   <div id="idBtnModalCartEmpty" class="modal fade" tabindex="-1" aria-labelledby="idBtnModalCartEmptyLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <div class=" d-block">
+                  <h5 class="modal-title" id="idBtnModalCartEmptyLabel">Entregar en:</h5>
+                  <img class="img-fluid me-2" src="images/gps01.png" width="15" height="15"><span class="clDeliveryAddress">PONER AQUÍ LA DIRECCIÓN LEIDA</span>
                </div>
-               <div class="modal-body">
-                  <p>Para poder ofrecerte productos dentro de tu área, necesitamos tu dirección.</p>
-                  <div class="input-group mb-5 ">
-                     <select id="idCitiesSelect" class="form-select" aria-label="Select filled from JS (Hs)">
-                        <option selected>Elija una dirección...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                     </select>
-                  </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-info" data-bs-dismiss="modal">
-                     Cancelar
-                  </button>
-                  <button id="idBtnSaveAddress" type="button" class="btn btn-success" data-bs-dismiss="modal">
-                     Guardar
-                  </button>
-               </div>
+               <button type="button" class="btn-close bg-dark" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-         </div> <!-- class="modal-dialog" -->
-      </div> <!-- End: id="idModalStaticAddress" -->
-   </div> <!-- End: Container with te botton of the modal and the modal -->
+            <div class="modal-body">
+               <div><img class="img-fluid rounded mx-auto d-block" src="images/cart-empty02.png" alt=""></div>
+            </div>
+            <div class="modal-footer">
+               <h5 class="mx-auto">
+                  <img class="img-fluid mx-1" src="images/info01.png" width="30" height="30">
+                  Tu canasta está vacia.
+               </h5>
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+               <button id="idBtnAddProdModCartEmpty" type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar productos</button>
+            </div>
+         </div>
+      </div>
+   </div>  <!-- End: id="idBtnModalCartEmpty"  -->
+
 
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

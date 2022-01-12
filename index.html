@@ -49,17 +49,54 @@
             <input id="idSearch" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Buscar</button>
           </form>
-          <div class="mx-4 px-2 bg-light border border-success rounded shadow d-flex align-items-center">
+          <div id="idAreaCartStatus"
+            class="mx-4 px-2 bg-light border border-success rounded shadow d-flex align-items-center">
             <a href="">
               <img id="idImgCartStatus" class="img-fluid py-1" src="images/cart-empty01.png" width="35" height="35">
             </a>
-            <span id="idTxtCartStatus" class="mx-4 fs-4">0</span>
+            <span id="idTxtCartStatus" class="ms-3 me-2 fs-4">0</span>
           </div>
         </div>
       </div>
     </nav>
+    <!-- -------------------------------------------------------------------------------------- -->
+    <!-- Modal to show "EMPTY CART" when the user wants watch the content of the cart           -->
+    <div id="idMsgCartEmptyContainer" style="margin: 120px; z-index: 10001">
+      <!-- Button trigger modal -->
+      <button id="idModalCartEmpty" type="button" class="btn btn-primary d-none" data-bs-toggle="modal"
+        data-bs-target="#idBtnModalCartEmpty">
+        El carrito está vacio
+      </button>
+      <!-- Modal -->
+      <div id="idBtnModalCartEmpty" class="modal fade" tabindex="-1" aria-labelledby="idBtnModalCartEmptyLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class=" d-block">
+                <h5 class="modal-title" id="idBtnModalCartEmptyLabel">Entregar en:</h5>
+                <img class="img-fluid me-2" src="images/gps01.png" width="15" height="15"><span
+                  class="clDeliveryAddress">PONER AQUÍ LA DIRECCIÓN LEIDA</span>
+              </div>
+              <button type="button" class="btn-close bg-black opacity-100 rounded-circle text-light d-flex justify-content-center align-items-center" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+              <div><img class="img-fluid rounded mx-auto d-block" src="images/cart-empty02.png" alt=""></div>
+            </div>
+            <div class="modal-footer text-center">
+              <h5 class="mx-auto">
+                <img class="img-fluid mx-1" src="images/info01.png" width="30" height="30">
+                Tu canasta está vacia.
+              </h5>
+              <button id="idBtnAddProdModCartEmpty" type="button" class="btn btn-primary me-2"
+                data-bs-dismiss="modal">Agregar productos</button>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End: id="idBtnModalCartEmpty"  -->
+    </div> <!-- End: id="idMsgCartEmptyContainer"> -->
   </header>
-  <!-- Product added to cart message -->
+  <!-- Product added to cart message (DIV whithout modal) -->
   <div id="idMsgItemAdded" class="position-absolute w-50 d-none" style="top: 6rem; right: 4rem; z-index: 10000;">
     <div class="alert alert-success alert-dismissible fade show rounded-pill mx-2" role="alert">
       <img src="images/ok01.png" class="me-3" width="30" height="30" role="img" aria-label="Success:"></img>
@@ -67,14 +104,14 @@
       <button type="button" class="btn-close mt-0" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   </div>
-  <!-- Main image banner -->
+  <!-- Main image banner (DIV without modal) -->
   <div id="idMain" class="">
     <div id="idBanner" class="container-fluid" style="margin-top: 100px">
       <img src="images/banner01.png" alt="" class="img-thumbnail"
         style="height: 300px; width: 100%; object-fit: cover;">
     </div>
   </div>
-  <!-- Display images to offer products container -->
+  <!-- Display images to offer products container (DIV without modal) -->
   <div id="idOffers" class="d-flex overflow-auto gap-2 m-3">
     <!-- This containes is filled from JS  -->
   </div>
