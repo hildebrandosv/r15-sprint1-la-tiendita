@@ -50,7 +50,7 @@
       },
       {
          "id": "3",
-         "name": "Aceite Vegetal",
+         "name": "Aceite Vegetal 1",
          "category": "Vegetales y frutas",
          "sub_category": "",
          "unit": "1000 cm3",
@@ -59,13 +59,13 @@
          "min_stock": "14",
          "max_stock": "94",
          "description": "Lorem ipsum dolor sit amet.",
-         "url_image": "https://picsum.photos/200/300?random=3",
+         "url_image": "images/img-prods/aceite_de_canola.png",
          "most-popular": "false",
          "discount": "0"
       },
       {
          "id": "4",
-         "name": "Aceite Vegetal",
+         "name": "Aceite Vegetal # 2",
          "category": "Vegetales y frutas",
          "sub_category": "",
          "unit": "3Lt.",
@@ -74,13 +74,13 @@
          "min_stock": "13",
          "max_stock": "16",
          "description": "Lorem ipsum dolor sit amet.",
-         "url_image": "https://picsum.photos/200/300?random=4",
+         "url_image": "images/img-prods/aceite_de_girasol.png",
          "most-popular": "true",
-         "discount": "7.5"
+         "discount": "7.5" 
       },
       {
          "id": "5",
-         "name": "Aceite Vegetal",
+         "name": "Aceite Vegetal N°3",
          "category": "Vegetales y frutas",
          "sub_category": "",
          "unit": "0.5Lt.",
@@ -89,7 +89,7 @@
          "min_stock": "10",
          "max_stock": "17",
          "description": "Lorem ipsum dolor sit amet.",
-         "url_image": "https://picsum.photos/200/300?random=5",
+         "url_image": "images/img-prods/aceite_de_oliva.png",
          "most-popular": "true",
          "discount": "15"
       },
