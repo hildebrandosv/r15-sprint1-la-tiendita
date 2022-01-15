@@ -179,6 +179,7 @@ function fnUpdateCart(element) {
    }
    const nAmountItems = cartContent.length;
    localStorage.setItem('aCartContent', JSON.stringify(cartContent));
+   localStorage.setItem('aCartPrevious', JSON.stringify(cartContent));
    idImgCartStatus.src = "images/cart-full01.png";
    idTxtCartStatus.innerHTML = fnNumberFormat(nAmountItems);
 }

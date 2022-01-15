@@ -59,14 +59,14 @@
          "min_stock": "14",
          "max_stock": "94",
          "description": "Lorem ipsum dolor sit amet.",
-         "url_image": "images/img-prods/aceite_de_canola.png",
+         "url_image": "images/gps01.png",
          "most-popular": "false",
          "discount": "0"
       },
       {
          "id": "4",
          "name": "Aceite Vegetal # 2",
-         "category": "Vegetales y frutas",
+         "category": "images/gps01.png",
          "sub_category": "",
          "unit": "3Lt.",
          "price": "19833",
@@ -74,14 +74,14 @@
          "min_stock": "13",
          "max_stock": "16",
          "description": "Lorem ipsum dolor sit amet.",
-         "url_image": "images/img-prods/aceite_de_girasol.png",
+         "url_image": "images/gps01.png",
          "most-popular": "true",
          "discount": "7.5" 
       },
       {
          "id": "5",
          "name": "Aceite Vegetal N°3",
-         "category": "Vegetales y frutas",
+         "category": "images/gps01.png",
          "sub_category": "",
          "unit": "0.5Lt.",
          "price": "4083",
@@ -89,7 +89,7 @@
          "min_stock": "10",
          "max_stock": "17",
          "description": "Lorem ipsum dolor sit amet.",
-         "url_image": "images/img-prods/aceite_de_oliva.png",
+         "url_image": "images/gps01.png",
          "most-popular": "true",
          "discount": "15"
       },
@@ -104,7 +104,7 @@
          "min_stock": "10",
          "max_stock": "94",
          "description": "Lorem ipsum dolor sit amet.",
-         "url_image": "https://picsum.photos/200/300?random=6",
+         "url_image": "images/gps01.png",
          "most-popular": "true",
          "discount": "25"
       },
@@ -119,7 +119,7 @@
          "min_stock": "14",
          "max_stock": "71",
          "description": "Lorem ipsum dolor sit amet.",
-         "url_image": "https://picsum.photos/200/300?random=7",
+         "url_image": "images/gps01.png",
          "most-popular": "true",
          "discount": "30"
       },
