@@ -1,3 +1,38 @@
+* {
+   --colorBgNavBarr: #e9e3e3;
+   --colorMainTitle: #313172;
+   --colorMainFooter: green;
+   --colorBgError: lightgray;
+   --colorTxtError: red;
+   --colorBgSuccess: #BFFF5F;
+   --colorTxtSuccess: green;
+   --colorBgForms: #262645;
+   --colorBtn1: #0AC763;
+   --colorBgSecondary2: rgb(189, 189, 189);
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   border: none;
+}* {
+   --colorBgNavBarr: #e9e3e3;
+   --colorMainTitle: #313172;
+   --colorMainFooter: green;
+   --colorBgError: lightgray;
+   --colorTxtError: red;
+   --colorBgSuccess: #BFFF5F;
+   --colorTxtSuccess: green;
+   --colorBgForms: #262645;
+   --colorBtn1: #0AC763;
+   --colorBgSecondary2: rgb(189, 189, 189);
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   border: none;
+}
+
+.clCol-btn1 {
+   background-color: var(--colorBtn1);
+ }
 
 .modal-content {
    width: 120%;

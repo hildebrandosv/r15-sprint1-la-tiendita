@@ -33,7 +33,7 @@ const idBtnModalCartEmpty = document.getElementById('idBtnModalCartEmpty')    //
 const idBtnAddProdModCartEmpty = document.getElementById('idBtnAddProdModCartEmpty')  // Go to add more products in modal window when the cart is empty
 //
 // *** VARIABLES definition ***
-let addressShiping = ""       // Shhiping Adress (string): Global variable to have always this data in memory
+let addressShipping = ""       // Shhiping Adress (string): Global variable to have always this data in memory
 let cartContent = []          // Content of the cart (array): Global variable to have always this data in memory
 let itemToAddToCart = {}       // Object to save the actual item to add to cart
 //
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', e => {
    localStorage.setItem('oItemToAddToCart', JSON.stringify(itemToAddToCart)); // Object with the last item selected to add to cart
 
    fnLoadOffers() // Puts the offer products
-   //TODO:(habilitar esta lín)TODO: fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShiping" in LS if not exists.
+   //TODO:(habilitar esta lín)TODO: fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShipping" in LS if not exists.
 })
 
 // Listens te event click in the status cart area
@@ -76,8 +76,8 @@ idOffers.addEventListener("submit", async e => {
    const btnSubmit = e.target.getElementsByTagName('button')[0];
    const id = btnSubmit.id; // Gets the ID to add to cart, this ID corresponding to ID of the button
    // If there is not a address to shipping, then this address is read in a modal of Bootstrap
-   addressShiping = fnGetDataFromLocalStorage("sAddressShiping");  // To updates the global variable
-   if (addressShiping === '') {
+   addressShipping = fnGetDataFromLocalStorage("sAddressShipping");  // To updates the global variable
+   if (addressShipping === '') {
       //TODO: idBtnModAddressSh.click();   //TODO: habilitar esto que lle la dirección cuando dan click en agregar y no hay una dirección
    }
    // Open the modal to selected product with the information of these product
@@ -89,9 +89,9 @@ idBtnSaveAddress.addEventListener('click', e => {
    e.preventDefault();
    const lCitySelected = (idCitiesSelect.selectedIndex > 0);
    if (lCitySelected) {
-      const sAddressShiping = idCitiesSelect.options[idCitiesSelect.selectedIndex].text;
-      localStorage.setItem('sAddressShiping', sAddressShiping);
-      addressShiping = sAddressShiping;
+      const sAddressShipping = idCitiesSelect.options[idCitiesSelect.selectedIndex].text;
+      localStorage.setItem('sAddressShipping', sAddressShipping);
+      addressShipping = sAddressShipping;
    } else {
       alert("ℹ Recuerde que debe digitar la dirección de envío.")
    }
@@ -231,12 +231,12 @@ async function fnLoadCities() {
    // Gets the cities of the DB
    const aCities = await fnGetTableOfDb(urlCities);
    // Verify if the last shipping address selected exits to show it selected in the list. If not exists, then initializates the key in empty.
-   const sAddressShiping = fnGetDataFromLocalStorage("sAddressShiping");
-   const nIndexCurrentCity = aCities.findIndex(element => element.city.toUpperCase().trim() === sAddressShiping.toUpperCase().trim());
+   const sAddressShipping = fnGetDataFromLocalStorage("sAddressShipping");
+   const nIndexCurrentCity = aCities.findIndex(element => element.city.toUpperCase().trim() === sAddressShipping.toUpperCase().trim());
    if (nIndexCurrentCity < 0) {
-      localStorage.setItem('sAddressShiping', "");
+      localStorage.setItem('sAddressShipping', "");
    }
-   addressShiping = sAddressShiping;    // To always charge thr cities, then updates the global variable
+   addressShipping = sAddressShipping;    // To always charge thr cities, then updates the global variable
    // Fills the list with the cities to select the shipping address
    idCitiesSelect.innerHTML = `<option ${nIndexCurrentCity < 0 ? "selected" : ""}><span>🛃</span>Elija una dirección...</option>`;
    aCities.forEach((element, index) => {
