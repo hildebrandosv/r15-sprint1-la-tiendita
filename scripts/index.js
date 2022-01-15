@@ -20,15 +20,16 @@ import {
 //
 const idOffers = document.getElementById("idOffers");                         // Container of products in offer to displays the cards of these products
 const idCitiesSelect = document.getElementById("idCitiesSelect");             // List (select tag) with cities to choose the shippment address
-const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');         // Botton to save the shipping address chosen
-const idBtnCancelAddress = document.getElementById('idBtnCancelAddress')      // Botton to cancel the shipping address selection
-const idBtnModAddressSh = document.getElementById('idBtnModAddressSh');       // Botton that activates the read modal of the shipping address
+const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');         // Button to save the shipping address chosen
+const idBtnCancelAddress = document.getElementById('idBtnCancelAddress')      // Button to cancel the shipping address selection
+const idBtnModAddressSh = document.getElementById('idBtnModAddressSh');       // Button that activates the read modal of the shipping address
 const idBtnModAddProdOffer = document.getElementById('idBtnModAddProdOffer'); // Button of modal to read the "SELECTED PRODUCT TO ADD TO CART". 
 const idMsgItemAdded = document.getElementById('idMsgItemAdded');             // Message item added when a product is added to cart
-const idAreaCartStatus = document.getElementById('idAreaCartStatus');          // Status cart area that contains image and text with amount items
-const idImgCartStatus = document.getElementById('idImgCartStatus');            // Image in te status cart container
-const idTxtCartStatus = document.getElementById('idTxtCartStatus');            // Texto in te status cart container with te amount of items in the cart
+const idAreaCartStatus = document.getElementById('idAreaCartStatus');         // Status cart area that contains image and text with amount items
+const idImgCartStatus = document.getElementById('idImgCartStatus');           // Image in te status cart container
+const idTxtCartStatus = document.getElementById('idTxtCartStatus');           // Texto in te status cart container with te amount of items in the cart
 const idBtnAddToCart_ModalProdOfferToCart = document.getElementById('idBtnAddToCart_ModalProdOfferToCart'); // Btn. to add product to cart
+const idBtnModalCartEmpty = document.getElementById('idBtnModalCartEmpty')    // Botton that activates the modal of empty cart
 const idBtnAddProdModCartEmpty = document.getElementById('idBtnAddProdModCartEmpty')  // Go to add more products in modal window when the cart is empty
 //
 // *** VARIABLES definition ***
@@ -53,12 +54,20 @@ window.addEventListener('DOMContentLoaded', e => {
 // Listens te event click in the status cart area
 idAreaCartStatus.addEventListener('click', e => {
    e.preventDefault();
-   alert()
+   cartContent = fnGetDataFromLocalStorage("aCartContent", true); // If the key is not in LS, it is created, else it gets its content
+   if (cartContent.length === 0) {
+      idImgCartStatus.src = "images/cart-empty01.png";
+      idBtnAddProdModCartEmpty.addEventListener('click', e => {
+         e.preventDefault();
+         window.location.href = '#idProdOfferToCartContainer';
+      })
+      idBtnModalCartEmpty.click();
+   }
+   else {
+      nn('2')
+   }
 })
-idBtnAddProdModCartEmpty.addEventListener('click', e => {
-   e.preventDefault();
-   alert()
-})
+function nn(nn) { }
 
 // Listens the event click in te container of the offers
 idOffers.addEventListener("submit", async e => {
@@ -148,9 +157,6 @@ async function fnLoadOneProduct(urlData, idKey) {
 idBtnAddToCart_ModalProdOfferToCart.addEventListener('click', e => {
    e.preventDefault();
    const oItemToAddToCart = fnGetDataFromLocalStorage("oItemToAddToCart", true); // If the key is not in LS, it is created, else it gets its content
-
-// console.log("cant: ",oItemToAddToCart.total_items)
-
    fnUpdateCart(oItemToAddToCart);  // Update the cart in Local Storage and te container status in el HTML. An improvment may be to use a table in the DB to storage the cart.
    location.hash = '#idMsgItemAdded';
    idMsgItemAdded.classList.remove('d-none')
@@ -166,9 +172,9 @@ function fnUpdateCart(element) {
    if (indexFound < 0) {  // If do not exists, the "total_items" property is created
       cartContent.push(element);
       indexFound = cartContent.length - 1;
-      console.log('element(IF) ',element)
+      console.log('element(IF) ', element)
    } else {
-      const nItemsOfTheProduct= element.total_items;
+      const nItemsOfTheProduct = element.total_items;
       cartContent[indexFound].total_items += nItemsOfTheProduct;
    }
    const nAmountItems = cartContent.length;
