@@ -31,6 +31,12 @@ const idTxtCartStatus = document.getElementById('idTxtCartStatus');           //
 const idBtnAddToCart_ModalProdOfferToCart = document.getElementById('idBtnAddToCart_ModalProdOfferToCart'); // Btn. to add product to cart
 const idBtnModalCartEmpty = document.getElementById('idBtnModalCartEmpty')    // Botton that activates the modal of empty cart
 const idBtnAddProdModCartEmpty = document.getElementById('idBtnAddProdModCartEmpty')  // Go to add more products in modal window when the cart is empty
+const idBtnModalCartDetail = document.getElementById('idBtnModalCartDetail');      // Button that activates the detail modal with all product in the cart
+const idUlItemsCartList = document.getElementById('idUlItemsCartList');            // UL container to paint all products in the cart
+const idBtnToEmptyCartDetail = document.getElementById('idBtnToEmptyCartDetail');  // Button to emty all items in the cart
+const idDeliveryAddressCartDetail = document.getElementById('idDeliveryAddressCartDetail');
+const idDeliveryAddressCartEmpty = document.getElementById('idDeliveryAddressCartEmpty');
+
 //
 // *** VARIABLES definition ***
 let addressShipping = ""       // Shhiping Adress (string): Global variable to have always this data in memory
@@ -61,13 +67,54 @@ idAreaCartStatus.addEventListener('click', e => {
          e.preventDefault();
          window.location.href = '#idProdOfferToCartContainer';
       })
+      // Load the address shippment to show it
+      addressShipping = fnGetDataFromLocalStorage("sAddressShipping"); // If the key is not in LS, it is created, else it gets its content
+      idDeliveryAddressCartEmpty.innerHTML = addressShipping; // Puts the shippment address
       idBtnModalCartEmpty.click();
    }
    else {
-      nn('2')
+      idBtnModalCartDetail.click()
+      // Load the address shippment to show in te detail cart
+      addressShipping = fnGetDataFromLocalStorage("sAddressShipping"); // If the key is not in LS, it is created, else it gets its content
+      idDeliveryAddressCartDetail.innerHTML = addressShipping; // Puts the shippment address
+      //Load the content cart to show the list of items in the cart
+      cartContent = fnGetDataFromLocalStorage("aCartContent", true); // If the key is not in LS, it is created, else it gets its content
+      fnPaintCart(cartContent);
    }
 })
-function nn(nn) { }
+//
+// LISTENER to add or substract items when the cart detail is displayed
+idUlItemsCartList.addEventListener('click', async (e) => {
+   const btnSubstract = e.target.classList.contains('clBtnAddOneLess');
+   const btnAdd = e.target.classList.contains('clBtnAddOneMore');
+   const containerOfLiItem = e.target.parentNode.parentNode.parentNode; // DIV that contains the LI to an item.
+   if (btnSubstract || btnAdd) {
+      const clAmountItemsInCart = containerOfLiItem.querySelector('.clTheSpanWithAmountItems'); // SPAN with the amount of items
+      let nAmountItems = Number(clAmountItemsInCart.innerHTML);
+      if (btnSubstract) {
+         nAmountItems > 0 ? nAmountItems -= 1 : 0;
+      }
+      else {
+         nAmountItems += 1;
+      }
+      clAmountItemsInCart.innerHTML = nAmountItems;
+      // Rewrite the cart array in the LS with the modificaión of the item
+      const id = containerOfLiItem.id;       // ID to find the item in the cart and updates in the local storage inmediatly
+      cartContent = fnGetDataFromLocalStorage("aCartContent", true); // If the key is not in LS, it is created, else it gets its content
+      const indexFound = cartContent.findIndex(item => item.id === id)
+      if (indexFound >= 0) {
+         cartContent[indexFound].total_items = nAmountItems;
+         localStorage.setItem('aCartContent', JSON.stringify(cartContent))
+      }
+   } // End: if "btnSubstract" or "btnAdd" are "true"
+})
+//
+// LISTENER to empty the all cart
+idBtnToEmptyCartDetail.addEventListener('click', e => {
+   cartContent = []; // Cart is initialized in empty
+   localStorage.setItem('aCartContent', JSON.stringify(cartContent))
+   idImgCartStatus.src = "images/cart-empty01.png";
+})
 
 // Listens the event click in te container of the offers
 idOffers.addEventListener("submit", async e => {
@@ -104,10 +151,58 @@ idBtnCancelAddress.addEventListener('click', e => {
       alert("ℹ Recuerde que debe digitar la dirección de envío.")
    }
 })
+// The next ADD EVENT LISTENER is to add the actual item to cart in offer products
+idBtnAddToCart_ModalProdOfferToCart.addEventListener('click', e => {
+   e.preventDefault();
+   const oItemToAddToCart = fnGetDataFromLocalStorage("oItemToAddToCart", true); // If the key is not in LS, it is created, else it gets its content
+   fnUpdateCart(oItemToAddToCart);  // Update the cart in Local Storage and te container status in el HTML. An improvment may be to use a table in the DB to storage the cart.
+   location.hash = '#idMsgItemAdded';
+   idMsgItemAdded.classList.remove('d-none')
+   setTimeout(() => {
+      idMsgItemAdded.classList.add('d-none')
+   }, 3000);
+})
 
 //╔════════════════════════════════════════════════╗
 //║             FUNCTION DEFINITION                ║
 //╚════════════════════════════════════════════════╝
+ //
+ // Show all products that contains the cart and show  the options to empty to cart or to go to pay.
+ function fnPaintCart(oneList) {
+   idUlItemsCartList.innerHTML= "";  // Deletes the container with items and rewrite it
+   oneList.forEach(element => {
+     const { id, name, url_image, unit } = element;
+     idUlItemsCartList.innerHTML += `           
+                     <li class="list-group-item">
+                       <div id=${id} class="container-fluid row justify-content-center align-items-center">
+                         <div class="col-12 col-sm-4 col-md-3 col-lg-3 p-0 m-0">
+                           <img src="images/cart-empty03.png" width="50px"></img>
+                         </div>
+                         <div class="col-12 col-sm-4 col-md-3 col-lg-3 p-0 m-0">
+                           <span class="lead">${name}</span>
+                           <p class="h5">$99,999</p>
+                         </div>
+                         <div class="col-12 col-sm-4 col-md-2 col-lg-2 p-0 m-0">
+                           <span class="lead">x 3 Lts.</span>
+                         </div>
+                         <div class="col-12 col-sm-4 col-md-1 col-lg-1">
+                           <span id="" class="bg-transparent btn-dark">
+                             <img class="mx-4 clBtnAddOneLess" src="./images/substract01.png" width="35" height="35">
+                           </span>
+                         </div>
+                         <div class="col-12 col-sm-4 col-md-1 col-lg-1">
+                           <p class="fs-4 fw-bold ms-3 text-center pt-3 clTheSpanWithAmountItems">1</p>
+                         </div>
+                         <div class="col-12 col-sm-4 col-md-1 col-lg-1">
+                           <span id="" class="bg-transparent btn-dark">
+                             <img class="mx-4 clBtnAddOneMore" src="./images/add01.png" width="35" height="35">
+                           </span>
+                         </div>
+                       </div>
+                     </li>
+                   `
+   });
+ }
 // GET promise to load ONE RECORD: Query only a product of the products in offer
 async function fnLoadOneProduct(urlData, idKey) {
    // Local variables for the item to be added to the
@@ -153,18 +248,6 @@ async function fnLoadOneProduct(urlData, idKey) {
    })
 }
 //
-// The next ADD EVENT LISTENER is to add the actual item to cart in offer products
-idBtnAddToCart_ModalProdOfferToCart.addEventListener('click', e => {
-   e.preventDefault();
-   const oItemToAddToCart = fnGetDataFromLocalStorage("oItemToAddToCart", true); // If the key is not in LS, it is created, else it gets its content
-   fnUpdateCart(oItemToAddToCart);  // Update the cart in Local Storage and te container status in el HTML. An improvment may be to use a table in the DB to storage the cart.
-   location.hash = '#idMsgItemAdded';
-   idMsgItemAdded.classList.remove('d-none')
-   setTimeout(() => {
-      idMsgItemAdded.classList.add('d-none')
-   }, 3000);
-})
-//
 // Updates the cart with the selected elements
 function fnUpdateCart(element) {
    cartContent = fnGetDataFromLocalStorage("aCartContent", true); // If the key is not in LS, it is created, else it gets its content
@@ -172,7 +255,6 @@ function fnUpdateCart(element) {
    if (indexFound < 0) {  // If do not exists, the "total_items" property is created
       cartContent.push(element);
       indexFound = cartContent.length - 1;
-      console.log('element(IF) ', element)
    } else {
       const nItemsOfTheProduct = element.total_items;
       cartContent[indexFound].total_items += nItemsOfTheProduct;

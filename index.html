@@ -52,7 +52,7 @@
           <div id="idAreaCartStatus"
             class="mx-4 px-2 bg-light border border-success rounded shadow d-flex align-items-center">
             <a href="">
-              <img id="idImgCartStatus" class="img-fluid py-1" src="images/cart-empty01.png" width="35" height="35">
+              <img id="idImgCartStatus" class="img-fluid py-1" src="images/cart-empty01.png" width="45" height="45">
             </a>
             <span id="idTxtCartStatus" class="ms-3 me-2 fs-4">0</span>
           </div>
@@ -75,8 +75,8 @@
             <div class="modal-header">
               <div class=" d-block">
                 <h5 class="modal-title" id="idModalCartEmptyLabel">Entregar en:</h5>
-                <img class="img-fluid me-2" src="images/gps01.png" width="15" height="15"><span
-                  class="clDeliveryAddress">PONER AQUÍ LA DIRECCIÓN LEIDA</span>
+                <img class="img-fluid me-2" src="images/gps01.png" width="15" height="15">
+                <span id="idDeliveryAddressCartEmpty">PONER AQUÍ LA DIRECCIÓN LEIDA</span>
               </div>
               <button type="button"
                 class="btn-close bg-black opacity-100 d-flex justify-content-center align-items-center rounded-circle text-light"
@@ -90,7 +90,7 @@
                 <img class="img-fluid mx-1" src="images/info01.png" width="30" height="30">
                 Tu canasta está vacia.
               </h5>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> -->
               <button id="idBtnAddProdModCartEmpty" type="button" class="btn btn-primary"
                 data-bs-dismiss="modal">Agregar productos</button>
             </div>
@@ -101,9 +101,51 @@
     <!-- -------------------------------------------------------------------------------------- -->
     <!-- Modal to show "DETAIL CART" when the user wants watch the content of the cart           -->
     <div id="idDetailCartContainer">
-
-      <!-- TODO: traer lo de tmp.html -->
-
+      <!-- Button trigger modal -->
+      <button id="idBtnModalCartDetail" type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#idModalCartDetail">
+        Ver contenido del carrito
+      </button>
+      <!-- Modal -->
+      <div id="idModalCartDetail" class="modal fade" tabindex="-1" aria-labelledby="idModalCartDetailLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="d-flex align-items-center">
+                <h6 id="idModalCartDetailLabel" class="modal-title fw-normal me-3 mt-1">Entregar en:</h6>
+                <img class="img-fluid me-2" src="images/gps01.png" width="15" height="15">
+                <span id="idDeliveryAddressCartDetail" class="fw-bold mt-1">PONER AQUÍ LA DIRECCIÓN LEIDA</span>
+              </div>
+              <button type="button"
+                class="btn-close bg-dark opacity-100 d-flex justify-content-center align-items-center rounded-circle text-light"
+                data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+              <ul id="idUlItemsCartList" class="list-group">
+                <!-- Add all item here from js with the cart contain and gets the data from the local store -->
+              </ul>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+              <h5 class="">
+                <button id="idBtnToEmptyCartDetail" class="bg-transparent" data-bs-dismiss="modal">
+                  <a class="nav-link active" href="">
+                    <img class="img-fluid mx-1" src="images/cart-empty03.png" width="30" height="30">
+                    Vaciar canasta
+                  </a>
+                </button>
+              </h5>
+              <button id="idBtnAddProdModCartEmpty" type="button"
+                class="btn btn-success py-3 rounded-3 opacity-25 shadow me-4 text-light clCol-btn1"
+                data-bs-dismiss="modal">
+                <span class="bg-secondary py-2 p-3 me-4 rounded-3">6</span>
+                <span class="h5 mx-3">Ir a pagar</span>
+                <span class="p-2 ms-4">$32,455</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End: id="idModalCartDetail"  -->
     </div> <!-- End: id="idMsgCartEmptyContainer"> -->
   </header>
   <!-- Product added to cart message (DIV whithout modal) -->
