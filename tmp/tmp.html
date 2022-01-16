@@ -11,58 +11,60 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="tmp.css">
 
-  <title>Modal</title>
+  <title>Tarjeta de Crédito</title>
 </head>
 <!-- idBtnModalCartDetail idModalCartDetail -->
 
 <body>
 
+  <div class="row container">
+    <div class="col-6">
+    </div> <!-- TODO: Fin DIV Información carrito  -->
+    <div class="col-6">
+      <form class="form-group mt-4">
+        <div class="form-group mb-3">
+          <label for="idEmail" class="form-label">Correo electrónico</label>
+          <input id="idEmail" type="text" class="form-control mt-1 shadow" style="font-size: 1.05em;" autoComplete="off"
+            placeholder="MiUsuario@dominio.com" required />
+        </div> <!-- TODO: Fin DIV lectura email  -->
+        <div class="form-group mb-3">
+          <label for="idCardNumber">Información de la tarjeta</label>
+          <div class="border rounded-3 shadow">
+            <div class="row border-bottom mx-0">
+              <div id="idInfoCartToPay" class="col-6">
+                <input id="idCardNumber" type="text" class="form-control border-0" style="font-size: 1.05em;"
+                  autoComplete="off" placeholder="1029 384756 5674 8392" required />
+              </div>
+              <div id="idCreditCardsImages" class="col-6 d-flex justify-content-around align-items-center">
+                <a id="idVisaCard" class="" aria-current="page" href="#">
+                  <img src="images/tc-visa01.png" id="visa" width="40" height="40">
+                </a>
+                <a id="idMasterCard" class="" href="#">
+                  <img src="images/tc-master-card01.png" id="mastercard" width="40" height="40">
+                </a>
+                <a id="idAmexCard" class="" href="#">
+                  <img src="images/tc-american-express01.png" id="amex" width="40" height="40">
+                </a>
+                <a id="idDinersCard" id="idCard" class=" pe-3" href="#">
+                  <img src="images/tc-diners-club01.png" id="diners" width="40" height="40">
+                </a>
+              </div>
+              <div class="form-group mb-3">
+                <p class="bg-warning"> Voy aquí.<br>
+                  Debo leer mes/año y números de seguridad <br>
+                  nombre de la tarjeta y<br>
+                  boton de pago<br>
+                  ADEMAS, botón volver parte superior izquierda
+                </p>
+              </div>
 
-  <!-- Button trigger modal -->
-  <button id="idBtnModalCartDetail" type="button" class="btn btn-primary" data-bs-toggle="modal"
-    data-bs-target="#idModalCartDetail">
-    Ver contenido del carrito
-  </button>
-  <!-- Modal -->
-  <div id="idModalCartDetail" class="modal fade" tabindex="-1" aria-labelledby="idModalCartDetailLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="d-flex align-items-center">
-            <h6 id="idModalCartDetailLabel" class="modal-title fw-normal me-3 mt-1">Entregar en:</h6>
-            <img class="img-fluid me-2" src="images/gps01.png" width="15" height="15">
-            <span class="clDeliveryAddress fw-bold mt-1">PONER AQUÍ LA DIRECCIÓN LEIDA</span>
-          </div>
-          <button type="button"
-            class="btn-close bg-dark opacity-100 d-flex justify-content-center align-items-center rounded-circle text-light"
-            data-bs-dismiss="modal" aria-label="Close">X</button>
-        </div>
-        <div class="modal-body">
-          <ul id="idUlItemsCartList" class="list-group">
-            <!-- Add all item here from js with the cart contain and gets the data from the local store -->
-          </ul>
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <h5 class="">
-            <button id="idBtnToEmptyCartDetail" class="bg-transparent" data-bs-dismiss="modal">
-              <a class="nav-link active" href="">
-                <img class="img-fluid mx-1" src="images/cart-empty03.png" width="30" height="30">
-                Vaciar canasta
-              </a>
-            </button>
-          </h5>
-          <button id="idBtnAddProdModCartEmpty" type="button"
-            class="btn btn-success py-3 rounded-3 opacity-25 shadow me-4 text-light clCol-btn1" data-bs-dismiss="modal">
-            <span class="bg-secondary py-2 p-3 me-4 rounded-3">6</span>
-            <span class="h5 mx-3">Ir a pagar</span>
-            <span class="p-2 ms-4">$32,455</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div> <!-- End: id="idModalCartDetail"  -->
+            </div>
+          </div> <!-- TODO: Fin DIV información de la TC sin el título  "Información de la tarjeta" (pone el border) -->
+        </div> <!-- TODO: Fin DIV Información de la tarjeta (número | tarjeta  y fecha | dígitos de seguridad )  -->
 
+      </form>
+    </div> <!-- TODO: Fin DIV Información de pago (formulario)  -->
+  </div> <!-- End: class="row container" -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
