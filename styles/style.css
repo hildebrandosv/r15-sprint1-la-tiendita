@@ -14,7 +14,7 @@
    --colorTxtSuccess: green;
    --colorBgForms: #262645;
    --colorBtn1: #0AC763;
-   --colorBgSecondary2: rgb(189, 189, 189);
+   --colorBgSecondary2: rgb(241, 232, 232);
    box-sizing: border-box;
    margin: 0;
    padding: 0;
@@ -23,10 +23,14 @@
 body{
   background-color: var(--colorBgNavBarr);
 }
-.clBg-secondary2 {
+.clBg-Secondary2{
   background-color: var(--colorBgSecondary2);
 }
+
 .clBg-secondary3 {
+  background-color: var(--colorBgSecondary2);
+}
+.clBg-secondary4 {
   background-color: var(--colorBtn1);
 }
 .clCol-txt-discount {
