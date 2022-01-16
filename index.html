@@ -99,6 +99,44 @@
       </div> <!-- End: id="idModalCartEmpty"  -->
     </div> <!-- End: id="idMsgCartEmptyContainer"> -->
     <!-- -------------------------------------------------------------------------------------- -->
+    <!-- Modal to show "PURCHASE DONE OK" when the user chooses pay after typing the form to pay.   -->
+    <div id="idMsgPurchaseOk">
+      <!-- Button trigger modal -->
+      <button id="idBtnModalMsgPurchaseOk" type="button" class="btn btn-primary d-none" data-bs-toggle="modal"
+        data-bs-target="#idModalCartPurchaseMades">
+        El carrito está vacio
+      </button>
+      <!-- Modal -->
+      <div id="idModalCartPurchaseMades" class="modal fade" tabindex="-1"
+        aria-labelledby="idModalCartPurchaseMadesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header mx-auto">
+              <h2 class="">¡Gracias por tu compra!</h2>
+              <button type="button"
+                class="ms-4 btn-close bg-dark opacity-100 d-flex justify-content-center align-items-center rounded-circle text-light"
+                data-bs-dismiss="modal" aria-label="Close">X
+              </button>
+            </div>
+            <div class="modal-body">
+              <div><img class="img-fluid rounded mx-auto d-block" src="images/cart-purchase01.png" alt=""></div>
+            </div>
+            <div class="modal-footer">
+              <h5 class="mx-auto">
+                <img class="img-fluid mx-1" src="images/ok01.png" width="30" height="30">
+                Pago exitoso.
+              </h5>
+              <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> -->
+              <button id="idBtnEndsPurchase" type="button" class="btn w-50 text-light me-4 clCol-btn1"
+                style="font-size: 1.2em;" data-bs-dismiss="modal">
+                Seguir comprando
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End: id="idModalCartPurchaseMades"  -->
+    </div> <!-- End: id="idMsgPurchaseOk"> -->
+    <!-- -------------------------------------------------------------------------------------- -->
     <!-- Modal to show "DETAIL CART" when the user wants watch the content of the cart           -->
     <div id="idDetailCartContainer">
       <!-- Button trigger modal -->
@@ -109,43 +147,52 @@
       <!-- Modal -->
       <div id="idModalCartDetail" class="modal fade" tabindex="-1" aria-labelledby="idModalCartDetailLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl">
           <div class="modal-content">
-            <div class="modal-header">
-              <div class="d-flex align-items-center">
-                <h6 id="idModalCartDetailLabel" class="modal-title fw-normal me-3 mt-1">Entregar en:</h6>
-                <img class="img-fluid me-2" src="images/gps01.png" width="15" height="15">
-                <span id="idDeliveryAddressCartDetail" class="fw-bold mt-1">PONER AQUÍ LA DIRECCIÓN LEIDA</span>
-              </div>
-              <button type="button"
-                class="btn-close bg-dark opacity-100 d-flex justify-content-center align-items-center rounded-circle text-light"
-                data-bs-dismiss="modal" aria-label="Close">X</button>
-            </div>
-            <div class="modal-body">
-              <ul id="idUlItemsCartList" class="list-group">
-                <!-- Add all item here from js with the cart contain and gets the data from the local store -->
-              </ul>
-            </div>
-            <div class="modal-footer d-flex justify-content-between">
-              <h5 class="">
-                <button id="idBtnToEmptyCartDetail" class="bg-transparent" data-bs-dismiss="modal">
-                  <a class="nav-link active" href="">
-                    <img class="img-fluid mx-1" src="images/cart-empty03.png" width="30" height="30">
-                    Vaciar canasta
-                  </a>
-                </button>
-              </h5>
-              <!-- class="btn w-100 fs-4 text-white clCol-btn1" -->
-              <button id="idBtnGoToPayCartDetail" type="button"
-                class="btn btn-success py-3 rounded-3 opacity-25 shadow me-4 text-light clCol-btn1"
-                data-bs-dismiss="modal">
-                <div class="my-2">
-                  <span id="idDifferentItemsTotalInCartDetail" class="bg-secondary py-2 p-3 me-4 rounded-3">6</span>
-                  <span class="h3 mx-3">Ir a pagar</span>
-                  <span id="idTotalToPayCartDetail" class="p-2 ms-4 fs-4">$0</span>
+            <div class="row">
+              <div class="col"> <!-- Column to show cart detail -->
+                <div class="modal-header">
+                  <div class="d-flex align-items-center">
+                    <h6 id="idModalCartDetailLabel" class="modal-title fw-normal me-3 mt-1">Entregar en:</h6>
+                    <img class="img-fluid me-2" src="images/gps01.png" width="15" height="15">
+                    <span id="idDeliveryAddressCartDetail" class="fw-bold mt-1">PONER AQUÍ LA DIRECCIÓN LEIDA</span>
+                  </div>
+                  <button type="button"
+                    class="btn-close bg-dark opacity-100 d-flex justify-content-center align-items-center rounded-circle text-light"
+                    data-bs-dismiss="modal" aria-label="Close">X</button>
                 </div>
-              </button>
-            </div>
+                <div class="modal-body">
+                  <ul id="idUlItemsCartList" class="list-group">
+                    <!-- Add all item here from js with the cart contain and gets the data from the local store -->
+                  </ul>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                  <h5 class="">
+                    <button id="idBtnToEmptyCartDetail" class="bg-transparent" data-bs-dismiss="modal">
+                      <a class="nav-link active" href="">
+                        <img class="img-fluid mx-1" src="images/cart-empty03.png" width="30" height="30">
+                        Vaciar canasta
+                      </a>
+                    </button>
+                  </h5>
+                  <!-- class="btn w-100 fs-4 text-white clCol-btn1" -->
+                  <button id="idBtnGoToPayCartDetail" type="button"
+                    class="btn btn-success py-3 rounded-3 shadow me-4 text-light clCol-btn1" data-bs-dismiss="modal">
+                    <div class="my-2">
+                      <span id="idDifferentItemsTotalInCartDetail" class="bg-secondary py-2 p-3 me-4 rounded-3">6</span>
+                      <span class="h3 mx-3">Ir a pagar</span>
+                      <span id="idTotalToPayCartDetail" class="p-2 ms-4 fs-4">$0</span>
+                    </div>
+                  </button>
+                </div>
+              </div> <!-- End: Column to show cart detail -->
+              <div class="col-5">  <!-- Column to show the pay form -->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique alias quas perspiciatis voluptates
+                dicta totam, delectus, maxime rerum tempore voluptatibus natus aliquam sunt omnis ducimus, consequuntur
+                debitis quae eius. Eum deleniti provident deserunt reprehenderit officia! In aperiam minima accusantium
+                perferendis.
+              </div>  <!-- End: Column to show the pay form -->
+            </div>  <!-- End: Row to show cart detail and pay form -->
           </div>
         </div>
       </div> <!-- End: id="idModalCartDetail"  -->
@@ -160,14 +207,14 @@
     </div>
   </div>
   <!-- Main image banner (DIV without modal) -->
-  <div id="idMain" class="">
-    <div id="idBanner" class="container-fluid" style="margin-top: 79px">
+  <div id="idMain" class="container-fluid mx-0 px-0">
+    <div id="idBanner" class="container-fluid" style="margin-top: 42px">
       <img src="images/banner01.png" alt="" class="img-thumbnail"
         style="height: 300px; width: 100%; object-fit: cover;">
     </div>
   </div>
   <!-- Display images to offer products container (DIV without modal) -->
-  <div id="idOffers" class="d-flex overflow-auto gap-2 m-3">
+  <div id="idOffers" class="d-flex overflow-auto gap-2 m-2">
     <!-- This containes is filled from JS  -->
   </div>
 

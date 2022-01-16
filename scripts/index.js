@@ -197,15 +197,15 @@ function fnPaintCart(oneList) {
                          </div>
                          <div class="col-12 col-sm-4 col-md-1 col-lg-1">
                            <span id="" class="bg-transparent btn-dark">
-                             <img class="mx-4 clBtnAddOneLess" src="./images/substract01.png" width="35" height="35">
+                             <img class="mx-2 clBtnAddOneLess" src="./images/substract01.png" width="30" height="30">
                            </span>
                          </div>
-                         <div class="col-12 col-sm-4 col-md-1 col-lg-1">
+                         <div class="col-12 col-sm-4 col-md-1 col-lg-1 text-center">
                            <p class="fs-4 fw-bold ms-3 text-center pt-3 clTheSpanWithAmountItems">1</p>
                          </div>
                          <div class="col-12 col-sm-4 col-md-1 col-lg-1">
                            <span id="" class="bg-transparent btn-dark">
-                             <img class="mx-4 clBtnAddOneMore" src="./images/add01.png" width="35" height="35">
+                             <img class="mx-2 clBtnAddOneMore" src="./images/add01.png" width="30" height="30">
                            </span>
                          </div>
                        </div>
