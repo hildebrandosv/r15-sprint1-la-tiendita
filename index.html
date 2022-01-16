@@ -150,7 +150,8 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="row">
-              <div class="col"> <!-- Column to show cart detail -->
+              <div class="col">
+                <!-- Column to show cart detail -->
                 <div class="modal-header">
                   <div class="d-flex align-items-center">
                     <h6 id="idModalCartDetailLabel" class="modal-title fw-normal me-3 mt-1">Entregar en:</h6>
@@ -186,15 +187,67 @@
                   </button>
                 </div>
               </div> <!-- End: Column to show cart detail -->
-              <div class="col-5">  <!-- Column to show the pay form -->
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique alias quas perspiciatis voluptates
-                dicta totam, delectus, maxime rerum tempore voluptatibus natus aliquam sunt omnis ducimus, consequuntur
-                debitis quae eius. Eum deleniti provident deserunt reprehenderit officia! In aperiam minima accusantium
-                perferendis.
-              </div>  <!-- End: Column to show the pay form -->
-            </div>  <!-- End: Row to show cart detail and pay form -->
-          </div>
-        </div>
+              <div class="col-5 me-4 mb-4">
+                <!-- Column to show the pay form -->
+                <form id="idForm01" class="form-group mt-4">
+                  <div class="form-group mb-3">
+                    <label for="idEmail" class="form-label">Correo electrónico</label>
+                    <input id="idEmail" name="email" type="text" class="form-control mt-1 shadow"
+                      style="font-size: 1.05em;" autoComplete="off" placeholder="MiUsuario@dominio.com" required />
+                  </div> <!-- End: input EMAIL  -->
+                  <div class="form-group mb-3">
+                    <label for="idCardNumber" class="form-label">Información de la tarjeta</label>
+                    <div class="row border rounded-3 shadow mx-0">
+                      <div id="idInfoCartToPay" class="col-6 my-2">
+                        <input id="idCardNumber" name="tc_number" type="text" class="form-control border-0"
+                          style="font-size: 1.05em;" autoComplete="off" placeholder="1029 384756 5674 8392" required />
+                      </div>
+                      <div id="idCreditCardsImages" class="col-6 my-1 d-flex justify-content-around align-items-center">
+                        <a class="clCol-bgSecondary1 rounded-circle p-1" aria-current="page" href="#">
+                          <img id="idVisaCard" class="px-1" src="images/tc-visa01.png" id="visa" width="40" height="40">
+                        </a>
+                        <a class="rounded-circle p-1" href="#">
+                          <img id="idMasterCard" class="p-1" src="images/tc-master-card01.png" id="mastercard"
+                            width="40" height="40">
+                        </a>
+                        <a class="" href="#">
+                          <img id="idAmexCard" class="p-1" src="images/tc-american-express01.png" id="amex" width="40"
+                            height="40">
+                        </a>
+                        <a class="pe-3" href="#">
+                          <img id="idDinersCard" class="p-1" src="images/tc-diners-club01.png" id="diners" width="40"
+                            height="40">
+                        </a>
+                      </div>
+                      <div class="form-group mb-2 row mx-0 border-top">
+                        <div class="col-6 mt-2 border-end my-0">
+                          <input id="idExpirationDate" name="expires" type="text" class="form-control border-0"
+                            style="font-size: 1.05em;" autoComplete="off" placeholder="MM / YY" required />
+                        </div>
+                        <div class="col-6 mt-2">
+                          <input id="idExpirationDate" name="cvv" type="text" class="form-control border-0"
+                            style="font-size: 1.05em;" autoComplete="off" placeholder="CVV" required />
+                        </div>
+                      </div>
+                    </div> <!-- End: input fields credit cart information  -->
+                  </div> <!-- End: label and input fields credit cart information  -->
+                  <div class="form-group mb-3">
+                    <label for="idCardName" class="form-label">Nombre en la tarjeta</label>
+                    <input id="idCardName" name="name" type="text" class="form-control mt-1 shadow"
+                      style="font-size: 1.05em;" autoComplete="off" placeholder="" required />
+                  </div> <!-- End: input EMAIL  -->
+                  <div class="d-grid">
+                    <button id="idBtnToPayForm" type="submit" disabled class="btn text-white clCol-btn1"
+                      class="btn fs-3 shadow text-light clCol-btn1">
+                      <span class="me-4 fs-4">Pagar</span>
+                      <span id="idTotalToPayForm" class="ms-4 fs-5">$0</span>
+                    </button>
+                  </div> <!-- End: Final pay button -->
+                </form> <!-- End: Form to final pay -->
+              </div> <!-- End: Column to show the pay form -->
+            </div> <!-- End: Row to show cart detail and pay form -->
+          </div> <!-- End: class="modal-content"  -->
+        </div> <!-- End: class="modal-dialog"  -->
       </div> <!-- End: id="idModalCartDetail"  -->
     </div> <!-- End: id="idMsgCartEmptyContainer"> -->
   </header>
