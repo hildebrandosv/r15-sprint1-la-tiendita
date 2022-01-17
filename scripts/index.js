@@ -34,14 +34,31 @@ const idBtnAddProdModCartEmpty = document.getElementById('idBtnAddProdModCartEmp
 const idBtnModalCartDetail = document.getElementById('idBtnModalCartDetail');      // Button that activates the detail modal with all product in the cart
 const idUlItemsCartList = document.getElementById('idUlItemsCartList');            // UL container to paint all products in the cart
 const idBtnToEmptyCartDetail = document.getElementById('idBtnToEmptyCartDetail');  // Button to emty all items in the cart
+const idTotalToPayCartDetail = document.getElementById('idTotalToPayCartDetail');  // SPAN that shows the total to pay in the main button
 const idDeliveryAddressCartDetail = document.getElementById('idDeliveryAddressCartDetail');
 const idDeliveryAddressCartEmpty = document.getElementById('idDeliveryAddressCartEmpty');
 
+const idBtnGoToPayCartDetail = document.getElementById('idBtnGoToPayCartDetail');   // Button to go to pay when the cart deatil is displayed
+const idContainerForm01 = document.getElementById('idContainerForm01');             // Container of the pay form
+const idReturnToPay = document.getElementById('idReturnToPay');                     // Link to return to watch the cart detail
+const idForm01 = document.getElementById('idForm01');                               // The pay form
+const idTotalToPayForm = document.getElementById('idTotalToPayForm');               // SPAN tag in button to definitive pay fron pay form that contains the total to pay
+
+const idBtnToPayForm = document.getElementById('idBtnToPayForm'); // Button to go to pay in the pay form
+const idVisaCard = document.getElementById('idVisaCard'); // Image this credit card to go to pay in the pay form
+const idMasterCard = document.getElementById('idMasterCard'); // Image this credit card to go to pay in the pay form
+const idAmexCard = document.getElementById('idAmexCard'); // Image this credit card to go to pay in the pay form
+const idDinersCard = document.getElementById('idDinersCard'); // Image this credit card to go to pay in the pay form
+const idBtnModalMsgPurchaseOk = document.getElementById('idBtnModalMsgPurchaseOk'); // Button that ends the purchase
+const idBtnEndsPurchase = document.getElementById('idBtnEndsPurchase'); // Button to continue buying after to pay te purchase with success
+
 //
 // *** VARIABLES definition ***
-let addressShipping = ""       // Shhiping Adress (string): Global variable to have always this data in memory
+let addressShipping = ""      // Shhiping Adress (string): Global variable to have always this data in memory
 let cartContent = []          // Content of the cart (array): Global variable to have always this data in memory
-let itemToAddToCart = {}       // Object to save the actual item to add to cart
+let itemToAddToCart = {}      // Object to save the actual item to add to cart
+let sCardSrcImage = ""        // Storages the URL ("src" property) of card selected
+
 //
 // *********************************************
 // ***           BEGIN MAIN MODULE           ***
@@ -73,6 +90,10 @@ idAreaCartStatus.addEventListener('click', e => {
       idBtnModalCartEmpty.click();
    }
    else {
+      // Activates the button to go to pay becouse before was deactivate when the pay form is shown.
+      idBtnGoToPayCartDetail.classList.remove('d-none');
+      idBtnToEmptyCartDetail.classList.remove('d-none');
+      // Opens to cart detail modal
       idBtnModalCartDetail.click()
       // Load the address shippment to show in te detail cart
       addressShipping = fnGetDataFromLocalStorage("sAddressShipping"); // If the key is not in LS, it is created, else it gets its content
@@ -115,7 +136,7 @@ idBtnToEmptyCartDetail.addEventListener('click', e => {
    localStorage.setItem('aCartContent', JSON.stringify(cartContent))
    idImgCartStatus.src = "images/cart-empty01.png";
 })
-
+//
 // Listens the event click in te container of the offers
 idOffers.addEventListener("submit", async e => {
    e.preventDefault();
@@ -130,7 +151,7 @@ idOffers.addEventListener("submit", async e => {
    // Open the modal to selected product with the information of these product
    fnLoadOneProduct(urlProducts, id)
 })
-
+//
 // Listens the click in the modal to "SAVE" button the address selected to shipping.
 idBtnSaveAddress.addEventListener('click', e => {
    e.preventDefault();
@@ -160,13 +181,110 @@ idBtnAddToCart_ModalProdOfferToCart.addEventListener('click', e => {
    idMsgItemAdded.classList.remove('d-none')
    setTimeout(() => {
       idMsgItemAdded.classList.add('d-none')
-   }, 2000);
+   }, 1000);
 })
+// The next ADD EVENT LISTENER is to go to pay form
+idBtnGoToPayCartDetail.addEventListener('click', e => {
+   // Deactivates the boton to go to pay becouse go to pay form
+   idBtnGoToPayCartDetail.classList.add('d-none');
+   idBtnToEmptyCartDetail.classList.add('d-none');
+   // Show pay form
+   idContainerForm01.classList.remove('d-none');
+   idTotalToPayForm.innerHTML = idTotalToPayCartDetail.innerHTML;  // Puts the total to pay in the pay buton of the form and is the same total that has in the "Ir a pagar"
+})
+// The next ADD EVENT LISTENER is to return to show the cart detail when the pay form is displayed
+idReturnToPay.addEventListener('click', e => {
+   // Activates the boton to go to pay becouse return from pay form
+   idBtnGoToPayCartDetail.classList.remove('d-none');
+   idBtnToEmptyCartDetail.classList.remove('d-none');
+   // Hide pay form
+   idContainerForm01.classList.add('d-none');
+})
+// Listener in the all inputs of form of the credit card
+idForm01.addEventListener('input', e => {
+   const oInputsForm = fnInputsValidate('url_image', sCardSrcImage);  // Creates Key|Value to image URL  of the credit cart selected
+   const lThereIsError = Object.keys(oInputsForm).length === 0;
+   if (lThereIsError) idBtnToPayForm.disabled = true
+   else idBtnToPayForm.disabled = false;
+})
+// Listener in the all inputs of form of the credit card. This is specificaly to capture the card image
+idForm01.addEventListener('mousemove', e => {
+   const oInputsForm = fnInputsValidate('url_image', sCardSrcImage);  // Creates Key|Value to image URL  of the credit cart selected
+   const lThereIsError = Object.keys(oInputsForm).length === 0;
+   if (lThereIsError) idBtnToPayForm.disabled = true
+   else idBtnToPayForm.disabled = false;
+})
+// Listener SUBMIT of form to do the final pay
+idForm01.addEventListener('submit', e => {
+   e.preventDefault();
+   idTxtCartStatus.innerHTML = 0;
+   idBtnModalMsgPurchaseOk.click();
+})
+// Listener CLICK in the button that ends the purchase an reset all data cart
+idBtnEndsPurchase.addEventListener('click', e => {
+   idContainerForm01.classList.add('d-none');  // Hide pay form
+   idForm01.reset();                           // Cleans the inputs form
+   cartContent = [];                           // Cart is initialized in empty
+   sCardSrcImage= "";                          // Url (src) of the credit card in empty
+   localStorage.setItem('aCartContent', JSON.stringify(cartContent))
+   idImgCartStatus.src = "images/cart-empty01.png";
+   window.location.href = '#idProdOfferToCartContainer';
+})
+// LISTENER to card credit image selected
+idVisaCard.addEventListener('click', e => { fnShowCreditCardSelected(idVisaCard.src, 'VISA') })
+idMasterCard.addEventListener('click', e => { fnShowCreditCardSelected(idMasterCard.src, 'MASTER') })
+idAmexCard.addEventListener('click', e => { fnShowCreditCardSelected(idAmexCard.src, 'AMEX') })
+idDinersCard.addEventListener('click', e => { fnShowCreditCardSelected(idDinersCard.src, 'DINERS') })
+
 
 //╔════════════════════════════════════════════════╗
 //║             FUNCTION DEFINITION                ║
 //╚════════════════════════════════════════════════╝
 //
+// Function that load te inputs form in an object. If at least one file is not selected, returns empty, else, 
+// return the object with all fields in pair "key:value", where the "key" is the name of the input in the form.
+function fnInputsValidate(otherKey_SrcImage, otherVal_SrcImage) {
+   let oWithAllInputs = {}  // Data object with the credit card data of to do the pay
+   const lstInputs = document.getElementsByClassName("form-control")
+   oWithAllInputs[lstInputs[1].name] = lstInputs[1].value; // This case: email
+   oWithAllInputs[lstInputs[2].name] = lstInputs[2].value; // This case: tc_number 
+   oWithAllInputs[lstInputs[3].name] = lstInputs[3].value; // This case: expires
+   oWithAllInputs[lstInputs[4].name] = lstInputs[4].value; // This case: cvv
+   oWithAllInputs[lstInputs[5].name] = lstInputs[5].value; // This case: name
+   // Adds Key|Value pair to input objects of the form (the pair arrives in the parameter)
+   oWithAllInputs[otherKey_SrcImage] = otherVal_SrcImage;
+   // Finds any field that is empty
+   const aAllValuesOfAllInputs = Object.values(oWithAllInputs);
+
+console.log('oWithAllInputs ',oWithAllInputs)
+
+   let lThereIsAtLeastOneEmpty = (aAllValuesOfAllInputs.indexOf('') >= 0);
+   if (lThereIsAtLeastOneEmpty) return {};
+   else return (oWithAllInputs);
+}
+
+// Function to put the back ground color to credit card image selected
+function fnShowCreditCardSelected(sSrc, sFranchiseCard) {
+   sCardSrcImage = sSrc;      // Load this variable that is GLOBAL '#fff'
+   idVisaCard.style.background = '#fff'
+   idMasterCard.style.background = '#fff'
+   idAmexCard.style.background = '#fff'
+   idDinersCard.style.background = '#fff'
+   switch (sFranchiseCard) {
+      case 'VISA':
+         idVisaCard.style.background = '#e6e6e6'
+         break;
+      case 'MASTER':
+         idMasterCard.style.background = '#e6e6e6'
+         break;
+      case 'AMEX':
+         idAmexCard.style.background = '#e6e6e6'
+         break;
+      case 'DINERS':
+         idDinersCard.style.background = '#e6e6e6'
+         break;
+   }
+}
 // Show all products that contains the cart and show  the options to empty to cart or to go to pay.
 function fnPaintCart(oneList) {
    let nTotalToPay = 0;
@@ -177,7 +295,6 @@ function fnPaintCart(oneList) {
    oneList.forEach(element => {
       const { id, name, url_image, unit, total_items, price, discount } = element;
       // Calculates the totals
-      const idTotalToPayCartDetail = document.getElementById('idTotalToPayCartDetail');
       const price_net = Math.round(price * ((100 - discount) / 100));
       nTotalToPay = total_items * price_net;
       idTotalToPayCartDetail.innerHTML = fnNumberFormat(nTotalToPay, '$');

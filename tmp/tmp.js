@@ -19,6 +19,7 @@ const idBtnEndsPurchase = document.getElementById('idBtnEndsPurchase'); // Butto
 
 // Listener in the all inputs of form fof the credit card
 idForm01.addEventListener('input', e => {
+
    const oInputsForm= fnInputsValidate('url_image', sCardSrcImage);  // Creates Key|Value to image URL  of the credit cart selected
    const lThereIsError= Object.keys(oInputsForm).length === 0;
    if (lThereIsError) idBtnToPayForm.disabled= true
@@ -43,12 +44,15 @@ idDinersCard.addEventListener('click', e => { fnShowCreditCardSelected(idDinersC
 function fnInputsValidate(otherKey_SrcImage, otherVal_SrcImage) {
    let oWithAllInputs = {}  // Data object with the credit card data of to do the pay
    const lstInputs = document.getElementsByClassName("form-control")
-   oWithAllInputs[lstInputs[0].name] = lstInputs[0].value; // This case: email
-   oWithAllInputs[lstInputs[1].name] = lstInputs[1].value; // This case: tc_number 
-   oWithAllInputs[lstInputs[2].name] = lstInputs[2].value; // This case: expires
-   oWithAllInputs[lstInputs[3].name] = lstInputs[3].value; // This case: cvv
-   oWithAllInputs[lstInputs[4].name] = lstInputs[4].value; // This case: name
-   // Adds Key|Value pair to input objects of the form (the pair arrives in the parameter)
+
+console.log('lstInputs ',lstInputs)
+
+oWithAllInputs[lstInputs[1].name] = lstInputs[1].value; // This case: email
+oWithAllInputs[lstInputs[2].name] = lstInputs[2].value; // This case: tc_number 
+oWithAllInputs[lstInputs[3].name] = lstInputs[3].value; // This case: expires
+oWithAllInputs[lstInputs[4].name] = lstInputs[4].value; // This case: cvv
+oWithAllInputs[lstInputs[5].name] = lstInputs[5].value; // This case: name
+// Adds Key|Value pair to input objects of the form (the pair arrives in the parameter)
    oWithAllInputs[otherKey_SrcImage] = otherVal_SrcImage;
    // Finds any field that is empty
    const aAllValuesOfAllInputs = Object.values(oWithAllInputs);

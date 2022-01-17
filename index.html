@@ -104,7 +104,7 @@
       <!-- Button trigger modal -->
       <button id="idBtnModalMsgPurchaseOk" type="button" class="btn btn-primary d-none" data-bs-toggle="modal"
         data-bs-target="#idModalCartPurchaseMades">
-        El carrito está vacio
+        Compra exitosa
       </button>
       <!-- Modal -->
       <div id="idModalCartPurchaseMades" class="modal fade" tabindex="-1"
@@ -150,8 +150,7 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="row">
-              <div class="col">
-                <!-- Column to show cart detail -->
+              <div class="col"> <!-- Column to show cart detail -->
                 <div class="modal-header">
                   <div class="d-flex align-items-center">
                     <h6 id="idModalCartDetailLabel" class="modal-title fw-normal me-3 mt-1">Entregar en:</h6>
@@ -178,7 +177,7 @@
                   </h5>
                   <!-- class="btn w-100 fs-4 text-white clCol-btn1" -->
                   <button id="idBtnGoToPayCartDetail" type="button"
-                    class="btn btn-success py-3 rounded-3 shadow me-4 text-light clCol-btn1" data-bs-dismiss="modal">
+                    class="d-none btn btn-success py-3 rounded-3 shadow me-4 text-light clCol-btn1" > <!-- data-bs-dismiss="modal" -->
                     <div class="my-2">
                       <span id="idDifferentItemsTotalInCartDetail" class="bg-secondary py-2 p-3 me-4 rounded-3">6</span>
                       <span class="h3 mx-3">Ir a pagar</span>
@@ -187,8 +186,15 @@
                   </button>
                 </div>
               </div> <!-- End: Column to show cart detail -->
-              <div class="col-5 me-4 mb-4">
+              <div id="idContainerForm01" class="col-5 me-4 mb-4 d-none">
                 <!-- Column to show the pay form -->
+                <div class="m-3 d-flex align-items-center">
+                  <a id="idReturnToPay"
+                    class="pb-1 pe-1 display-6 text-light text-decoration-none bg-dark rounded-circle d-flex justify-content-center align-items-center"
+                    style="width: 50px; height: 50px;" aria-current="page" href="#">
+                    < </a>
+                    <span class="ms-2" style="font-size: 1.3em;">Volver</span> 
+                </div>
                 <form id="idForm01" class="form-group mt-4">
                   <div class="form-group mb-3">
                     <label for="idEmail" class="form-label">Correo electrónico</label>
