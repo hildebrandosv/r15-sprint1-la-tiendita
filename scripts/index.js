@@ -52,6 +52,17 @@ const idDinersCard = document.getElementById('idDinersCard'); // Image this cred
 const idBtnModalMsgPurchaseOk = document.getElementById('idBtnModalMsgPurchaseOk'); // Button that ends the purchase
 const idBtnEndsPurchase = document.getElementById('idBtnEndsPurchase'); // Button to continue buying after to pay te purchase with success
 
+// CRUD
+const ul = document.querySelector('.clCrud');
+
+const idCrudProducts = document.getElementById('idCrudProducts');
+idCrudProducts.addEventListener('click', e => {
+   // fnLoadProducts();
+})
+
+// End: CRUD
+
+
 //
 // *** VARIABLES definition ***
 let addressShipping = ""      // Shhiping Adress (string): Global variable to have always this data in memory
@@ -72,6 +83,8 @@ window.addEventListener('DOMContentLoaded', e => {
 
    fnLoadOffers() // Puts the offer products
    //TODO:(habilitar esta lín)TODO: fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShipping" in LS if not exists.
+
+   fnLoadProducts();
 })
 
 // Listens te event click in the status cart area
@@ -410,8 +423,7 @@ async function fnLoadOffers() {
                                  class="fs-5 fw-bolder ps-2 pb-3 bg-gradient clCol-txt-discount">${discount}%</span>
                               <span class="h6 me-2 bg-gradient clCol-txt-discount">dcto.</span>
                            </div>
-                           <img id="idOffers-img" src="${url_image}"
-                           class="card-img-top" alt="...">
+                           <img id="idOffers-img" src="${url_image}" class="card-img-top" width="80" height="300" >
                            <div class="card-body">
                               <div class="d-flex">
                                  <h3 id="idOffers-price-net" class="card-title fw-bold">
@@ -433,7 +445,6 @@ async function fnLoadOffers() {
                         </div>`
    })
 }
-
 // Content generation of the cities to choose to shippment
 async function fnLoadCities() {
    // Gets the cities of the DB
@@ -451,3 +462,54 @@ async function fnLoadCities() {
       idCitiesSelect.innerHTML += `<option value="${element.id}" ${index == nIndexCurrentCity ? "selected" : ""}><span>🛃</span>${element.city}</option>`;
    })
 }
+//
+// CRUD Productos: "GET" promise to load ALL TABLE data to CRUD
+async function fnLoadProducts() {
+   const aProducts = await fnGetTableOfDb(urlProducts);
+   ul.innerHTML= '';
+   aProducts.forEach(element => {
+      // Unstructured every data record (an object) to puts in the individual values with te same name of the object "key"
+      const { id, name, unit, price, url_image, most_popular, discount } = element;
+      const price_net = Math.round(price * ((100 - discount) / 100));
+      const price_format = fnNumberFormat(price);
+      const price_net_format = fnNumberFormat(price_net);
+      // Fills the container with products in offer
+      ul.innerHTML += `
+                      <li class="list-group-item">
+                          <div class="container-fluid align-items-center row">
+                              <div class= "col-12 col-sm-3 col-md-4 p-0 m-0">
+                                  <span class="lead">${name}</span>
+                              </div>
+                              <div class= "col-12 col-sm-1 col-md-2 p-0 m-0">
+                                  <img src=${url_image} width="50px"></img>
+                              </div>
+                              <div class= "col-12 col-sm-3 col-md-4 p-0 m-0">
+                                 <p class="lead text-center">${price_format}</p>
+                                 <p class="lead text-center">${unit}</p>
+                              </div>
+
+                              <div class= "col-12 col-sm-2 col-md-2">
+                                 <button id=${id} 
+                                         class="btn btn-dark fs-5 btm-sm float-end clBtnDelete">
+                                    Borrar
+                                 </button>
+                              </div>
+                          </div>
+                      </li>
+                      `
+  });
+
+}
+// CRUD Products: "DELETE" promise to load ALL TABLE data to CRUD
+ul.addEventListener('click', async (e) => {
+   const btnEliminar = e.target.classList.contains('clBtnDelete');
+   if (btnEliminar === true) {
+       const id = e.target.id;
+       const responseFetch = await fetch(urlProducts + id, {
+           method: 'DELETE'
+       })
+      //  await fnLoadProducts();
+       const dataJson = await responseFetch.json()
+       console.log(dataJson)
+   }
+})
