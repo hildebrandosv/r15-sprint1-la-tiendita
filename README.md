@@ -2,8 +2,8 @@
 ## Reto: La Tiendita | Sprint 1 | 10 jan 2022 | Timelines
 
 > ## Formador : John Florez | @JohnFlorez25
-> ## [WebPage] 
-#### [Repositorio] 
+> ## [WebPage] https://hildebrandosv.github.io/r15-sprint1-la-tiendita/
+#### [Repositorio] https://github.com/hildebrandosv/r15-sprint1-la-tiendita
 ___
 ### --> ENUNCIADO:
 #### * Objetivo: A continuación, se describen las consideraciones técnicas que se deben tener en cuenta para brindar solución al producto a entregar para cumplir con el SPRINT 1
