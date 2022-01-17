@@ -262,7 +262,6 @@ console.log('oWithAllInputs ',oWithAllInputs)
    if (lThereIsAtLeastOneEmpty) return {};
    else return (oWithAllInputs);
 }
-
 // Function to put the back ground color to credit card image selected
 function fnShowCreditCardSelected(sSrc, sFranchiseCard) {
    sCardSrcImage = sSrc;      // Load this variable that is GLOBAL '#fff'
@@ -298,8 +297,8 @@ function fnPaintCart(oneList) {
       const price_net = Math.round(price * ((100 - discount) / 100));
       nTotalToPay = total_items * price_net;
       idTotalToPayCartDetail.innerHTML = fnNumberFormat(nTotalToPay, '$');
-      // Paints each item whit its data line (a LI tag) per line (a LI tag) 
-      idUlItemsCartList.innerHTML += `           
+      // Paints each item whit its data line (a LI tag) per line (a LI tag)
+      idUlItemsCartList.innerHTML += `
                      <li class="list-group-item">
                        <div id=${id} class="container-fluid row justify-content-center align-items-center">
                          <div class="col-12 col-sm-4 col-md-3 col-lg-3 p-0 m-0">
@@ -399,12 +398,11 @@ async function fnLoadOffers() {
    const aProducts = (await fnGetTableOfDb(urlProducts)).filter(element => element.discount > 0)
    aProducts.forEach(element => {
       // Unstructured every data record (an object) to puts in the individual values with te same name of the object "key"
-      const { id, name, unit, price, stock, min_stock, max_stock, description, url_image, most_popular, discount } = element;
+      const { id, name, unit, price, url_image, most_popular, discount } = element;
       const price_net = Math.round(price * ((100 - discount) / 100));
       const price_format = fnNumberFormat(price);
       const price_net_format = fnNumberFormat(price_net);
       // Fills the container with products in offer
-      const url_IMAGE = "./images/vegetables01.png";   // TODO: quitar esto y reemplazar la variable del objeto más abajo TODO: 
       idOffers.innerHTML += `
                         <div class="card position-relative fst-italic" style="width: 350px; min-width: 350px;" data-id=${id}>
                            <div id="idDiscount" class="position-absolute rounded-pill m-2 clBg-secondary2">
@@ -412,7 +410,7 @@ async function fnLoadOffers() {
                                  class="fs-5 fw-bolder ps-2 pb-3 bg-gradient clCol-txt-discount">${discount}%</span>
                               <span class="h6 me-2 bg-gradient clCol-txt-discount">dcto.</span>
                            </div>
-                           <img id="idOffers-img" src="${url_IMAGE}"
+                           <img id="idOffers-img" src="${url_image}"
                            class="card-img-top" alt="...">
                            <div class="card-body">
                               <div class="d-flex">
