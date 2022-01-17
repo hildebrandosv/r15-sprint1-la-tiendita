@@ -18,6 +18,8 @@ import {
 //
 // *** CONSTANT definition ***
 //
+const idLinkHome = document.getElementById("idLinkHome");
+const idMainContainer = document.getElementById("idMainContainer");           // Container to show cart
 const idOffers = document.getElementById("idOffers");                         // Container of products in offer to displays the cards of these products
 const idCitiesSelect = document.getElementById("idCitiesSelect");             // List (select tag) with cities to choose the shippment address
 const idBtnSaveAddress = document.getElementById('idBtnSaveAddress');         // Button to save the shipping address chosen
@@ -54,13 +56,19 @@ const idBtnEndsPurchase = document.getElementById('idBtnEndsPurchase'); // Butto
 
 // CRUD
 const ul = document.querySelector('.clCrud');
-
+const idCrudContainer = document.getElementById('idCrudContainer');
 const idCrudProducts = document.getElementById('idCrudProducts');
 idCrudProducts.addEventListener('click', e => {
-   // fnLoadProducts();
+   idCrudContainer.classList.remove('d-none');
+   idMainContainer.classList.add('d-none');
 })
-
 // End: CRUD
+
+
+idLinkHome.addEventListener('click', e => {
+   idCrudContainer.classList.add('d-none');
+   idMainContainer.classList.remove('d-none');
+})
 
 
 //
@@ -82,7 +90,7 @@ window.addEventListener('DOMContentLoaded', e => {
    localStorage.setItem('oItemToAddToCart', JSON.stringify(itemToAddToCart)); // Object with the last item selected to add to cart
 
    fnLoadOffers() // Puts the offer products
-   //TODO:(habilitar esta lín)TODO: fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShipping" in LS if not exists.
+   fnLoadCities() // Puts the Cities to select the shipping address and creates the key "sAddressShipping" in LS if not exists.
 
    fnLoadProducts();
 })
@@ -159,7 +167,7 @@ idOffers.addEventListener("submit", async e => {
    // If there is not a address to shipping, then this address is read in a modal of Bootstrap
    addressShipping = fnGetDataFromLocalStorage("sAddressShipping");  // To updates the global variable
    if (addressShipping === '') {
-      //TODO: idBtnModAddressSh.click();   //TODO: habilitar esto que lle la dirección cuando dan click en agregar y no hay una dirección
+      idBtnModAddressSh.click();   //TODO: habilitar esto que lle la dirección cuando dan click en agregar y no hay una dirección
    }
    // Open the modal to selected product with the information of these product
    fnLoadOneProduct(urlProducts, id)
@@ -238,7 +246,7 @@ idBtnEndsPurchase.addEventListener('click', e => {
    idContainerForm01.classList.add('d-none');  // Hide pay form
    idForm01.reset();                           // Cleans the inputs form
    cartContent = [];                           // Cart is initialized in empty
-   sCardSrcImage= "";                          // Url (src) of the credit card in empty
+   sCardSrcImage = "";                          // Url (src) of the credit card in empty
    localStorage.setItem('aCartContent', JSON.stringify(cartContent))
    idImgCartStatus.src = "images/cart-empty01.png";
    window.location.href = '#idProdOfferToCartContainer';
@@ -269,7 +277,7 @@ function fnInputsValidate(otherKey_SrcImage, otherVal_SrcImage) {
    // Finds any field that is empty
    const aAllValuesOfAllInputs = Object.values(oWithAllInputs);
 
-console.log('oWithAllInputs ',oWithAllInputs)
+   console.log('oWithAllInputs ', oWithAllInputs)
 
    let lThereIsAtLeastOneEmpty = (aAllValuesOfAllInputs.indexOf('') >= 0);
    if (lThereIsAtLeastOneEmpty) return {};
@@ -466,7 +474,7 @@ async function fnLoadCities() {
 // CRUD Productos: "GET" promise to load ALL TABLE data to CRUD
 async function fnLoadProducts() {
    const aProducts = await fnGetTableOfDb(urlProducts);
-   ul.innerHTML= '';
+   ul.innerHTML = '';
    aProducts.forEach(element => {
       // Unstructured every data record (an object) to puts in the individual values with te same name of the object "key"
       const { id, name, unit, price, url_image, most_popular, discount } = element;
@@ -497,19 +505,52 @@ async function fnLoadProducts() {
                           </div>
                       </li>
                       `
-  });
+   });
 
 }
 // CRUD Products: "DELETE" promise to load ALL TABLE data to CRUD
 ul.addEventListener('click', async (e) => {
    const btnEliminar = e.target.classList.contains('clBtnDelete');
    if (btnEliminar === true) {
-       const id = e.target.id;
-       const responseFetch = await fetch(urlProducts + id, {
-           method: 'DELETE'
-       })
+      const id = e.target.id;
+      const responseFetch = await fetch(urlProducts + id, {
+         method: 'DELETE'
+      })
       //  await fnLoadProducts();
-       const dataJson = await responseFetch.json()
-       console.log(dataJson)
+      const dataJson = await responseFetch.json()
+      console.log(dataJson)
    }
 })
+
+// CRUD Products: Captura de datos del formulario
+const capturaDatos = () => {
+   const name = document.getElementById('inputNombre').value;
+   const url_image = document.getElementById('inputUrl').value;
+   const price = document.getElementById('inputPrecio').value;
+   const unit = document.getElementById('inputUnidad').value;
+   const oInputs = {
+      name,
+      url_image,
+      price,
+      unit
+   }
+   return oInputs;
+}
+
+// CRUD Products: "POST" promise to creates data
+const form = document.querySelector('.clCrudForm');
+console.log('form', form)
+
+form.addEventListener('submit', async (e) => {
+   e.preventDefault();
+   const objeto = capturaDatos();
+   console.log('objeto ', objeto)
+   await fetch(urlProducts, {
+      method: 'POST',
+      body: JSON.stringify(objeto),
+      headers: {
+         "Content-Type": "application/json; charset=utf-8"
+      }
+   })
+})
+

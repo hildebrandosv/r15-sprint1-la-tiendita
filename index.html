@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-5">
             <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#idMain">Inicio</a>
+              <a id="idLinkHome" class="nav-link active" aria-current="page" href="#idMain">Inicio</a>
             </li>
             <li class="nav-item me-5">
               <a id="idCrudProducts" class="nav-link" aria-current="page" href="#idCrudContainer">Productos</a>
@@ -269,7 +269,7 @@
   </div>
   <!-- ----------------------------------- -->
   <!-- ---------- CRUD Products ---------- -->
-  <div id="idCrudContainer" class="container mt-5 bg-warning">
+  <div id="idCrudContainer" class="container mt-5 d-none">
     <div class="row">
       <div div class="col-7">
         <h3 class="text-center">Lista de Productos</h3>
@@ -279,50 +279,53 @@
       </div>
       <div div class="col-5">
         <h3 class="text-center"> Mantenimiento Productos </h3>
-
         <div class="row">
-          <div class="col-6">
-            <form id="idForm" class="form-group">
-              <input id="inputUrl" type="text" class="form-control " placeholder="Url imagen" name="url" required />
+          <div class="col-12 text-center">
+            <img id="idPhoto" class="img-fluid" src="images/photo01.png" width="180" alt="">
+          </div>
+          <div class="col-12">
+            <form id="idForm" class="form-group clCrudForm">
               <input id="inputNombre" type="text" class="form-control mt-2" name="nombre" autoComplete="off"
-                placeholder="Nombre Usuario" required />
-              <input id="inputCorreo" type="text" class="form-control mt-2" name="correo" autoComplete="off"
-                placeholder="Correo Usuario" required />
-              <textarea id="inputDescripcion" class="form-control mt-2" autoComplete="off" name="descripcion"
-                placeholder="Descripción" required></textarea>
-              <input id="inputId" type="text" class="form-control mt-2" name="id" autoComplete="off" />
+                placeholder="Nombre del producto" required />
+              <input id="inputUrl" type="text" class="form-control  mt-2" placeholder="Url imagen" name="url"
+                required />
+              <input id="inputPrecio" type="text" class="form-control mt-2" placeholder="Precio" name="precio"
+                required />
+              <input id="inputUnidad" type="text" class="form-control mt-2" placeholder="Unidad" name="unidad"
+                required />
+              <!-- <input id="inputId" type="text" class="form-control mt-2" placeholder="Id"  name="id" autoComplete="off" /> -->
               <div class="d-grid gap-2 mx-auto mt-2">
                 <button type="submit" class="btn btn-dark">
                   Guardar
                 </button>
-                <button id="btnCorreo" type="button" class="btn btn-dark">
-                  Buscar por correo
-                </button>
-                <button id="btnModificar" type="button" class="btn btn-dark">
+                <!-- <button id="btnCorreo" type="button" class="btn btn-dark">
+                  Buscar por nombre
+                </button> -->
+                <button id="btnModificar" type="button" class="btn btn-dark" disabled>
                   Modificar
                 </button>
               </div>
             </form>
-          </div>
-          <div class="col-6">
-            <img id="idPhoto" class="img-fluid" src="images/photo01.png" width="180" alt="">
           </div>
         </div>
       </div>
     </div> <!-- End: class="row" -->
   </div> <!-- End: id="idCrud" -->
 
-  <!-- Main image banner (DIV without modal) -->
-  <div id="idMain" class="container-fluid mx-0 px-0">
-    <div id="idBanner" class="container-fluid" style="margin-top: 42px">
-      <img src="images/banner01.png" alt="" class="img-thumbnail"
-        style="height: 300px; width: 100%; object-fit: cover;">
+
+  <main id="idMainContainer">
+    <!-- Main image banner (DIV without modal) -->
+    <div id="idMain" class="container-fluid mx-0 px-0">
+      <div id="idBanner" class="container-fluid" style="margin-top: 42px">
+        <img src="images/banner01.png" alt="" class="img-thumbnail"
+          style="height: 300px; width: 100%; object-fit: cover;">
+      </div>
     </div>
-  </div>
-  <!-- Display images to offer products container (DIV without modal) -->
-  <div id="idOffers" class="d-flex overflow-auto gap-2 m-2">
-    <!-- This containes is filled from JS  -->
-  </div>
+    <!-- Display images to offer products container (DIV without modal) -->
+    <div id="idOffers" class="d-flex overflow-auto gap-2 m-2">
+      <!-- This containes is filled from JS  -->
+    </div>
+  </main>
 
   <!-- ---------------------------------------------------------------------------------------- -->
   <!-- TODO: (ACTIVAR ESTO) TODO:Modal to read the "ADDRESS TO SHIPPING". This modal only is showed when the user do not has a address -->

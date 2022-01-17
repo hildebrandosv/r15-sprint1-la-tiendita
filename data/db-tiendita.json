@@ -37,15 +37,6 @@
       "discount": "0"
     },
     {
-      "id": "14",
-      "name": "Arroz",
-      "unit": "Arr.",
-      "price": "30500",
-      "url_image": "images/img-prods/arroz.png",
-      "most_popular": "true",
-      "discount": "30"
-    },
-    {
       "id": "15",
       "name": "Arveja Seca",
       "unit": "kilo",
@@ -1133,6 +1124,13 @@
       "url_image": "images/img-prods/zanahoria.png",
       "most_popular": "false",
       "discount": "15"
+    },
+    {
+      "name": "Prueba 1",
+      "url_image": "https://picsum.photos/80/90?random=0.7764782967229094",
+      "price": "1111",
+      "unit": "Kilos",
+      "id": "lCNk53X"
     }
   ],
   "tbCities": [
